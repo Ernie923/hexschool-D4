@@ -1,7 +1,17 @@
 <nav class="navbar navbar-expand-lg">
 	<div class="container flex-lg-row flex-row-reverse">
 		<a class="navbar-brand" href="#">
-			<img src="../assets/images/logo/Logo Type.svg" alt="logo" />
+			<picture>
+				<source
+					media="(min-width: 992px)"
+					srcset="../assets/images/logo/Logo-Type.svg"
+				/>
+				<img
+					src="../assets/images/logo/Logo-Type-sm.svg"
+					alt="logo"
+					class="w-100"
+				/>
+			</picture>
 		</a>
 		<button
 			class="navbar-toggler"
@@ -18,17 +28,27 @@
 			class="collapse navbar-collapse justify-content-lg-end"
 			id="navbarSupportedContent"
 		>
-			<ul
-				class="navbar-nav grid gap-lg-10 justify-content-center align-items-center"
-			>
+			<ul class="navbar-nav text-center gap-lg-10">
 				<li class="nav-item">
-					<a class="nav-link fs-h6 fw-bold" href="#">找遊戲</a>
+					<a
+						class="nav-link fs-h6 fw-bold link-primary-black nav-link-bg"
+						href="#"
+						>找遊戲</a
+					>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link fs-h6 fw-bold" href="#">密室排行榜</a>
+					<a
+						class="nav-link fs-h6 fw-bold link-primary-black nav-link-bg"
+						href="#"
+						>密室排行榜</a
+					>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link fs-h6 fw-bold" href="#">登入/註冊</a>
+					<a
+						class="nav-link fs-h6 fw-bold link-primary-black nav-link-bg"
+						href="#"
+						>登入/註冊</a
+					>
 				</li>
 			</ul>
 		</div>
