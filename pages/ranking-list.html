@@ -9,7 +9,15 @@
 	<body>
 		<%- include('./layout/header'); -%>
 		<div class="banner">
-			<div class="container"></div>
+			<picture>
+				<source
+					media="(min-width: 992px)"
+					srcset="../assets/images/illustration/Banner-1.svg" />
+				<img
+					src="../assets/images/illustration/Banner-3.svg"
+					alt="banner"
+					class="w-100" />
+			</picture>
 		</div>
 		<%- include('./layout/footer'); -%>
 
