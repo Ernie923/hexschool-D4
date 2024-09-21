@@ -1,4 +1,33 @@
-.nav-link-bg:hover {
-	background: $nature-95;
-	border: 1px solid $nature-80;
+.navbar {
+  height: 72px;
+
+  @include media-breakpoint-up(lg) {
+    height: 100px;
+  }
+
+  .w-100,
+  .vw-100 {
+    @include media-breakpoint-up(lg) {
+      width: auto;
+    }
+  }
+
+  .navbar-collapse {
+    max-width: 1076px;
+  }
+}
+
+.nav-link-bg {
+  transition: 0.2s;
+
+  &:hover {
+    background: $nature-95;
+    border: 1px solid $nature-80;
+
+    @include media-breakpoint-up(lg) {
+      background: $white;
+      border: 0;
+      transform: scale(0.9);
+    }
+  }
 }
