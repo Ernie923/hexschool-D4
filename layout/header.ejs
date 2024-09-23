@@ -1,52 +1,50 @@
-<nav class="navbar navbar-expand-lg">
-	<div class="container-fluid container-lg flex-lg-row flex-row-reverse">
-		<a class="navbar-brand" href="#">
-			<picture>
-				<source
-					media="(min-width: 992px)"
-					srcset="../assets/images/logo/Logo-Type.svg" />
-				<img
-					src="../assets/images/logo/Logo-Type-sm.svg"
-					alt="logo"
-					class="w-100" />
-			</picture>
+<nav
+  class="navbar navbar-expand-lg w-100 bg-white position-fixed top-0 start-0 d-lg-flex justify-content-between"
+>
+  <div
+    class="nav-box w-100 px-3 d-lg-none d-flex flex-row justify-content-between align-items-center"
+  >
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand m-0 d-inline" href="#">
+      <img src="../assets/images/logo/Logo-Type-sm.svg" alt="logo" class="" />
+    </a>
+  </div>
+  <div class="collapse navbar-collapse vw-100 mx-lg-auto px-lg-3 d-lg-flex justify-content-between" id="navbarSupportedContent">
+		<a class="m-0 d-none d-lg-inline" href="#">
+			<img src="/assets/images/logo/Logo-Type.svg" alt="logo-lg" />
 		</a>
-		<button
-			class="navbar-toggler"
-			type="button"
-			data-bs-toggle="collapse"
-			data-bs-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent"
-			aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div
-			class="collapse navbar-collapse justify-content-lg-end"
-			id="navbarSupportedContent">
-			<ul class="navbar-nav text-center gap-lg-10">
-				<li class="nav-item">
-					<a
-						class="nav-link fs-h6 fw-bold link-primary-black nav-link-bg"
-						href="#"
-						>找遊戲</a
-					>
-				</li>
-				<li class="nav-item">
-					<a
-						class="nav-link fs-h6 fw-bold link-primary-black nav-link-bg"
-						href="#"
-						>密室排行榜</a
-					>
-				</li>
-				<li class="nav-item">
-					<a
-						class="nav-link fs-h6 fw-bold link-primary-black nav-link-bg"
-						href="#"
-						>登入/註冊</a
-					>
-				</li>
-			</ul>
-		</div>
-	</div>
+    <ul class="navbar-nav text-center gap-lg-10 bg-white">
+      <li class="nav-item">
+        <a
+          class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold link-primary-black"
+          href="#"
+          >找遊戲</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bol100ink-primary-black"
+          href="#"
+          >密室排行榜</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold link-primary-black"
+          href="#"
+          >登入/註冊</a
+        >
+      </li>
+    </ul>
+  </div>
 </nav>
