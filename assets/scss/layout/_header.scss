@@ -1,8 +1,15 @@
 .navbar {
   height: 72px;
+  z-index: 10;
 
   @include media-breakpoint-up(lg) {
     height: 100px;
+  }
+
+  .container-lg {
+    @include media-breakpoint-up(xl) {
+      max-width: 1076px;
+    }
   }
 
   .w-100,
@@ -10,10 +17,6 @@
     @include media-breakpoint-up(lg) {
       width: auto;
     }
-  }
-
-  .navbar-collapse {
-    max-width: 1076px;
   }
 }
 
@@ -31,6 +34,7 @@
     }
   }
 }
+
 .navbar-toggler{
 	border: none;
 }
