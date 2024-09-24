@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>contact</title>
 	</head>
-	<body>
+	<body class="bg-primary-99">
 		<%- include('./layout/header'); -%>
-		<div class="banner">
+		<main class="banner">
 			<picture>
 				<source
 					media="(min-width: 992px)"
@@ -18,72 +18,169 @@
 					alt="banner"
 					class="w-100" />
 			</picture>
-		</div>
-		<main class="my-10 bg-primary-99">
+		</main>
+		<div class="my-10">
 			<div class="container">
-				<div class="bg-white">
-					<form class="m-lg-3 mb-lg-6">
-						<fieldset class="mb-3">
-							<legend class="fs-Caption">排序條件</legend>
-							<div class="form-check form-check-inline py-2">
-								<input
-									class="form-check-input"
-									type="radio"
-									name="flexRadioDefault"
-									id="flexRadioDefault1" />
-								<label
-									class="form-check-label"
-									for="flexRadioDefault1">
-									難度
-								</label>
-							</div>
-							<div class="form-check form-check-inline py-2">
-								<input
-									class="form-check-input"
-									type="radio"
-									name="flexRadioDefault"
-									id="flexRadioDefault2"
-									checked />
-								<label
-									class="form-check-label"
-									for="flexRadioDefault2">
-									人氣
-								</label>
-							</div>
-							<div class="form-check form-check-inline py-2">
-								<input
-									class="form-check-input"
-									type="radio"
-									name="flexRadioDefault"
-									id="flexRadioDefault3"
-									checked />
-								<label
-									class="form-check-label"
-									for="flexRadioDefault3">
-									價格
-								</label>
-							</div>
-						</fieldset>
-						<fieldset>
-							<div class="d-flex">
-								<div>
-									<legend class="fs-Caption">工作室</legend>
+				<div class="row justify-content-center">
+					<div class="col-10 bg-white">
+						<form class="m-lg-3 mb-lg-6">
+							<fieldset class="mb-3">
+								<legend class="fs-Caption">排序條件</legend>
+								<div class="form-check form-check-inline py-2">
 									<input
-										type="text"
-										class="form-control"
-										placeholder="搜尋工作室名稱"
-										aria-label="search" />
+										class="form-check-input"
+										type="radio"
+										name="flexRadioDefault"
+										id="flexRadioDefault1" />
+									<label
+										class="form-check-label"
+										for="flexRadioDefault1">
+										難度
+									</label>
 								</div>
-								<button type="submit" class="btn btn-primary">
-									搜尋
-								</button>
-							</div>
-						</fieldset>
-					</form>
-					<div></div>
+								<div class="form-check form-check-inline py-2">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="flexRadioDefault"
+										id="flexRadioDefault2"
+										checked />
+									<label
+										class="form-check-label"
+										for="flexRadioDefault2">
+										人氣
+									</label>
+								</div>
+								<div class="form-check form-check-inline py-2">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="flexRadioDefault"
+										id="flexRadioDefault3"
+										checked />
+									<label
+										class="form-check-label"
+										for="flexRadioDefault3">
+										價格
+									</label>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="row d-flex d-grid gap-3">
+									<div class="col-9">
+										<legend class="fs-Caption">
+											工作室
+										</legend>
+										<input
+											type="text"
+											class="form-control"
+											placeholder="搜尋工作室名稱"
+											aria-label="search" />
+									</div>
+									<div class="col">
+										<button
+											type="submit"
+											class="btn btn-secondary-60 link-white">
+											搜尋
+										</button>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+						<div class="p-3">
+							<table class="table">
+								<thead>
+									<tr class="border-nature-90">
+										<th
+											scope="col"
+											class="text-primary-30 ps-0 py-3 pe-6 fw-bold">
+											圖片
+										</th>
+										<th
+											scope="col"
+											class="text-primary-30 ps-0 py-3 pe-2 fw-bold">
+											名稱
+										</th>
+										<th
+											scope="col"
+											class="text-primary-30 ps-0 py-3 pe-2 fw-bold">
+											工作室
+										</th>
+										<th
+											scope="col"
+											class="text-primary-30 ps-0 py-3 pe-2 fw-bold">
+											遊玩人數
+										</th>
+										<th
+											scope="col"
+											class="text-primary-30 ps-0 py-3 pe-2 fw-bold">
+											評價
+										</th>
+										<th
+											scope="col"
+											class="text-primary-30 ps-0 py-3 fw-bold">
+											價格
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="border-nature-90">
+										<td
+											class="col-2 ps-0 py-3 pe-6 align-middle">
+											<picture>
+												<source
+													media="(min-width: 992px)"
+													srcset="
+														../assets/images/muhammad-haikal.png
+													" />
+												<img
+													src="../assets/images/muhammad-haikal-sm.png"
+													alt=""
+													class="w-100" />
+											</picture>
+										</td>
+										<td class="ps-0 py-3 pe-2 align-middle">
+											X伯爵的委託
+										</td>
+										<td class="ps-0 py-3 pe-2 align-middle">
+											神不在場
+										</td>
+										<td class="ps-0 py-3 pe-2 align-middle">
+											1358
+										</td>
+										<td class="ps-0 py-3 pe-2 align-middle">
+											<img
+												src="../assets/images/icon/star.png"
+												alt="star" />
+											<img
+												src="../assets/images/icon/star.png"
+												alt="star" />
+											<img
+												src="../assets/images/icon/star.png"
+												alt="star" />
+										</td>
+										<td class="ps-0 py-3 align-middle">
+											400/人
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td colspan="2">Larry the Bird</td>
+										<td>@twitter</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 			</div>
-		</main>
+		</div>
 		<%- include('./layout/footer'); -%>
 
 		<script type="module" src="../main.js"></script>
