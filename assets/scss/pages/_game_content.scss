@@ -1,4 +1,32 @@
-.game_content {
+.game_content .container {
   max-width: 1076px;
   margin: 0 auto;
+}
+
+.discribe {
+  .title {
+    z-index: 2;
+  }
+
+  .rectangle {
+    z-index: 1;
+    width: 100px;
+    height: 16px;
+    top: 30%;
+  }
+}
+
+.comment-item {
+  .image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .triangle {
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; 
+    border-bottom: 20px solid $nature-95;
+  }
 }
