@@ -1,10 +1,13 @@
 .game_content .container {
-  max-width: 1076px;
   margin: 0 auto;
+
+  @include media-breakpoint-up(xl) {
+    max-width: 1076px;
+  }
 }
 
 .discribe {
-  .title {
+  .title .text {
     z-index: 2;
   }
 
@@ -13,6 +16,13 @@
     width: 100px;
     height: 16px;
     top: 30%;
+
+    @include media-breakpoint-up(lg) {
+      width: 156px;
+      height: 24px;
+      right: -13px;
+      top: 40%;
+    }
   }
 }
 
@@ -28,5 +38,23 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent; 
     border-bottom: 20px solid $nature-95;
+  }
+}
+
+.others {
+  .title .text {
+    z-index: 2;
+  }
+
+  .rectangle {
+    z-index: 1;  
+    width: 190px;
+    height: 16px;
+    top: 30%;
+
+    @include media-breakpoint-up(lg) {
+      width: 288px;
+      height: 24px;
+    }
   }
 }
