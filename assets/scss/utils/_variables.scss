@@ -753,18 +753,18 @@ $font-sizes: (
 	// 5: $h5-font-size,
 	// 6: $h6-font-size
 	//自定義字體大小
-	Display1: $font-size-base * 4,//64px
-	Display2: $font-size-base * 3,//48px
-	h1: $font-size-base * 2.5,//40px
-	h2: $font-size-base * 2.375,//38px
-	h3: $font-size-base * 2,//32px
-	h4: $font-size-base * 1.75,//28px
-	h5: $font-size-base * 1.5,//24px
-	h6: $font-size-base * 1.25,//20px
-	Body-1: $font-size-base,//16px
-	Body-2: $font-size-base * 0.875,//14px
-	Caption: $font-size-base * 0.75,//12px
-	) !default;
+	Display1: $font-size-base * 4,     //64px
+	Display2: $font-size-base * 3,     //48px
+	h1:       $font-size-base * 2.5,   //40px
+	h2:       $font-size-base * 2.375, //38px
+	h3:       $font-size-base * 2,     //32px
+	h4:       $font-size-base * 1.75,  //28px
+	h5:       $font-size-base * 1.5,   //24px
+	h6:       $font-size-base * 1.25,  //20px
+	Body-1:   $font-size-base,         //16px
+	Body-2:   $font-size-base * 0.875, //14px
+	Caption:  $font-size-base * 0.75,  //12px
+	) !default; 
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables

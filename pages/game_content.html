@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>Game</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <main class="game_content mt-18 mt-lg-20">
+      <div class="banner container py-6 py-lg-10">
+        <picture>
+          <source
+            media="(min-width: 992px)"
+            srcset="/assets/images/julia-kadel.png"
+          />
+          <img
+            class="w-100 rounded"
+            src="/assets/images/julia-kadel-sm.png"
+            alt="banner"
+          />
+        </picture>
+        <div class="mt-6 mb-10">
+          <h1 class="fs-h5 fs-lg-Display2 fw-bold mb-4">等一個人・盜墓</h1>
+          <div class="mb-4 d-flex align-items-center">
+            <img class="me-1" src="/assets/images/icon/star.png" alt="star" />
+            <p
+              class="fs-Body-2 d-inline border-end border-nature-80 mb-0 me-2 pe-3"
+            >
+              4.9
+            </p>
+            <p class="fs-Body-2 mb-0 d-inline">4,055 人評論</p>
+          </div>
+          <ul class="d-flex gap-2">
+            <li
+              class="bg-nature-95 text-black px-2 py-1 d-flex align-items-center rounded-pill"
+            >
+              <span class="material-symbols-outlined me-1">child_care</span>
+              <p class="fs-Body-2 mb-0">新手入門</p>
+            </li>
+            <li
+              class="bg-nature-95 text-black px-2 py-1 d-flex align-items-center rounded-pill"
+            >
+              <span class="material-symbols-outlined me-1">factory</span>
+              <p class="fs-Body-2 mb-0">場景逼真</p>
+            </li>
+            <li
+              class="bg-nature-95 text-black px-2 py-1 d-flex align-items-center rounded-pill"
+            >
+              <span class="material-symbols-outlined me-1">editor_choice</span>
+              <p class="fs-Body-2 mb-0">中度玩家</p>
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <div
+            class="col-12 col-lg-6 border border-nature-90 rounded-4 p-4 mx-3 mb-3 mb-lg-0"
+          >
+            <h6 class="fs-h6 fw-bold text-primary-20 mb-3">基本資訊</h6>
+            <ul>
+              <li class="mb-2 d-flex align-items-center">
+                <img
+                  src="/assets/images/icon/person.png"
+                  alt="person"
+                  class="me-3"
+                  style="width: 16px"
+                />
+                <p class="fs-Body-2 mb-0 text-break">2~8人</p>
+              </li>
+              <li class="mb-2 d-flex align-items-center">
+                <img
+                  src="/assets/images/icon/time.png"
+                  alt="time"
+                  class="me-3"
+                />
+                <p class="fs-Body-2 mb-0 text-break">
+                  110分鐘（含80分鐘體驗時間及前後解說）
+                </p>
+              </li>
+              <li class="mb-2 d-flex align-items-center">
+                <img
+                  src="/assets/images/icon/address.png"
+                  alt="address"
+                  class="me-3"
+                />
+                <p class="fs-Body-2 mb-0 text-break">
+                  新北市中和區連城路52號4樓
+                </p>
+              </li>
+              <li class="mb-2 d-flex align-items-center">
+                <img
+                  src="/assets/images/icon/link.png"
+                  alt="link"
+                  class="me-3"
+                />
+                <a href="#" class="fs-Body-2 mb-0 text-break"
+                  >https://loginescape.simplybook.asia/v2/#book</a
+                >
+              </li>
+              <li class="mb-2 d-flex align-items-center">
+                <img
+                  src="/assets/images/icon/phone.png"
+                  alt="phone"
+                  class="me-3"
+                />
+                <p class="fs-Body-2 mb-0 text-break">0963-606-082</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-6 px-3 border border-nature-90 rounded-4 p-4">
+            <h6 class="fs-h6 fw-bold text-primary-20 mb-3">參考價格</h6>
+            <ul class="d-flex flex-column gap-2">
+              <li class="fs-Body-2">平日2人：$900/人（限平日）</li>
+              <li class="fs-Body-2">平日2人：$900/人（限平日）</li>
+              <li class="fs-Body-2">平日3人：$800/人（限平日）</li>
+              <li class="fs-Body-2">平日4人：$700/人</li>
+              <li class="fs-Body-2">平日5-6人：$650/人</li>
+              <li class="fs-Body-2">假日4人：$650/人</li>
+              <li class="fs-Body-2">假日5-6人：$650/人</li>
+              <li class="fs-Body-2">假日7-8人：$750/人 (請以工作室公佈為主)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
