@@ -6,5 +6,5 @@ const navbarToggler = document.querySelector(".navbar-toggler");
 const mainElement = document.querySelector("main");
 
 navbarToggler.addEventListener("click", () => {
-  mainElement.classList.toggle("main-overlay");
+    mainElement.classList.toggle("main-overlay");
 });
