@@ -1,24 +1,21 @@
 //文字響應式
 $utilities: map-merge(
-    $utilities,
-    (
-        "font-size":
-        map-merge(
-            map-get($utilities, "font-size"),
-            (responsive: true,)
-        ),
-    )
+  $utilities,
+  (
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+  )
 );
 
-.bg-dark-transparent {
-    background-color: rgba(0, 0, 0, 0.4); /* 黑色透明度 40% */
-}
-
 .main-overlay::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0.5;
-  }
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}

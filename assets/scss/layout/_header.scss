@@ -1,6 +1,5 @@
 .navbar {
   height: 72px;
-  z-index: 10;
 
   @include media-breakpoint-up(lg) {
     height: 100px;
@@ -18,6 +17,10 @@
       width: auto;
     }
   }
+}
+
+.nav, .navbar-collapse {
+  z-index: 10;
 }
 
 .nav-link-bg {
