@@ -11,3 +11,11 @@ ul,
 li {
 	list-style-type: none;
 }
+
+main {
+	margin-top: 72px;
+
+	@include media-breakpoint-up(lg) {
+			margin-top: 102px;
+	}
+}
