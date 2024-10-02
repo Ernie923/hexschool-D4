@@ -8,11 +8,15 @@
 	</head>
 	<body class="bg-primary-99">
 		<%- include('./layout/header'); -%>
-		<main class="banner">
+		<main class="banner position-relative">
+			<div
+				class="banner-title position-absolute top-30 start-10 pb-3 d-none d-lg-block">
+				<h1 class="fs-Display2 fw-bold text-primary-10">密室排行榜</h1>
+			</div>
 			<picture>
 				<source
 					media="(min-width: 992px)"
-					srcset="../assets/images/illustration/Banner-1.svg" />
+					srcset="../assets/images/illustration/Banner-list.png" />
 				<img
 					src="../assets/images/illustration/Banner-3.svg"
 					alt="banner"
@@ -22,7 +26,7 @@
 		<section class="my-10">
 			<div class="container">
 				<div class="row justify-content-center">
-					<div class="col-10 bg-white">
+					<div class="col-xl-10 bg-white">
 						<form class="m-lg-3 mb-lg-6">
 							<fieldset class="mb-3">
 								<legend class="fs-Caption">排序條件</legend>
@@ -106,12 +110,12 @@
 												</th>
 												<th
 													scope="col"
-													class="text-primary-30 ps-0 py-3 pe-2 fw-bold d-sm-none d-md-table-cell">
+													class="text-primary-30 ps-0 py-3 pe-2 fw-bold d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													工作室
 												</th>
 												<th
 													scope="col"
-													class="text-primary-30 ps-0 py-3 pe-2 fw-bold d-sm-none d-md-table-cell">
+													class="text-primary-30 ps-0 py-3 pe-2 fw-bold d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													遊玩人數
 												</th>
 												<th
@@ -136,10 +140,10 @@
 														<source
 															media="(min-width: 992px)"
 															srcset="
-																../assets/images/muhammad-haikal.png
+																../assets/images/muhammad-haikal-list.png
 															" />
 														<img
-															src="../assets/images/muhammad-haikal-sm.png"
+															src="../assets/images/muhammad-haikal-list-sm.png"
 															alt=""
 															class="w-100 rounded-2" />
 													</picture>
@@ -149,11 +153,11 @@
 													X伯爵的委託
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													神不在場
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													1358
 												</td>
 												<td
@@ -182,10 +186,10 @@
 														<source
 															media="(min-width: 992px)"
 															srcset="
-																../assets/images/julia-kadel.png
+																../assets/images/julia-kadel-list.png
 															" />
 														<img
-															src="../assets/images/julia-kadel-sm.png"
+															src="../assets/images/julia-kadel-list-sm.png"
 															alt=""
 															class="w-100 rounded-2" />
 													</picture>
@@ -195,11 +199,11 @@
 													等一個人．盜墓
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													許多門
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													1301
 												</td>
 												<td
@@ -234,10 +238,10 @@
 														<source
 															media="(min-width: 992px)"
 															srcset="
-																../assets/images/kostiantyn-li.png
+																../assets/images/kostiantyn-li-list.png
 															" />
 														<img
-															src="../assets/images/kostiantyn-li-sm.png"
+															src="../assets/images/kostiantyn-li-list-sm.png"
 															alt=""
 															class="w-100 rounded-2" />
 													</picture>
@@ -247,11 +251,11 @@
 													花月宴
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													神不在場
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													1269
 												</td>
 												<td
@@ -280,10 +284,10 @@
 														<source
 															media="(min-width: 992px)"
 															srcset="
-																../assets/images/Comment3.png
+																../assets/images/alexandru-zdrobau-list.png
 															" />
 														<img
-															src="../assets/images/alexandru-zdrobau-sm.png"
+															src="../assets/images/alexandru-zdrobau-list-sm.png"
 															alt=""
 															class="w-100 rounded-2" />
 													</picture>
@@ -293,11 +297,11 @@
 													美人秘湯
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													LoGin
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													1200
 												</td>
 												<td
@@ -332,10 +336,10 @@
 														<source
 															media="(min-width: 992px)"
 															srcset="
-																../assets/images/degleex-ganzorig.png
+																../assets/images/muhammad-haikal-sjukri-list.png
 															" />
 														<img
-															src="../assets/images/degleex-ganzorig-sm.png"
+															src="../assets/images/muhammad-haikal-sjukri-list-sm.png"
 															alt=""
 															class="w-100 rounded-2" />
 													</picture>
@@ -345,11 +349,11 @@
 													逃兵
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													玩笑實驗室
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													1186
 												</td>
 												<td
@@ -384,10 +388,10 @@
 														<source
 															media="(min-width: 992px)"
 															srcset="
-																../assets/images/roonz-nl.png
+																../assets/images/roonz-nl-list.png
 															" />
 														<img
-															src="../assets/images/roonz-nl-sm.png"
+															src="../assets/images/roonz-nl-list-sm.png"
 															alt=""
 															class="w-100 rounded-2" />
 													</picture>
@@ -397,11 +401,11 @@
 													鬱金香
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													快樂工作室
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													1097
 												</td>
 												<td
@@ -436,10 +440,10 @@
 														<source
 															media="(min-width: 992px)"
 															srcset="
-																../assets/images/harry-quan.png
+																../assets/images/harry-quan-list.png
 															" />
 														<img
-															src="../assets/images/harry-quan-sm.png"
+															src="../assets/images/harry-quan-list-sm.png"
 															alt=""
 															class="w-100 rounded-2" />
 													</picture>
@@ -449,11 +453,11 @@
 													獨眼傑克
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													任意門
 												</td>
 												<td
-													class="ps-0 py-3 pe-2 align-middle d-sm-none d-md-table-cell">
+													class="ps-0 py-3 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
 													968
 												</td>
 												<td
