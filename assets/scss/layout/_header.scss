@@ -25,7 +25,6 @@
 }
 
 .nav-link-bg {
-  transition: 0.2s;
 
   &:hover {
     background: $nature-95;
@@ -34,7 +33,7 @@
     @include media-breakpoint-up(lg) {
       background: $white;
       border: 0;
-      transform: scale(0.9);
+      color: $secondary-40;
     }
   }
 }
