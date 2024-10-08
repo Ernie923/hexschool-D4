@@ -77,14 +77,11 @@
 
 .forgot-password {
   text-decoration: none;
-  margin-bottom: 76px;
-}
+  margin-bottom: 68px;
 
-.social-login .line {
-  margin: 0;
-  top: 10px;
-  left: 0;
-  border: 1px solid $nature-70;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 76px;
+  }
 }
 
 .signup-text {
@@ -102,8 +99,6 @@
   align-items: center;
   gap: 16px;
   border: 1px solid black;
-  padding: 12px;
-  margin: 8px;
   cursor: pointer;
   width: 100%;
   border-radius: 16px;

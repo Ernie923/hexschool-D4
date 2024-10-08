@@ -68,29 +68,35 @@
 >
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-body container bg-primary-99 p-16 rounded-4">
+      <div class="modal-body container bg-primary-99 p-md-16 p-8 rounded-4">
         <div
           class="bg-white mb-8 rounded-3 border border-black d-flex justify-content-around position-relative"
         >
           <div class="tab-background"></div>
-          <button id="login-tab" class="tab active py-4 w-100 rounded-3 fs-h6">
+          <button
+            id="login-tab"
+            class="tab active py-md-4 py-2 w-100 rounded-3 fs-md-h6 fs-Body-1"
+          >
             登入
           </button>
-          <button id="signup-tab" class="tab py-4 w-100 rounded-3 fs-h6">
+          <button
+            id="signup-tab"
+            class="tab py-md-4 py-2 w-100 rounded-3 fs-md-h6 fs-Body-1"
+          >
             註冊
           </button>
         </div>
 
         <form id="login-form" class="d-flex flex-column">
           <input
-            class="p-3 mb-4 border border-black rounded-3"
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
             type="email"
             id="email"
             placeholder="電子郵件"
             required
           />
           <input
-            class="p-3 border border-black rounded-3"
+            class="p-md-3 p-2 border border-black rounded-3"
             type="password"
             id="password"
             placeholder="密碼"
@@ -101,7 +107,7 @@
           </a>
           <button
             type="submit"
-            class="submit-btn fs-h6 bg-primary-70 text-white p-4 border border-black rounded-3"
+            class="submit-btn fs-md-h6 fs-Body-1 bg-primary-70 text-white p-md-4 p-2 border border-black rounded-3"
           >
             登入
           </button>
@@ -109,21 +115,21 @@
 
         <form id="signup-form" class="hidden d-flex flex-column">
           <input
-            class="p-3 mb-4 border border-black rounded-3"
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
             type="email"
             id="signup-email"
             placeholder="電子郵件"
             required
           />
           <input
-            class="p-3 mb-4 border border-black rounded-3"
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
             type="password"
             id="signup-password"
             placeholder="密碼"
             required
           />
           <input
-            class="p-3 mb-8 border border-black rounded-3"
+            class="p-md-3 p-2 mb-8 border border-black rounded-3"
             type="password"
             id="signup-password-confirm"
             placeholder="確認密碼"
@@ -131,7 +137,7 @@
           />
           <button
             type="submit"
-            class="submit-btn fs-h6 bg-primary-70 text-white p-4 border border-black rounded-3"
+            class="submit-btn fs-md-h6 fs-Body-1 bg-primary-70 text-white p-md-4 p-2 border border-black rounded-3"
           >
             註冊
           </button>
@@ -150,11 +156,7 @@
         <div
           class="social-login mt-8 position-relative d-flex flex-column align-items-center"
         >
-          <p class="w-50 text-center mb-6 bg-primary-99 z-2">
-            或使用以下帳號登入
-          </p>
-          <hr class="line w-100 position-absolute z-1" />
-          <button class="social-btn google">
+          <button class="social-btn google my-2 p-md-3 p-2">
             <img
               class="social-img"
               src="/assets/images/icon/google.png"
@@ -162,7 +164,7 @@
             />
             Continue with Google
           </button>
-          <button class="social-btn facebook">
+          <button class="social-btn facebook my-2 p-md-3 p-2">
             <img class="social-img" src="/assets/images/icon/fb.svg" alt="fb" />
             Continue with Facebook
           </button>
