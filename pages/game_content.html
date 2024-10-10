@@ -17,7 +17,7 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <main class="game_content">
+    <main class="game_content position-relative">
       <div class="info container py-6 py-lg-10">
         <picture>
           <source
@@ -434,6 +434,18 @@
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
+      </div>
+
+      <div class="add-comment position-fixed z-1">
+        <button
+          href="#"
+          title="新增評論"
+          class="border border-none bg-primary-95 p-3 p-lg-4 rounded-circle"
+        >
+          <span class="material-symbols-outlined d-block text-primary-60"
+            >add_comment
+          </span>
+        </button>
       </div>
     </main>
 

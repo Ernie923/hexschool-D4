@@ -104,3 +104,14 @@
 .swiper-button-prev::after {
   left: -10px;
 }
+
+.add-comment {
+  bottom: 20px;
+  right: 20px;
+
+  .material-symbols-outlined {
+    @include media-breakpoint-up(lg) {
+      font-size: 36px;
+    }
+  }
+}
