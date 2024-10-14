@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<%- include('./layout/header'); -%>
+
+		<main>
+			<div class="container">
+				<div class="pb-10">
+					<picture>
+						<source
+							media="(min-width: 992px)"
+							srcset="../assets/images/peter-herrmann.jpg" />
+						<img
+							src="../assets/images/peter-herrmann-sm.jpg"
+							alt="banner"
+							class="w-100" />
+					</picture>
+					<div>
+						<div class="py-10">
+							<h1 class="fs-Display2">遊戲名稱：詭廁</h1>
+						</div>
+						<div>
+							<h2>整體評價</h2>
+							<p class="py-3">
+								依據您遊玩的經驗，整體而言您會給這個遊戲幾分?
+							</p>
+							<div class="box">
+								<input
+									type="radio"
+									name="star"
+									id="score5"
+									value="5" />
+								<label class="star" for="score5"></label>
+								<input
+									type="radio"
+									name="star"
+									id="score4"
+									value="4" />
+								<label class="star" for="score4"></label>
+								<input
+									type="radio"
+									name="star"
+									id="score3"
+									value="3" />
+								<label class="star" for="score3"></label>
+								<input
+									type="radio"
+									name="star"
+									id="score2"
+									value="2" />
+								<label class="star" for="score2"></label>
+								<input
+									type="radio"
+									name="star"
+									id="score1"
+									value="1" />
+								<label class="star" for="score1"></label>
+							</div>
+						</div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<%- include('./layout/footer'); -%>
+
+		<script type="module" src="../main.js"></script>
+	</body>
+</html>
