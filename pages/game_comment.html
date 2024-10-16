@@ -1,314 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>遊戲評論</title>
-	</head>
-	<body>
-		<%- include('./layout/header'); -%>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>遊戲評論</title>
+    </head>
+    <body>
+        <%- include('./layout/header'); -%>
 
-		<main>
-			<div class="container">
-				<div class="pb-10">
-					<picture>
-						<source
-							media="(min-width: 992px)"
-							srcset="../assets/images/peter-herrmann.jpg" />
-						<img
-							src="../assets/images/peter-herrmann-sm.jpg"
-							alt="banner"
-							class="w-100" />
-					</picture>
-					<div>
-						<div class="py-10">
-							<h1 class="fs-Display2">遊戲名稱：詭廁</h1>
-						</div>
-						<div>
-							<h2>整體評價</h2>
-							<p class="py-3">
-								依據您遊玩的經驗，整體而言您會給這個遊戲幾分?
-							</p>
-							<div class="box">
-								<input
-									type="radio"
-									name="star"
-									id="score5"
-									value="5" />
-								<label class="star" for="score5"></label>
-								<input
-									type="radio"
-									name="star"
-									id="score4"
-									value="4" />
-								<label class="star" for="score4"></label>
-								<input
-									type="radio"
-									name="star"
-									id="score3"
-									value="3" />
-								<label class="star" for="score3"></label>
-								<input
-									type="radio"
-									name="star"
-									id="score2"
-									value="2" />
-								<label class="star" for="score2"></label>
-								<input
-									type="radio"
-									name="star"
-									id="score1"
-									value="1" />
-								<label class="star" for="score1"></label>
-							</div>
-						</div>
-						<div>
-							<form class="row gy-2 gx-3 align-items-center">
-								<h2>難度與特色</h2>
-								<h3>難度</h3>
-								<div class="col-auto">
-									<input
-										class="form-check-input"
-										type="radio"
-										name="inlineRadioOptions"
-										id="inlineRadio1"
-										value="option1" />
-									<label
-										class="form-check-label"
-										for="inlineRadio1"
-										>新手入門</label
-									>
-								</div>
-								<div class="col-auto">
-									<input
-										class="form-check-input"
-										type="radio"
-										name="inlineRadioOptions"
-										id="inlineRadio2"
-										value="option2" />
-									<label
-										class="form-check-label"
-										for="inlineRadio2"
-										>中度玩家</label
-									>
-								</div>
-								<div class="col-auto">
-									<input
-										class="form-check-input"
-										type="radio"
-										name="inlineRadioOptions"
-										id="inlineRadio3"
-										value="option3" />
-									<label
-										class="form-check-label"
-										for="inlineRadio3"
-										>重度解謎</label
-									>
-								</div>
-								<h3>主題特色(最多選3項)</h3>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck1" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck1">
-											偵探推理
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck2" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck2">
-											機關重重
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck3" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck3">
-											劇情厲害
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck4" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck4">
-											場景逼真
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck5" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck5">
-											互動操作
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck6" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck6">
-											謎題邏輯
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck7" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck7">
-											輕鬆歡樂
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck8" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck8">
-											恐怖驚悚
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck9" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck9">
-											緊張刺激
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck10" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck10">
-											勾心鬥角
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck11" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck11">
-											團隊合作
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck12" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck12">
-											親子同遊
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck13" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck13">
-											玩法特殊
-										</label>
-									</div>
-								</div>
-								<div class="col-3">
-									<div class="form-check">
-										<input
-											class="form-check-input"
-											type="checkbox"
-											id="autoSizingCheck14" />
-										<label
-											class="form-check-label"
-											for="autoSizingCheck14">
-											角色扮演
-										</label>
-									</div>
-								</div>
-								<h3>遊玩日期</h3>
-								<div>
-									<input
-										type="text"
-										class="form-control"
-										type="date" />
-								</div>
-							</form>
-						</div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-		</main>
+        <main>
+            <div class="container-fluid container-lg">
+                <div class="rol d-flex justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="pb-10">
+                            <picture>
+                                <source
+                                    media="(min-width: 992px)"
+                                    srcset="../assets/images/peter-herrmann.jpg"
+                                />
+                                <img
+                                    src="../assets/images/peter-herrmann-sm.jpg"
+                                    alt="banner"
+                                    class="w-100"
+                                />
+                            </picture>
+                            <div>
+                                <div class="py-10">
+                                    <h1 class="fs-Display2">遊戲名稱：詭廁</h1>
+                                </div>
+                                <div class="mb-6">
+                                    <h2>整體評價</h2>
+                                    <p class="py-3">
+                                        依據您遊玩的經驗，整體而言您會給這個遊戲幾分?
+                                    </p>
+                                    <div class="box">
+                                        <input
+                                            type="radio"
+                                            name="star"
+                                            id="score5"
+                                            value="5"
+                                        />
+                                        <label
+                                            class="star"
+                                            for="score5"
+                                        ></label>
+                                        <input
+                                            type="radio"
+                                            name="star"
+                                            id="score4"
+                                            value="4"
+                                        />
+                                        <label
+                                            class="star"
+                                            for="score4"
+                                        ></label>
+                                        <input
+                                            type="radio"
+                                            name="star"
+                                            id="score3"
+                                            value="3"
+                                        />
+                                        <label
+                                            class="star"
+                                            for="score3"
+                                        ></label>
+                                        <input
+                                            type="radio"
+                                            name="star"
+                                            id="score2"
+                                            value="2"
+                                        />
+                                        <label
+                                            class="star"
+                                            for="score2"
+                                        ></label>
+                                        <input
+                                            type="radio"
+                                            name="star"
+                                            id="score1"
+                                            value="1"
+                                        />
+                                        <label
+                                            class="star"
+                                            for="score1"
+                                        ></label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <form>
+                                        <div class="row mb-6">
+                                            <h2>難度與特色</h2>
+                                            <div class="row py-3">
+                                                <h3 class="pb-2">難度</h3>
+                                                <div class="col-auto">
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="inlineRadioOptions"
+                                                        id="inlineRadio1"
+                                                        value="option1"
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="inlineRadio1"
+                                                        >新手入門</label
+                                                    >
+                                                </div>
+                                                <div class="col-auto">
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="inlineRadioOptions"
+                                                        id="inlineRadio2"
+                                                        value="option2"
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="inlineRadio2"
+                                                        >中度玩家</label
+                                                    >
+                                                </div>
+                                                <div class="col-auto">
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="inlineRadioOptions"
+                                                        id="inlineRadio3"
+                                                        value="option3"
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="inlineRadio3"
+                                                        >重度解謎</label
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="row py-3">
+                                                <h3 class="pb-2">
+                                                    主題特色(最多選3項)
+                                                </h3>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck1"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck1"
+                                                        >
+                                                            偵探推理
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck2"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck2"
+                                                        >
+                                                            機關重重
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck3"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck3"
+                                                        >
+                                                            劇情厲害
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck4"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck4"
+                                                        >
+                                                            場景逼真
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck5"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck5"
+                                                        >
+                                                            互動操作
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck6"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck6"
+                                                        >
+                                                            謎題邏輯
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck7"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck7"
+                                                        >
+                                                            輕鬆歡樂
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck8"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck8"
+                                                        >
+                                                            恐怖驚悚
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck9"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck9"
+                                                        >
+                                                            緊張刺激
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck10"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck10"
+                                                        >
+                                                            勾心鬥角
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck11"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck11"
+                                                        >
+                                                            團隊合作
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck12"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck12"
+                                                        >
+                                                            親子同遊
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck13"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck13"
+                                                        >
+                                                            玩法特殊
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-lg-3 col-md-6 col-12"
+                                                >
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            id="autoSizingCheck14"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="autoSizingCheck14"
+                                                        >
+                                                            角色扮演
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <h3 class="pb-2">遊玩日期</h3>
+                                            <div class="col-12">
+                                                <input
+                                                    type="date"
+                                                    class="form-control"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <h3 class="pb-2">遊戲完成度</h3>
+                                            <div class="col-auto">
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="inlineRadioOptions"
+                                                    id="inlineRadioSuccess"
+                                                    value="option1"
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="inlineRadioSuccess"
+                                                    >過關</label
+                                                >
+                                            </div>
+                                            <div class="col-auto">
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="inlineRadioOptions"
+                                                    id="inlineRadioFfail"
+                                                    value="option2"
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="inlineRadioFail"
+                                                    >未通關</label
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <h3 class="pb-2">體驗心得</h3>
+                                            <div class="col-12">
+                                                <textarea
+                                                    class="form-control"
+                                                    id="experience"
+                                                    rows="5"
+                                                ></textarea>
+                                                <label
+                                                    for="experience"
+                                                    class="form-label"
+                                                ></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-grid gap-2">
+                                            <button
+                                                type="submit"
+                                                class="btn btn-secondary-60 link-white rounded-1 mb-3"
+                                            >
+                                                送出
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-		<%- include('./layout/footer'); -%>
+        <%- include('./layout/footer'); -%>
 
-		<script type="module" src="../main.js"></script>
-	</body>
+        <script type="module" src="../main.js"></script>
+    </body>
 </html>
