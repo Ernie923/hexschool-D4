@@ -1,5 +1,6 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.min.js";
+import "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js";
 
 // 當漢堡選單下拉時背景顏色變為黑色半透明
 document.querySelector(".navbar-toggler").addEventListener("click", () => {
@@ -52,3 +53,16 @@ document.getElementById("login-link").addEventListener("click", function (e) {
   e.preventDefault();
   loginTab.click();
 });
+
+//限制checkbox選取數量的上限
+$(document).ready(function() {
+  $('#input_3_2 input[type=checkbox]').click(function() {
+      $("#input_3_2 input[type=checkbox]").attr('disabled', true);
+      if ($("#input_3_2 input[type=checkbox]:checked").length >= 3) {
+          $("#input_3_2 input[type=checkbox]:checked").attr('disabled', false);
+      } else {
+          $('#input_3_2 input[type=checkbox]').attr('disabled', false);
+      }
+  });
+
+})
