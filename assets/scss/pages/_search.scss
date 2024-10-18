@@ -1,0 +1,26 @@
+.search-input ,.form-select {
+    background-color: transparent; /* 移除底色 */
+    //border: none; /* 移除邊框 */
+    box-shadow: none; /* 移除陰影 */
+}
+.form-check-input {
+    appearance :auto;
+}
+
+.reset_button{
+    background-color: transparent; /* 移除底色 */
+    
+}
+
+.dotted{
+    border-right: 1px dotted #CCC5C2;
+}
+
+.card:hover{
+    background-color: $nature-90;
+}
+
+.game-card{
+    background-color: transparent;
+    // border: 0px;
+}
