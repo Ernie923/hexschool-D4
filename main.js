@@ -1,12 +1,15 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.min.js";
 
+// ==================== Navbar ====================
+
 // 當漢堡選單下拉時背景顏色變為黑色半透明
 document.querySelector(".navbar-toggler").addEventListener("click", () => {
   document.querySelector("main").classList.toggle("main-overlay");
 });
 
-// 登入註冊表單切換
+// =============== Login & Signup =================
+
 const loginTab = document.getElementById("login-tab");
 const signupTab = document.getElementById("signup-tab");
 const tabBackground = document.querySelector(".tab-background");
@@ -52,3 +55,36 @@ document.getElementById("login-link").addEventListener("click", function (e) {
   e.preventDefault();
   loginTab.click();
 });
+
+let isLoggedIn = false;
+
+const authButton = document.getElementById("auth-btn");
+const loginButton = document.getElementById("login-btn");
+const signupButton = document.getElementById("signup-btn");
+const userIcon = document.getElementById("user-icon");
+
+// 檢查登入狀態並切換顯示
+function checkLoginStatus() {
+  if (isLoggedIn) {
+    loginButton.classList.add("hidden");
+    signupButton.classList.add("hidden");
+    userIcon.classList.remove("hidden");
+    authButton.classList.add("hidden");
+  } else {
+    loginButton.classList.remove("hidden");
+    signupButton.classList.remove("hidden");
+    userIcon.classList.add("hidden");
+    authButton.classList.remove("hidden");
+  }
+}
+
+loginButton.addEventListener("click", function () {
+  var loginModal = new bootstrap.Modal(document.getElementById("login-modal"));
+  if (loginModal) {
+    loginModal.hide();
+  }
+  isLoggedIn = true;
+  checkLoginStatus();
+});
+
+checkLoginStatus();
