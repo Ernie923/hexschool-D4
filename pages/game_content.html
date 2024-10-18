@@ -11,10 +11,10 @@
     <title>密室介紹</title>
 </head>
 
-<body class="">
+<body>
     <%- include('./layout/header'); -%>
 
-        <main class="game_content">
+        <main class="game_content position-relative">
             <div class="info container py-6 py-lg-10">
                 <picture>
                     <source media="(min-width: 992px)" srcset="/assets/images/julia-kadel.png" />
@@ -82,7 +82,6 @@
                         <div class="border border-nature-90 border-lg-nature-70 rounded-4 p-4">
                             <h6 class="fs-h6 fw-bold text-primary-20 mb-3">參考價格</h6>
                             <ul class="d-flex flex-column gap-2">
-                                <li class="fs-Body-2">平日2人：$900/人（限平日）</li>
                                 <li class="fs-Body-2">平日2人：$900/人（限平日）</li>
                                 <li class="fs-Body-2">平日3人：$800/人（限平日）</li>
                                 <li class="fs-Body-2">平日4人：$700/人</li>
@@ -351,6 +350,13 @@
                     <div class="swiper-button-prev"></div>
                 </div>
             </div>
+
+            <div class="add-comment position-fixed z-1">
+                <button href="#" title="新增評論" class="border border-none bg-primary-95 p-3 p-lg-4 rounded-circle">
+                    <span class="material-symbols-outlined d-block text-primary-60">add_comment
+                    </span>
+                </button>
+            </div>
         </main>
 
         <%- include('./layout/footer'); -%>
@@ -372,10 +378,6 @@
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",
                     },
-                    // navigation: {
-                    //   nextEl: ".swiper-next",
-                    //   prevEl: ".swiper-prev",
-                    // },
                 });
             </script>
 </body>
