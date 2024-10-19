@@ -36,7 +36,7 @@
                                             <input type="text" class="form-control border-0 search-input"
                                                 placeholder="搜尋關鍵字" aria-label="Search">
                                             <span class="input-group-text search-input border-0">
-                                                <i class="bi bi-search"></i>
+                                                <a href=""><i class="bi bi-search"></i></a>
                                             </span>
                                         </div>
                                     </div>
@@ -222,24 +222,16 @@
                                                     難度
                                                 </p>
                                                 <!-- 手機板下拉式選單 -->
+
                                                 <select
                                                     class="form-select d-md-none mb-md-6 mb-3 border  rounded-1  border-primary-black"
                                                     aria-label="Default select example">
-                                                    <option selected>請選擇主題類別</option>
-                                                    <option value="Detectivereasoning">偵探推理</option>
-                                                    <option value="Theplotisgreat">劇情厲害</option>
-                                                    <option value="interactiveoperation">互動操作</option>
-                                                    <option value="Relaxedandhappy">輕鬆歡樂</option>
-                                                    <option value="Thrilling">緊張刺激</option>
-                                                    <option value="Specialgameplay">玩法特殊</option>
-                                                    <option value="Manyagencies">機關重重</option>
-                                                    <option value="Realisticscenes">場景逼真</option>
-                                                    <option value="puzzleLogic">謎題邏輯</option>
-                                                    <option value="horrorthriller">恐怖驚悚</option>
-                                                    <option value="Intrigue">勾心鬥角</option>
-                                                    <option value="Familytravel">親子同遊</option>
-                                                    <option value="rolePlay">角色扮演</option>
+                                                    <option selected>請選擇難度</option>
+                                                    <option value="GettingStarted">新手入門</option>
+                                                    <option value="Moderateplayer">中度玩家</option>
+                                                    <option value="Heavypuzzle">重度解謎</option>
                                                 </select>
+
 
                                                 <!-- 電腦版核取方塊 -->
                                                 <div class="row m-0 mb-6 d-none d-md-flex">
@@ -282,12 +274,23 @@
                                                 </p>
                                                 <!-- 手機板下拉式選單 -->
                                                 <select
-                                                    class="form-select mb-md-6 mb-3 border rounded-1 border-primary-black"
-                                                    aria-label="Select player type">
-                                                    <option selected>請選擇難度</option>
-                                                    <option value="GettingStarted">新手入門</option>
-                                                    <option value="Moderateplayer">中度玩家</option>
-                                                    <option value="Heavypuzzle">重度解謎</option>
+                                                    class="form-select d-md-none mb-md-6 mb-3 border  rounded-1  border-primary-black"
+                                                    aria-label="Default select example">
+                                                    <option selected>請選擇主題類別</option>
+                                                    <option value="Detectivereasoning">偵探推理</option>
+                                                    <option value="Theplotisgreat">劇情厲害</option>
+                                                    <option value="interactiveoperation">互動操作</option>
+                                                    <option value="Relaxedandhappy">輕鬆歡樂</option>
+                                                    <option value="Thrilling">緊張刺激</option>
+                                                    <option value="teamWork">團隊合作</option>
+                                                    <option value="Specialgameplay">玩法特殊</option>
+                                                    <option value="Manyagencies">機關重重</option>
+                                                    <option value="Realisticscenes">場景逼真</option>
+                                                    <option value="puzzleLogic">謎題邏輯</option>
+                                                    <option value="horrorthriller">恐怖驚悚</option>
+                                                    <option value="Intrigue">勾心鬥角</option>
+                                                    <option value="Familytravel">親子同遊</option>
+                                                    <option value="rolePlay">角色扮演</option>
                                                 </select>
 
                                                 <!-- 電腦版核取方塊 -->
@@ -326,16 +329,16 @@
                                                             </label>
                                                         </div>
                                                         <div class="form-check mb-4 ">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="keelung">
-                                                            <label class="form-check-label text-nowrap" for="keelung">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Thrilling" id="Thrilling">
+                                                            <label class="form-check-label text-nowrap" for="Thrilling">
                                                                 緊張刺激
                                                             </label>
                                                         </div>
                                                         <div class="form-check mb-4 ">
                                                             <input class="form-check-input" type="checkbox"
-                                                                value="Thrilling" id="Thrilling">
-                                                            <label class="form-check-label text-nowrap" for="Thrilling">
+                                                                value="teamWork" id="teamWork">
+                                                            <label class="form-check-label text-nowrap" for="teamWork">
                                                                 團隊合作
                                                             </label>
                                                         </div>
@@ -417,7 +420,7 @@
                                         class="btn btn-secondary-60 link-white rounded-2 w-100">搜尋</button>
                                 </div>
                                 <div class=" ">
-                                    <button type="submit"
+                                    <button type="reset"
                                         class="btn w-100 reset_button border-0 text-primary-black fw-bold text-sm-center text-end">重置</button>
                                 </div>
                             </form>
@@ -434,28 +437,18 @@
                                         <a href="game_content.html">
                                             <div class="card p-3 rounded-6 ">
                                                 <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto col-sm-12 ">
                                                         <!-- 手機板圖片在左邊 -->
                                                         <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
+                                                                srcset="../assets/images/julia-kadel.svg">
 
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
+                                                            <img src="../assets/images/julia-kadel-sm.svg" alt="等一個人・盜墓"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0 img-fluid" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
+                                                    <div class="col ms-3 ms-md-0">
                                                         <div class="card-body p-0">
                                                             <h6
                                                                 class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
@@ -469,6 +462,65 @@
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
+                                                                <span class="ps-2 fs-Body-2">4,055 人評論</span>
+                                                            </p>
+                                                            <p=
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="../assets/images/icon/person.png"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    2-8 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="../assets/images/icon/price.png"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 600元起
+                                                                </span>
+                                                                </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="../assets/images/kostiantyn.svg">
+
+                                                            <img src="../assets/images/kostiantyn-sm.svg" alt="花月宴"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                花月宴
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                新北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating do tted pe-3 fs-Body-2">
+                                                                    <img src="../assets/images/icon/star.png" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
                                                                 <span class="ps-2 fs-Body-2">1,264 人評論</span>
                                                             </p>
                                                             <p
@@ -476,12 +528,12 @@
                                                                 <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
+                                                                    4-8 人
                                                                 </span>
                                                                 <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
-                                                                    每人600元起
+                                                                    每人 800元起
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -503,32 +555,22 @@
                                         <a href="game_content.html">
                                             <div class="card p-3 rounded-6 ">
                                                 <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto col-sm-12 ">
                                                         <!-- 手機板圖片在左邊 -->
                                                         <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
+                                                                srcset="../assets/images/sergio-alves.svg">
 
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
+                                                            <img src="../assets/images/sergio-alves-sm.svg" alt="利維得酒吧"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
+                                                    <div class="col ms-3 ms-md-0">
                                                         <div class="card-body p-0">
                                                             <h6
                                                                 class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
+                                                                利維得酒吧
                                                             </h6>
                                                             <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
@@ -538,19 +580,78 @@
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                                <span class="ps-2 fs-Body-2">1,245 人評論</span>
                                                             </p>
                                                             <p
                                                                 class="d-flex align-items-start flex-md-row flex-column ">
                                                                 <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
+                                                                    4-8 人
                                                                 </span>
                                                                 <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
-                                                                    每人600元起
+                                                                    每人 1,280 元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">劇情厲害</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="../assets/images/joanna-kosinska.svg">
+
+                                                            <img src="../assets/images/joanna-kosinska-sm.svg" alt="秦閣"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                秦閣
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                新北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="../assets/images/icon/star.png" alt="star"
+                                                                        class="pe-1">4.8
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">1,233 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="../assets/images/icon/person.png"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    6-8 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="../assets/images/icon/price.png"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 650元起
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -572,54 +673,104 @@
                                         <a href="game_content.html">
                                             <div class="card p-3 rounded-6 ">
                                                 <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto col-sm-12 ">
                                                         <!-- 手機板圖片在左邊 -->
                                                         <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
+                                                                srcset="../assets/images/adrien-olichon-eye.svg">
 
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
+                                                            <img src="../assets/images/adrien-olichon-eye-sm.svg"
+                                                                alt="獨眼傑克"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
+                                                    <div class="col ms-3 ms-md-0">
                                                         <div class="card-body p-0">
                                                             <h6
                                                                 class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
+                                                                獨眼傑克
                                                             </h6>
                                                             <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
+                                                                台北市
                                                             </p>
                                                             <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
-                                                                        class="pe-1">4.9
+                                                                        class="pe-1">4.7
                                                                 </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                                <span class="ps-2 fs-Body-2">1,049 人評論</span>
                                                             </p>
                                                             <p
                                                                 class="d-flex align-items-start flex-md-row flex-column ">
                                                                 <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
+                                                                    2-8 人
                                                                 </span>
                                                                 <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
-                                                                    每人600元起
+                                                                    每人 600元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">新手入門</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">互動操作</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="../assets/images/jerome.svg">
+
+                                                            <img src="../assets/images/jerome-sm.svg" alt="SHINOBI 忍"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                SHINOBI 忍
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                台北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="../assets/images/icon/star.png" alt="star"
+                                                                        class="pe-1">4.6
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">680 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="../assets/images/icon/person.png"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    4-10 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="../assets/images/icon/price.png"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 550元起
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -641,54 +792,45 @@
                                         <a href="game_content.html">
                                             <div class="card p-3 rounded-6 ">
                                                 <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto col-sm-12 ">
                                                         <!-- 手機板圖片在左邊 -->
                                                         <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
+                                                                srcset="../assets/images/adrien-olichon-knight.svg">
 
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
+                                                            <img src="../assets/images/adrien-olichon-knight-sm.svg"
+                                                                alt="騎士軌途"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
+                                                    <div class="col ms-3 ms-md-0">
                                                         <div class="card-body p-0">
                                                             <h6
                                                                 class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
+                                                                騎士軌途
                                                             </h6>
                                                             <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
+                                                                太北市
                                                             </p>
                                                             <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                                <span class="ps-2 fs-Body-2">642 人評論</span>
                                                             </p>
                                                             <p
                                                                 class="d-flex align-items-start flex-md-row flex-column ">
                                                                 <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
+                                                                    6-10 人
                                                                 </span>
                                                                 <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
-                                                                    每人600元起
+                                                                    每人 650元起
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -701,7 +843,7 @@
                                                     <span
                                                         class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">謎題邏輯</span>
                                                 </div>
                                             </div>
                                         </a>
@@ -710,54 +852,44 @@
                                         <a href="game_content.html">
                                             <div class="card p-3 rounded-6 ">
                                                 <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto col-sm-12 ">
                                                         <!-- 手機板圖片在左邊 -->
                                                         <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
+                                                                srcset="../assets/images/Comment3.svg">
 
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
+                                                            <img src="../assets/images/Comment3-sm.svg" alt="美人秘湯"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
+                                                    <div class="col ms-3 ms-md-0">
                                                         <div class="card-body p-0">
                                                             <h6
                                                                 class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
+                                                                美人秘湯
                                                             </h6>
                                                             <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
+                                                                台北市
                                                             </p>
                                                             <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                                <span class="ps-2 fs-Body-2">622 人評論</span>
                                                             </p>
                                                             <p
                                                                 class="d-flex align-items-start flex-md-row flex-column ">
                                                                 <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
+                                                                    6-8 人
                                                                 </span>
                                                                 <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
-                                                                    每人600元起
+                                                                    每人 750元起
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -766,218 +898,11 @@
                                                 <!-- 手機版標籤在底部 -->
                                                 <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">新手入門</span>
                                                     <span
                                                         class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
-                                        <a href="game_content.html">
-                                            <div class="card p-3 rounded-6 ">
-                                                <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
-                                                        <!-- 手機板圖片在左邊 -->
-                                                        <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
-                                                            <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
-
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
-                                                        </picture>
-                                                    </div>
-                                                    <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
-                                                        <div class="card-body p-0">
-                                                            <h6
-                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
-                                                            </h6>
-                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
-                                                            </p>
-                                                            <p class="d-flex align-items-center mb-2">
-                                                                <span class="rating dotted pe-3 fs-Body-2">
-                                                                    <img src="../assets/images/icon/star.png" alt="star"
-                                                                        class="pe-1">4.9
-                                                                </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
-                                                            </p>
-                                                            <p
-                                                                class="d-flex align-items-start flex-md-row flex-column ">
-                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
-                                                                    <img src="../assets/images/icon/person.png"
-                                                                        alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
-                                                                </span>
-                                                                <span class="ps-md-2  fs-Body-2">
-                                                                    <img src="../assets/images/icon/price.png"
-                                                                        alt="star" class="pe-1">
-                                                                    每人600元起
-                                                                </span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 手機版標籤在底部 -->
-                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
-                                        <a href="game_content.html">
-                                            <div class="card p-3 rounded-6 ">
-                                                <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
-                                                        <!-- 手機板圖片在左邊 -->
-                                                        <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
-                                                            <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
-
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
-                                                        </picture>
-                                                    </div>
-                                                    <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
-                                                        <div class="card-body p-0">
-                                                            <h6
-                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
-                                                            </h6>
-                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
-                                                            </p>
-                                                            <p class="d-flex align-items-center mb-2">
-                                                                <span class="rating dotted pe-3 fs-Body-2">
-                                                                    <img src="../assets/images/icon/star.png" alt="star"
-                                                                        class="pe-1">4.9
-                                                                </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
-                                                            </p>
-                                                            <p
-                                                                class="d-flex align-items-start flex-md-row flex-column ">
-                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
-                                                                    <img src="../assets/images/icon/person.png"
-                                                                        alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
-                                                                </span>
-                                                                <span class="ps-md-2  fs-Body-2">
-                                                                    <img src="../assets/images/icon/price.png"
-                                                                        alt="star" class="pe-1">
-                                                                    每人600元起
-                                                                </span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 手機版標籤在底部 -->
-                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
-                                        <a href="game_content.html">
-                                            <div class="card p-3 rounded-6 ">
-                                                <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
-                                                        <!-- 手機板圖片在左邊 -->
-                                                        <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
-                                                            <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
-
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
-                                                        </picture>
-                                                    </div>
-                                                    <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
-                                                        <div class="card-body p-0">
-                                                            <h6
-                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
-                                                            </h6>
-                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
-                                                            </p>
-                                                            <p class="d-flex align-items-center mb-2">
-                                                                <span class="rating dotted pe-3 fs-Body-2">
-                                                                    <img src="../assets/images/icon/star.png" alt="star"
-                                                                        class="pe-1">4.9
-                                                                </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
-                                                            </p>
-                                                            <p
-                                                                class="d-flex align-items-start flex-md-row flex-column ">
-                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
-                                                                    <img src="../assets/images/icon/person.png"
-                                                                        alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
-                                                                </span>
-                                                                <span class="ps-md-2  fs-Body-2">
-                                                                    <img src="../assets/images/icon/price.png"
-                                                                        alt="star" class="pe-1">
-                                                                    每人600元起
-                                                                </span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 手機版標籤在底部 -->
-                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">輕鬆歡樂</span>
                                                 </div>
                                             </div>
                                         </a>
@@ -986,7 +911,7 @@
 
                                 </div>
                             </div>
-                            <div class="recently mt-5 mt-md-10 ">
+                            <div class="recently my-5 my-md-10  ">
                                 <div class="title-container w-100  d-flex justify-content-center align-items-center">
                                     <h3 class="text-center mb-12 recommendation-title fw-bold fs-sm-h3 fs-h6">
                                         近期新作</h3>
@@ -996,54 +921,44 @@
                                         <a href="game_content.html">
                                             <div class="card p-3 rounded-6 ">
                                                 <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto col-sm-12 ">
                                                         <!-- 手機板圖片在左邊 -->
                                                         <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
+                                                                srcset="../assets/images/sergei.svg">
 
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
+                                                            <img src="../assets/images/sergei-sm.svg" alt="逃兵"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
+                                                    <div class="col ms-3 ms-md-0">
                                                         <div class="card-body p-0">
                                                             <h6
                                                                 class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
+                                                                逃兵
                                                             </h6>
                                                             <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
+                                                                桃園市
                                                             </p>
                                                             <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                                <span class="ps-2 fs-Body-2">219 人評論</span>
                                                             </p>
                                                             <p
                                                                 class="d-flex align-items-start flex-md-row flex-column ">
                                                                 <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
+                                                                    2-4 人
                                                                 </span>
                                                                 <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
-                                                                    每人600元起
+                                                                    每人 700元起
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -1053,6 +968,128 @@
                                                 <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
                                                         class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">恐怖驚悚</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 中螢幕 (768px 以上) -->
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="../assets/images/ante-samarzija.svg">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
+                                                            <img src="../assets/images/ante-samarzija-sm.svg"
+                                                                alt="玄武石醫院"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                玄武石醫院
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                高雄市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="../assets/images/icon/star.png" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">183 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="../assets/images/icon/person.png"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    2-5人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="../assets/images/icon/price.png"
+                                                                        alt="star" class="pe-1">
+                                                                    每人550元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">劇情厲害</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="../assets/images/adrien-olichon.svg">
+
+                                                            <img src="../assets/images/adrien-olichon-sm.svg"
+                                                                alt="庫克王國2-復仇的餓火"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                庫克王國2-復仇的餓火
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                高雄市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="../assets/images/icon/star.png" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">160 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="../assets/images/icon/person.png"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    2-6 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="../assets/images/icon/price.png"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 750元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">新手入門</span>
                                                     <span
                                                         class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
@@ -1065,54 +1102,45 @@
                                         <a href="game_content.html">
                                             <div class="card p-3 rounded-6 ">
                                                 <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto col-sm-12 ">
                                                         <!-- 手機板圖片在左邊 -->
                                                         <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
+                                                                srcset="../assets/images/egor-freethinkel.svg">
 
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
+                                                            <img src="../assets/images/egor-freethinkel-sm.svg"
+                                                                alt="MY後台苦路"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
+                                                    <div class="col ms-3 ms-md-0">
                                                         <div class="card-body p-0">
                                                             <h6
                                                                 class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
+                                                                MY後台苦路
                                                             </h6>
                                                             <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
+                                                                台中市
                                                             </p>
                                                             <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
-                                                                        class="pe-1">4.9
+                                                                        class="pe-1">4.4
                                                                 </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                                <span class="ps-2 fs-Body-2">70 人評論</span>
                                                             </p>
                                                             <p
                                                                 class="d-flex align-items-start flex-md-row flex-column ">
                                                                 <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
+                                                                    8-12 人
                                                                 </span>
                                                                 <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
-                                                                    每人600元起
+                                                                    每人 900元起
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -1123,9 +1151,9 @@
                                                     <span
                                                         class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">團隊合作</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">玩法特殊</span>
                                                 </div>
                                             </div>
                                         </a>
@@ -1134,54 +1162,45 @@
                                         <a href="game_content.html">
                                             <div class="card p-3 rounded-6 ">
                                                 <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto col-sm-12 ">
                                                         <!-- 手機板圖片在左邊 -->
                                                         <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
+                                                                srcset="../assets/images/omer-haktan.svg">
 
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
+                                                            <img src="../assets/images/omer-haktan-sm.svg"
+                                                                alt="康斯特學員：惡獸起源"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
+                                                    <div class="col ms-3 ms-md-0">
                                                         <div class="card-body p-0">
                                                             <h6
                                                                 class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
+                                                                康斯特學員：惡獸起源
                                                             </h6>
                                                             <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
+                                                                台北市
                                                             </p>
                                                             <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
-                                                                        class="pe-1">4.9
+                                                                        class="pe-1">4.7
                                                                 </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                                <span class="ps-2 fs-Body-2">36 人評論</span>
                                                             </p>
                                                             <p
                                                                 class="d-flex align-items-start flex-md-row flex-column ">
                                                                 <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
+                                                                    1-4 人
                                                                 </span>
                                                                 <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
-                                                                    每人600元起
+                                                                    每人 200元起
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -1190,11 +1209,11 @@
                                                 <!-- 手機版標籤在底部 -->
                                                 <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">新手入門</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">角色扮演</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">輕鬆歡樂</span>
                                                 </div>
                                             </div>
                                         </a>
@@ -1203,54 +1222,44 @@
                                         <a href="game_content.html">
                                             <div class="card p-3 rounded-6 ">
                                                 <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto col-sm-12 ">
                                                         <!-- 手機板圖片在左邊 -->
                                                         <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
+                                                                srcset="../assets/images/roonz.svg">
 
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
+                                                            <img src="../assets/images/roonz-sm.svg" alt="鬱金香"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
+                                                    <div class="col ms-3 ms-md-0">
                                                         <div class="card-body p-0">
                                                             <h6
                                                                 class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
+                                                                鬱金香
                                                             </h6>
                                                             <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
+                                                                桃園市
                                                             </p>
                                                             <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
-                                                                        class="pe-1">4.9
+                                                                        class="pe-1">5.0
                                                                 </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                                <span class="ps-2 fs-Body-2">1 人評論</span>
                                                             </p>
                                                             <p
                                                                 class="d-flex align-items-start flex-md-row flex-column ">
                                                                 <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
+                                                                    2-6 人
                                                                 </span>
                                                                 <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
-                                                                    每人600元起
+                                                                    每人 850元起
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -1259,11 +1268,11 @@
                                                 <!-- 手機版標籤在底部 -->
                                                 <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">新手入門</span>
                                                     <span
                                                         class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                    <span class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">劇情厲害
+                                                    </span>
                                                 </div>
                                             </div>
                                         </a>
@@ -1272,54 +1281,44 @@
                                         <a href="game_content.html">
                                             <div class="card p-3 rounded-6 ">
                                                 <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto col-sm-12 ">
                                                         <!-- 手機板圖片在左邊 -->
                                                         <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
+                                                                srcset="../assets/images/erik-muller.svg">
 
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
+                                                            <img src="../assets/images/erik-muller-sm.svg" alt="諜影：重慶迷霧"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
+                                                    <div class="col ms-3 ms-md-0">
                                                         <div class="card-body p-0">
                                                             <h6
                                                                 class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
+                                                                諜影：重慶迷霧
                                                             </h6>
                                                             <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
+                                                                台北市
                                                             </p>
                                                             <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
-                                                                        class="pe-1">4.9
+                                                                        class="pe-1">4.8
                                                                 </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                                <span class="ps-2 fs-Body-2">253 人評論</span>
                                                             </p>
                                                             <p
                                                                 class="d-flex align-items-start flex-md-row flex-column ">
                                                                 <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
+                                                                    8-8 人
                                                                 </span>
                                                                 <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
-                                                                    每人600元起
+                                                                    每人 1,350元起
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -1331,8 +1330,8 @@
                                                         class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
                                                         class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                    <span class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">勾心鬥角
+                                                    </span>
                                                 </div>
                                             </div>
                                         </a>
@@ -1341,54 +1340,45 @@
                                         <a href="game_content.html">
                                             <div class="card p-3 rounded-6 ">
                                                 <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto col-sm-12 ">
                                                         <!-- 手機板圖片在左邊 -->
                                                         <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
 
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
+                                                                srcset="../assets/images/lan-gao.svg">
 
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
+                                                            <img src="../assets/images/lan-gao-sm.svg" alt="驅魔"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
+                                                    <div class="col ms-3 ms-md-0">
                                                         <div class="card-body p-0">
                                                             <h6
                                                                 class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
+                                                                驅魔
                                                             </h6>
                                                             <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
+                                                                台中市
                                                             </p>
                                                             <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                                <span class="ps-2 fs-Body-2">4,055 人評論</span>
                                                             </p>
                                                             <p
                                                                 class="d-flex align-items-start flex-md-row flex-column ">
                                                                 <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
+                                                                    4-10 人
                                                                 </span>
                                                                 <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
-                                                                    每人600元起
+                                                                    每人 600元起
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -1399,147 +1389,9 @@
                                                     <span
                                                         class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">恐怖驚悚</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
-                                        <a href="game_content.html">
-                                            <div class="card p-3 rounded-6 ">
-                                                <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
-                                                        <!-- 手機板圖片在左邊 -->
-                                                        <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
-                                                            <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
-
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
-                                                        </picture>
-                                                    </div>
-                                                    <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
-                                                        <div class="card-body p-0">
-                                                            <h6
-                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
-                                                            </h6>
-                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
-                                                            </p>
-                                                            <p class="d-flex align-items-center mb-2">
-                                                                <span class="rating dotted pe-3 fs-Body-2">
-                                                                    <img src="../assets/images/icon/star.png" alt="star"
-                                                                        class="pe-1">4.9
-                                                                </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
-                                                            </p>
-                                                            <p
-                                                                class="d-flex align-items-start flex-md-row flex-column ">
-                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
-                                                                    <img src="../assets/images/icon/person.png"
-                                                                        alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
-                                                                </span>
-                                                                <span class="ps-md-2  fs-Body-2">
-                                                                    <img src="../assets/images/icon/price.png"
-                                                                        alt="star" class="pe-1">
-                                                                    每人600元起
-                                                                </span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 手機版標籤在底部 -->
-                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
-                                        <a href="game_content.html">
-                                            <div class="card p-3 rounded-6 ">
-                                                <div class="row g-0 align-items-start h-100">
-                                                    <div class="col-auto">
-                                                        <!-- 手機板圖片在左邊 -->
-                                                        <picture class="">
-                                                            <!-- 超大螢幕 (1200px 以上) -->
-                                                            <!-- <source media="(min-width: 992px)"
-                                                                srcset="../assets/images/julia-kadel.png"> -->
-
-                                                            <!-- 大螢幕 (992px 以上) -->
-                                                            <source media="(min-width: 768px)"
-                                                                srcset="../assets/images/julia-kadel.png">
-
-                                                            <!-- 中螢幕 (768px 以上) -->
-                                                            <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel-sm.png">
-
-                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
-                                                            <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
-                                                        </picture>
-                                                    </div>
-                                                    <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col ms-3 ms-sm-0">
-                                                        <div class="card-body p-0">
-                                                            <h6
-                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
-                                                                等一個人・盜墓
-                                                            </h6>
-                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
-                                                                新北市
-                                                            </p>
-                                                            <p class="d-flex align-items-center mb-2">
-                                                                <span class="rating dotted pe-3 fs-Body-2">
-                                                                    <img src="../assets/images/icon/star.png" alt="star"
-                                                                        class="pe-1">4.9
-                                                                </span>
-                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
-                                                            </p>
-                                                            <p
-                                                                class="d-flex align-items-start flex-md-row flex-column ">
-                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
-                                                                    <img src="../assets/images/icon/person.png"
-                                                                        alt="star" class="pe-1 fs-Body-2">
-                                                                    2-8人
-                                                                </span>
-                                                                <span class="ps-md-2  fs-Body-2">
-                                                                    <img src="../assets/images/icon/price.png"
-                                                                        alt="star" class="pe-1">
-                                                                    每人600元起
-                                                                </span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 手機版標籤在底部 -->
-                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
-                                                    <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">場景逼真</span>
                                                 </div>
                                             </div>
                                         </a>
