@@ -24,14 +24,18 @@
   z-index: 20;
 }
 
+.nav-link {
+  color: $black;
+}
+
 .nav-link-bg {
   &:hover {
     background: $nature-95;
     border: 1px solid $nature-80;
 
     @include media-breakpoint-up(lg) {
-      background: $white;
-      border: 0;
+      background: $primary-99 !important;
+      border: 0 !important;
       color: $secondary-40;
     }
   }
