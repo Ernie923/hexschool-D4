@@ -1,474 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>密室介紹</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <%- include('./layout/header'); -%>
 
-    <main class="game_content position-relative">
-      <div class="info container py-6 py-lg-10">
-        <picture>
-          <source
-            media="(min-width: 992px)"
-            srcset="/assets/images/julia-kadel.png"
-          />
-          <img
-            class="w-100 rounded"
-            src="/assets/images/julia-kadel-sm.png"
-            alt="banner"
-          />
-        </picture>
-        <div class="my-6 my-lg-10">
-          <h1 class="fs-h5 fs-lg-Display2 fw-bold mb-4">等一個人・盜墓</h1>
-          <div class="mb-4 d-flex align-items-center">
-            <img class="me-1" src="/assets/images/icon/star.png" alt="star" />
-            <p
-              class="fs-Body-2 d-inline border-end border-nature-80 mb-0 me-2 pe-3"
-            >
-              4.9
-            </p>
-            <p class="fs-Body-2 mb-0 d-inline">4,055 人評論</p>
-          </div>
-          <ul class="d-flex gap-2">
-            <li
-              class="bg-nature-95 text-black px-2 py-1 d-flex align-items-center rounded-pill"
-            >
-              <span class="material-symbols-outlined me-1">child_care</span>
-              <p class="fs-Body-2 mb-0">新手入門</p>
-            </li>
-            <li
-              class="bg-nature-95 text-black px-2 py-1 d-flex align-items-center rounded-pill"
-            >
-              <span class="material-symbols-outlined me-1">factory</span>
-              <p class="fs-Body-2 mb-0">場景逼真</p>
-            </li>
-            <li
-              class="bg-nature-95 text-black px-2 py-1 d-flex align-items-center rounded-pill"
-            >
-              <span class="material-symbols-outlined me-1">editor_choice</span>
-              <p class="fs-Body-2 mb-0">中度玩家</p>
-            </li>
-          </ul>
-        </div>
-        <div class="row row-cols-1 row-cols-lg-2 gx-6 gy-3">
-          <div class="col">
-            <div
-              class="border border-nature-90 border-lg-nature-70 rounded-4 p-4"
-            >
-              <h6 class="fs-h6 fw-bold text-primary-20 mb-3">基本資訊</h6>
-              <ul>
-                <li class="mb-2 d-flex align-items-center">
-                  <img
-                    src="/assets/images/icon/person.png"
-                    alt="person"
-                    class="me-3"
-                    style="width: 16px"
-                  />
-                  <p class="fs-Body-2 mb-0 text-break">2~8人</p>
-                </li>
-                <li class="mb-2 d-flex align-items-center">
-                  <img
-                    src="/assets/images/icon/time.png"
-                    alt="time"
-                    class="me-3"
-                  />
-                  <p class="fs-Body-2 mb-0 text-break">
-                    110分鐘（含80分鐘體驗時間及前後解說）
-                  </p>
-                </li>
-                <li class="mb-2 d-flex align-items-center">
-                  <img
-                    src="/assets/images/icon/address.png"
-                    alt="address"
-                    class="me-3"
-                  />
-                  <p class="fs-Body-2 mb-0 text-break">
-                    新北市中和區連城路52號4樓
-                  </p>
-                </li>
-                <li class="mb-2 d-flex align-items-center">
-                  <img
-                    src="/assets/images/icon/link.png"
-                    alt="link"
-                    class="me-3"
-                  />
-                  <a href="#" class="fs-Body-2 mb-0 text-break"
-                    >https://loginescape.simplybook.asia/v2/#book</a
-                  >
-                </li>
-                <li class="mb-2 d-flex align-items-center">
-                  <img
-                    src="/assets/images/icon/phone.png"
-                    alt="phone"
-                    class="me-3"
-                  />
-                  <p class="fs-Body-2 mb-0 text-break">0963-606-082</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col">
-            <div
-              class="border border-nature-90 border-lg-nature-70 rounded-4 p-4"
-            >
-              <h6 class="fs-h6 fw-bold text-primary-20 mb-3">參考價格</h6>
-              <ul class="d-flex flex-column gap-2">
-                <li class="fs-Body-2">平日2人：$900/人（限平日）</li>
-                <li class="fs-Body-2">平日3人：$800/人（限平日）</li>
-                <li class="fs-Body-2">平日4人：$700/人</li>
-                <li class="fs-Body-2">平日5-6人：$650/人</li>
-                <li class="fs-Body-2">假日4人：$650/人</li>
-                <li class="fs-Body-2">假日5-6人：$650/人</li>
-                <li class="fs-Body-2">
-                  假日7-8人：$750/人 (請以工作室公佈為主)
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="discribe bg-nature-20">
-        <div
-          class="container py-10 py-lg-16 d-flex flex-column align-items-center align-items-lg-start"
-        >
-          <div
-            class="title position-relative d-flex flex-column align-items-center align-items-lg-start"
-          >
-            <h2 class="text fs-h6 fs-lg-h3 text-primary-95 fw-bold mb-4">
-              遊戲介紹
-            </h2>
-            <div class="rectangle bg-nature-30 rounded position-absolute"></div>
-          </div>
-          <p class="d-lg-none text-white text-center mb-11">
-            西域沙漠中突然出現了一座神秘的古墓<br />
-            陵墓的主人正是消失已久的樓蘭女王政府派出一支考古隊前往調查。但他們卻離奇的失去了聯繫於是政府秘密派遣盗墓賊再次前往究竟，會在裡面發現什麼...？
-          </p>
-          <p class="d-none d-lg-block fs-h6 text-white text-start mb-20">
-            西域沙漠中<br />
-            突然出現了一座神秘的古墓<br />
-            陵墓的主人正是消失已久的樓蘭女王政府派出一支考古隊前往調查<br />
-            但他們卻離奇的失去了聯繫於是政府秘密派遣盗墓賊再次前往究竟，會在裡面發現什麼...？
-          </p>
-          <div class="comment container px-0">
-            <ul
-              class="row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex justify-content-center"
-            >
-              <li class="comment-item mb-6">
-                <div class="user px-4 mb-2 d-flex align-items-center">
-                  <img
-                    class="image me-3 object-fit-cover rounded-circle"
-                    src="/assets/images/comment1.png"
-                    alt=""
-                  />
-                  <p class="name text-white fw-bold">王小美</p>
-                </div>
-                <div class="triangle mx-6"></div>
-                <div class="content bg-nature-95 rounded-4 p-3 p-lg-5">
-                  <div
-                    class="mb-3 d-flex justify-content-between align-items-start"
-                  >
-                    <div class="d-flex flex-column align-items-start">
-                      <p class="date">2024/03/17</p>
-                      <ul class="d-flex gap-2">
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/half-star.png" alt="" />
-                        </li>
-                      </ul>
+        <main class="game_content position-relative">
+            <div class="info container py-6 py-lg-10">
+                <picture>
+                    <source media="(min-width: 992px)" srcset="/assets/images/julia-kadel.png" />
+                    <img class="w-100 rounded" src="/assets/images/julia-kadel-sm.png" alt="banner" />
+                </picture>
+                <div class="my-6 my-lg-10">
+                    <h1 class="fs-h5 fs-lg-Display2 fw-bold mb-4">等一個人・盜墓</h1>
+                    <div class="mb-4 d-flex align-items-center">
+                        <img class="me-1" src="/assets/images/icon/star.png" alt="star" />
+                        <p class="fs-Body-2 d-inline border-end border-nature-80 mb-0 me-2 pe-3">
+                            4.9
+                        </p>
+                        <p class="fs-Body-2 mb-0 d-inline">4,055 人評論</p>
                     </div>
-                    <p class="tag rounded bg-primary-90 px-2 py-1">#無劇透</p>
-                  </div>
-                  <p class="fs-Body-2">
-                    首先進去踩下去的第一個場景真的覺得太不可思議馬上就懂為什麼需要脫模子。從第一個肆題就覺得很有巧思，，而後進入到古墓更覺得很不可思議，除了空間轉換真的讓我們玩案⋯
-                  </p>
+                    <ul class="d-flex gap-2">
+                        <li class="bg-nature-95 text-black px-2 py-1 d-flex align-items-center rounded-pill">
+                            <span class="material-symbols-outlined me-1">child_care</span>
+                            <p class="fs-Body-2 mb-0">新手入門</p>
+                        </li>
+                        <li class="bg-nature-95 text-black px-2 py-1 d-flex align-items-center rounded-pill">
+                            <span class="material-symbols-outlined me-1">factory</span>
+                            <p class="fs-Body-2 mb-0">場景逼真</p>
+                        </li>
+                        <li class="bg-nature-95 text-black px-2 py-1 d-flex align-items-center rounded-pill">
+                            <span class="material-symbols-outlined me-1">editor_choice</span>
+                            <p class="fs-Body-2 mb-0">中度玩家</p>
+                        </li>
+                    </ul>
                 </div>
-              </li>
-              <li class="comment-item mb-6">
-                <div class="user px-4 mb-2 d-flex align-items-center">
-                  <img
-                    class="image me-3 object-fit-cover rounded-circle"
-                    src="/assets/images/comment2.png"
-                    alt=""
-                  />
-                  <p class="name text-white fw-bold">李錦</p>
-                </div>
-                <div class="triangle mx-6"></div>
-                <div class="content bg-nature-95 rounded-4 p-3 p-lg-5">
-                  <div
-                    class="mb-3 d-flex justify-content-between align-items-start"
-                  >
-                    <div class="d-flex flex-column align-items-start">
-                      <p class="date">2024/03/17</p>
-                      <ul class="d-flex gap-2">
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/half-star.png" alt="" />
-                        </li>
-                      </ul>
+                <div class="row row-cols-1 row-cols-lg-2 gx-6 gy-3">
+                    <div class="col">
+                        <div class="border border-nature-90 border-lg-nature-70 rounded-4 p-4">
+                            <h6 class="fs-h6 fw-bold text-primary-20 mb-3">基本資訊</h6>
+                            <ul>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <img src="/assets/images/icon/person.png" alt="person" class="me-3"
+                                        style="width: 16px" />
+                                    <p class="fs-Body-2 mb-0 text-break">2~8人</p>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <img src="/assets/images/icon/time.png" alt="time" class="me-3" />
+                                    <p class="fs-Body-2 mb-0 text-break">
+                                        110分鐘（含80分鐘體驗時間及前後解說）
+                                    </p>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <img src="/assets/images/icon/address.png" alt="address" class="me-3" />
+                                    <p class="fs-Body-2 mb-0 text-break">
+                                        新北市中和區連城路52號4樓
+                                    </p>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <img src="/assets/images/icon/link.png" alt="link" class="me-3" />
+                                    <a href="#"
+                                        class="fs-Body-2 mb-0 text-break">https://loginescape.simplybook.asia/v2/#book</a>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <img src="/assets/images/icon/phone.png" alt="phone" class="me-3" />
+                                    <p class="fs-Body-2 mb-0 text-break">0963-606-082</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <p class="tag rounded bg-primary-90 px-2 py-1">#無劇透</p>
-                  </div>
-                  <p class="fs-Body-2">
-                    遊玩過程可以求救五次的機會，差點把關卡設施用壞，小幫手很害怕地制止我們XD<br />
-                    極限通關，整體來說不錯玩<br />
-                    但希望設施可以好一點，不要看起來那麼舊
-                  </p>
-                </div>
-              </li>
-              <li class="comment-item mb-6">
-                <div class="user px-4 mb-2 d-flex align-items-center">
-                  <img
-                    class="image me-3 object-fit-cover rounded-circle"
-                    src="/assets/images/comment3.png"
-                    alt=""
-                  />
-                  <p class="name text-white fw-bold">陳欣妤</p>
-                </div>
-                <div class="triangle mx-6"></div>
-                <div class="content bg-nature-95 rounded-4 p-3 p-lg-5">
-                  <div
-                    class="mb-3 d-flex justify-content-between align-items-start"
-                  >
-                    <div class="d-flex flex-column align-items-start">
-                      <p class="date">2023/08/28</p>
-                      <ul class="d-flex gap-2">
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/half-star.png" alt="" />
-                        </li>
-                      </ul>
+                    <div class="col">
+                        <div class="border border-nature-90 border-lg-nature-70 rounded-4 p-4">
+                            <h6 class="fs-h6 fw-bold text-primary-20 mb-3">參考價格</h6>
+                            <ul class="d-flex flex-column gap-2">
+                                <li class="fs-Body-2">平日2人：$900/人（限平日）</li>
+                                <li class="fs-Body-2">平日3人：$800/人（限平日）</li>
+                                <li class="fs-Body-2">平日4人：$700/人</li>
+                                <li class="fs-Body-2">平日5-6人：$650/人</li>
+                                <li class="fs-Body-2">假日4人：$650/人</li>
+                                <li class="fs-Body-2">假日5-6人：$650/人</li>
+                                <li class="fs-Body-2">
+                                    假日7-8人：$750/人 (請以工作室公佈為主)
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <p class="tag rounded bg-primary-90 px-2 py-1">#無劇透</p>
-                  </div>
-                  <p class="fs-Body-2">
-                    推推，可以去玩一下，流程順暢、線索也滿好找的。彩蛋可能要花點時間去特別找按鍵式手機上也有線索，記得要帶老一點的朋友去遊玩
-                  </p>
                 </div>
-              </li>
-              <li class="comment-item mb-6 mb-lg-0">
-                <div class="user px-4 mb-2 d-flex align-items-center">
-                  <img
-                    class="image me-3 object-fit-cover rounded-circle"
-                    src="/assets/images/comment4.png"
-                    alt=""
-                  />
-                  <p class="name text-white fw-bold">潘橡義</p>
-                </div>
-                <div class="triangle mx-6"></div>
-                <div class="content bg-nature-95 rounded-4 p-3 p-lg-5">
-                  <div
-                    class="mb-3 d-flex justify-content-between align-items-start"
-                  >
-                    <div class="d-flex flex-column align-items-start">
-                      <p class="date">2023/12/16</p>
-                      <ul class="d-flex gap-2">
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                      </ul>
-                    </div>
-                    <p class="tag rounded bg-primary-90 px-2 py-1">#劇透</p>
-                  </div>
-                  <p class="fs-Body-2">
-                    來體驗全台最逼真場景！ 真的在開一輛車 我是坐副駕 <br />
-                    <br />
-                    場景：<br />
-                    有真的車就是逼真！除此之外的場景就是普通正常~場景昏暗，線索字都看不清楚
-                    <br />
-                    <br />
-                    謎題：<br />
-                    一開始題目幾乎都在坐中段及車尾的位置，頭腦擔當建議選這些位置，前座就是負責開車跟驚嚇第一排②題目難度中等，是需要思考的。<br />
-                    尤其進到第3個空間後的題目，思考一陣子 知道怎麼解。<br />
-                    有需要團體合作稍稍分開進行的部分，不會難但建議至少有一個坦才好進行...
-                  </p>
-                </div>
-              </li>
-              <li class="comment-item">
-                <div class="user px-4 mb-2 d-flex align-items-center">
-                  <img
-                    class="image me-3 object-fit-cover rounded-circle"
-                    src="/assets/images/comment5.png"
-                    alt=""
-                  />
-                  <p class="name text-white fw-bold">方永烈</p>
-                </div>
-                <div class="triangle mx-6"></div>
-                <div class="content bg-nature-95 rounded-4 p-3 p-lg-5">
-                  <div
-                    class="mb-3 d-flex justify-content-between align-items-start"
-                  >
-                    <div class="d-flex flex-column align-items-start">
-                      <p class="date">2022/04/05</p>
-                      <ul class="d-flex gap-2">
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="/assets/images/icon/star.png" alt="" />
-                        </li>
-                      </ul>
-                    </div>
-                    <p class="tag rounded bg-primary-90 px-2 py-1">#無劇透</p>
-                  </div>
-                  <p class="fs-Body-2">
-                    不愧是年度最佳遊戲第二名，場景跟機關都相當用心。<br />
-                    很多那種平常玩恐怖遊戲中會有的橋段當遣種遊戲內會發生的事情—一發生在現實中，就會覺得超級酷的！<br />
-                    謎題有些可能不夠直觀，但隨著進度小天使都會出來做補充。<br />
-                    完全沒有鎖頭的全機關密室，喜歡恐怖主題的一定不能錯過。
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="others py-10">
-        <div
-          class="title position-relative d-flex flex-column align-items-center"
-        >
-          <h2 class="text fs-h6 fs-lg-h3 fw-bold mb-7 mb-lg-12">
-            您可能喜歡的遊戲
-          </h2>
-          <div class="rectangle bg-primary-80 rounded position-absolute"></div>
-        </div>
-        <div class="swiper mySwiper container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="#">
-                <img
-                  class="image w-100 rounded-3 rounded-lg-8"
-                  src="/assets/images/muhammad-haikal.png"
-                  alt=""
-                />
-              </a>
             </div>
-            <div class="swiper-slide">
-              <a href="#">
-                <img
-                  class="image w-100 rounded-3 rounded-lg-8"
-                  src="/assets/images/jerome.png"
-                  alt=""
-                />
-              </a>
+
+            <div class="discribe bg-nature-20">
+                <div class="container py-10 py-lg-16 d-flex flex-column align-items-center align-items-lg-start">
+                    <div class="title position-relative d-flex flex-column align-items-center align-items-lg-start">
+                        <h2 class="text fs-h6 fs-lg-h3 text-primary-95 fw-bold mb-4">
+                            遊戲介紹
+                        </h2>
+                        <div class="rectangle bg-nature-30 rounded position-absolute"></div>
+                    </div>
+                    <p class="d-lg-none text-white text-center mb-11">
+                        西域沙漠中突然出現了一座神秘的古墓<br />
+                        陵墓的主人正是消失已久的樓蘭女王政府派出一支考古隊前往調查。但他們卻離奇的失去了聯繫於是政府秘密派遣盗墓賊再次前往究竟，會在裡面發現什麼...？
+                    </p>
+                    <p class="d-none d-lg-block fs-h6 text-white text-start mb-20">
+                        西域沙漠中<br />
+                        突然出現了一座神秘的古墓<br />
+                        陵墓的主人正是消失已久的樓蘭女王政府派出一支考古隊前往調查<br />
+                        但他們卻離奇的失去了聯繫於是政府秘密派遣盗墓賊再次前往究竟，會在裡面發現什麼...？
+                    </p>
+                    <div class="comment container px-0">
+                        <ul class="row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex justify-content-center">
+                            <li class="comment-item mb-6">
+                                <div class="user px-4 mb-2 d-flex align-items-center">
+                                    <img class="image me-3 object-fit-cover rounded-circle"
+                                        src="/assets/images/comment1.png" alt="" />
+                                    <p class="name text-white fw-bold">王小美</p>
+                                </div>
+                                <div class="triangle mx-6"></div>
+                                <div class="content bg-nature-95 rounded-4 p-3 p-lg-5">
+                                    <div class="mb-3 d-flex justify-content-between align-items-start">
+                                        <div class="d-flex flex-column align-items-start">
+                                            <p class="date">2024/03/17</p>
+                                            <ul class="d-flex gap-2">
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/half-star.png" alt="" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="tag rounded bg-primary-90 px-2 py-1">#無劇透</p>
+                                    </div>
+                                    <p class="fs-Body-2">
+                                        首先進去踩下去的第一個場景真的覺得太不可思議馬上就懂為什麼需要脫模子。從第一個肆題就覺得很有巧思，，而後進入到古墓更覺得很不可思議，除了空間轉換真的讓我們玩案⋯
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="comment-item mb-6">
+                                <div class="user px-4 mb-2 d-flex align-items-center">
+                                    <img class="image me-3 object-fit-cover rounded-circle"
+                                        src="/assets/images/comment2.png" alt="" />
+                                    <p class="name text-white fw-bold">李錦</p>
+                                </div>
+                                <div class="triangle mx-6"></div>
+                                <div class="content bg-nature-95 rounded-4 p-3 p-lg-5">
+                                    <div class="mb-3 d-flex justify-content-between align-items-start">
+                                        <div class="d-flex flex-column align-items-start">
+                                            <p class="date">2024/03/17</p>
+                                            <ul class="d-flex gap-2">
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/half-star.png" alt="" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="tag rounded bg-primary-90 px-2 py-1">#無劇透</p>
+                                    </div>
+                                    <p class="fs-Body-2">
+                                        遊玩過程可以求救五次的機會，差點把關卡設施用壞，小幫手很害怕地制止我們XD<br />
+                                        極限通關，整體來說不錯玩<br />
+                                        但希望設施可以好一點，不要看起來那麼舊
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="comment-item mb-6">
+                                <div class="user px-4 mb-2 d-flex align-items-center">
+                                    <img class="image me-3 object-fit-cover rounded-circle"
+                                        src="/assets/images/comment3.png" alt="" />
+                                    <p class="name text-white fw-bold">陳欣妤</p>
+                                </div>
+                                <div class="triangle mx-6"></div>
+                                <div class="content bg-nature-95 rounded-4 p-3 p-lg-5">
+                                    <div class="mb-3 d-flex justify-content-between align-items-start">
+                                        <div class="d-flex flex-column align-items-start">
+                                            <p class="date">2023/08/28</p>
+                                            <ul class="d-flex gap-2">
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/half-star.png" alt="" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="tag rounded bg-primary-90 px-2 py-1">#無劇透</p>
+                                    </div>
+                                    <p class="fs-Body-2">
+                                        推推，可以去玩一下，流程順暢、線索也滿好找的。彩蛋可能要花點時間去特別找按鍵式手機上也有線索，記得要帶老一點的朋友去遊玩
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="comment-item mb-6 mb-lg-0">
+                                <div class="user px-4 mb-2 d-flex align-items-center">
+                                    <img class="image me-3 object-fit-cover rounded-circle"
+                                        src="/assets/images/comment4.png" alt="" />
+                                    <p class="name text-white fw-bold">潘橡義</p>
+                                </div>
+                                <div class="triangle mx-6"></div>
+                                <div class="content bg-nature-95 rounded-4 p-3 p-lg-5">
+                                    <div class="mb-3 d-flex justify-content-between align-items-start">
+                                        <div class="d-flex flex-column align-items-start">
+                                            <p class="date">2023/12/16</p>
+                                            <ul class="d-flex gap-2">
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="tag rounded bg-primary-90 px-2 py-1">#劇透</p>
+                                    </div>
+                                    <p class="fs-Body-2">
+                                        來體驗全台最逼真場景！ 真的在開一輛車 我是坐副駕 <br />
+                                        <br />
+                                        場景：<br />
+                                        有真的車就是逼真！除此之外的場景就是普通正常~場景昏暗，線索字都看不清楚
+                                        <br />
+                                        <br />
+                                        謎題：<br />
+                                        一開始題目幾乎都在坐中段及車尾的位置，頭腦擔當建議選這些位置，前座就是負責開車跟驚嚇第一排②題目難度中等，是需要思考的。<br />
+                                        尤其進到第3個空間後的題目，思考一陣子 知道怎麼解。<br />
+                                        有需要團體合作稍稍分開進行的部分，不會難但建議至少有一個坦才好進行...
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="comment-item">
+                                <div class="user px-4 mb-2 d-flex align-items-center">
+                                    <img class="image me-3 object-fit-cover rounded-circle"
+                                        src="/assets/images/comment5.png" alt="" />
+                                    <p class="name text-white fw-bold">方永烈</p>
+                                </div>
+                                <div class="triangle mx-6"></div>
+                                <div class="content bg-nature-95 rounded-4 p-3 p-lg-5">
+                                    <div class="mb-3 d-flex justify-content-between align-items-start">
+                                        <div class="d-flex flex-column align-items-start">
+                                            <p class="date">2022/04/05</p>
+                                            <ul class="d-flex gap-2">
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                                <li>
+                                                    <img src="/assets/images/icon/star.png" alt="" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="tag rounded bg-primary-90 px-2 py-1">#無劇透</p>
+                                    </div>
+                                    <p class="fs-Body-2">
+                                        不愧是年度最佳遊戲第二名，場景跟機關都相當用心。<br />
+                                        很多那種平常玩恐怖遊戲中會有的橋段當遣種遊戲內會發生的事情—一發生在現實中，就會覺得超級酷的！<br />
+                                        謎題有些可能不夠直觀，但隨著進度小天使都會出來做補充。<br />
+                                        完全沒有鎖頭的全機關密室，喜歡恐怖主題的一定不能錯過。
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="swiper-slide">
-              <a href="#">
-                <img
-                  class="image w-100 rounded-3 rounded-lg-8"
-                  src="/assets/images/joanna-kosinska.png"
-                  alt=""
-                />
-              </a>
+
+            <div class="others py-10">
+                <div class="title position-relative d-flex flex-column align-items-center">
+                    <h2 class="text fs-h6 fs-lg-h3 fw-bold mb-7 mb-lg-12">
+                        您可能喜歡的遊戲
+                    </h2>
+                    <div class="rectangle bg-primary-80 rounded position-absolute"></div>
+                </div>
+                <div class="swiper mySwiper container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img class="image w-100 rounded-3 rounded-lg-8" src="/assets/images/muhammad-haikal.png"
+                                    alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img class="image w-100 rounded-3 rounded-lg-8" src="/assets/images/jerome.png"
+                                    alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img class="image w-100 rounded-3 rounded-lg-8" src="/assets/images/joanna-kosinska.png"
+                                    alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div>
-          </div>
-          <div class="swiper-pagination"></div>
 
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div>
+            <div class="add-comment position-fixed z-1">
+                <a href="game_comment.html">
+                    <button href="#" title="新增評論" class="border border-none bg-primary-95 p-3 p-lg-4 rounded-circle">
+                        <span class="material-symbols-outlined d-block text-primary-60">add_comment
+                        </span>
+                    </button>
+                </a>
 
-      <div class="add-comment position-fixed z-1">
-        <button
-          href="#"
-          title="新增評論"
-          class="border border-none bg-primary-95 p-3 p-lg-4 rounded-circle"
-        >
-          <span class="material-symbols-outlined d-block text-primary-60"
-            >add_comment
-          </span>
-        </button>
-      </div>
-    </main>
+            </div>
+        </main>
 
-    <%- include('./layout/footer'); -%>
-    <script type="module" src="../main.js"></script>
-    <!-- swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <%- include('./layout/footer'); -%>
+            <script type="module" src="../main.js"></script>
+            <!-- swiper JS -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 24,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
-  </body>
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 24,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            </script>
+</body>
+
 </html>
