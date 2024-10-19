@@ -1,611 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>密室排行榜</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <%- include('./layout/header'); -%>
-    <main>
-      <div class="banner position-relative">
-        <div
-          class="banner-title position-absolute top-30 start-10 pb-3 d-none d-lg-block"
-        >
-          <h1 class="fs-Display2 fw-bold text-primary-10">密室排行榜</h1>
-        </div>
-        <picture>
-          <source
-            media="(min-width: 992px)"
-            srcset="../assets/images/illustration/Banner-list.png"
-          />
-          <img
-            src="../assets/images/illustration/Banner-3.svg"
-            alt="banner"
-            class="w-100"
-          />
-        </picture>
-      </div>
+        <main>
+            <div class="banner position-relative">
+                <div class="banner-title position-absolute top-30 start-10 pb-3 d-none d-lg-block">
+                    <h1 class="fs-Display2 fw-bold text-primary-10">密室排行榜</h1>
+                </div>
+                <picture>
+                    <source media="(min-width: 992px)" srcset="../assets/images/illustration/Banner-list.png" />
+                    <img src="../assets/images/illustration/Banner-3.svg" alt="banner" class="w-100" />
+                </picture>
+            </div>
 
-      <section class="my-lg-10">
-        <div class="container-fluid container-lg">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 bg-white rounded-3">
-              <form class="p-3 pb-6">
-                <fieldset class="mb-3">
-                  <legend class="fs-Caption">排序條件</legend>
-                  <div class="form-check form-check-inline py-2">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                      checked
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      難度
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline py-2">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault2"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      人氣
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline py-2">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault3"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault3">
-                      價格
-                    </label>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <div class="d-flex">
-                    <div class="input-group">
-                      <legend class="fs-Caption">工作室</legend>
-                      <img
-                        src="../assets/images/icon/search.png"
-                        alt="search"
-                        class="input-group-text border-primary-black rounded-start-1 rounded-end-0"
-                      />
-                      <input
-                        type="text"
-                        class="form-control border-primary-black rounded-start-0 rounded-end-1"
-                        placeholder="搜尋工作室名稱"
-                        aria-label="search"
-                      />
-                      <button
-                        type="submit"
-                        class="btn btn-secondary-60 link-white px-11 py-2 ms-3 rounded-1"
-                      >
-                        搜尋
-                      </button>
-                    </div>
-                  </div>
-                </fieldset>
-              </form>
-              <div class="p-lg-3 px-3 pb-8">
-                <div class="scrollbar">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr class="border-0">
-                        <th
-                          scope="col"
-                          class="text-primary-30 ps-0 py-3 pe-lg-6 pe-3 fw-bold"
-                        >
-                          圖片
-                        </th>
-                        <th
-                          scope="col"
-                          class="text-primary-30 ps-0 py-3 pe-2 fw-bold"
-                        >
-                          名稱
-                        </th>
-                        <th
-                          scope="col"
-                          class="text-primary-30 ps-0 py-3 pe-2 fw-bold d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          工作室
-                        </th>
-                        <th
-                          scope="col"
-                          class="text-primary-30 ps-0 py-3 pe-2 fw-bold d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          遊玩人數
-                        </th>
-                        <th
-                          scope="col"
-                          class="text-primary-30 ps-0 py-3 pe-2 fw-bold"
-                        >
-                          評價
-                        </th>
-                        <th
-                          scope="col"
-                          class="text-primary-30 ps-0 py-3 pe-lg-5 pe-2 fw-bold"
-                        >
-                          價格
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr
-                        class="border-nature-90 py-lg-3"
-                        onclick="window.location='./game_content.html'"
-                      >
-                        <td
-                          class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle"
-                        >
-                          <picture>
-                            <source
-                              media="(min-width: 992px)"
-                              srcset="../assets/images/muhammad-haikal-list.png"
-                            />
-                            <img
-                              src="../assets/images/muhammad-haikal-list-sm.png"
-                              alt=""
-                              class="w-100 rounded-2"
-                            />
-                          </picture>
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          X伯爵的委託
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          神不在場
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          1358
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 align-middle">400/人</td>
-                      </tr>
-                      <tr
-                        class="border-nature-90 py-lg-3"
-                        onclick="window.location='./game_content.html'"
-                      >
-                        <td
-                          class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle"
-                        >
-                          <picture>
-                            <source
-                              media="(min-width: 992px)"
-                              srcset="../assets/images/julia-kadel-list.png"
-                            />
-                            <img
-                              src="../assets/images/julia-kadel-list-sm.png"
-                              alt=""
-                              class="w-100 rounded-2"
-                            />
-                          </picture>
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          等一個人．盜墓
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          許多門
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          1301
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/half-star.png"
-                            alt="star"
-                          />
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 align-middle">400/人</td>
-                      </tr>
-                      <tr
-                        class="border-nature-90 py-lg-3"
-                        onclick="window.location='./game_content.html'"
-                      >
-                        <td
-                          class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle"
-                        >
-                          <picture>
-                            <source
-                              media="(min-width: 992px)"
-                              srcset="../assets/images/kostiantyn-li-list.png"
-                            />
-                            <img
-                              src="../assets/images/kostiantyn-li-list-sm.png"
-                              alt=""
-                              class="w-100 rounded-2"
-                            />
-                          </picture>
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          花月宴
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          神不在場
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          1269
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/half-star.png"
-                            alt="star"
-                          />
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 align-middle">450/人</td>
-                      </tr>
-                      <tr
-                        class="border-nature-90 py-lg-3"
-                        onclick="window.location='./game_content.html'"
-                      >
-                        <td
-                          class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle"
-                        >
-                          <picture>
-                            <source
-                              media="(min-width: 992px)"
-                              srcset="
+            <section class="my-lg-10">
+                <div class="container-fluid container-lg">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10 bg-white rounded-3">
+                            <form class="p-3 pb-6">
+                                <fieldset class="mb-3">
+                                    <legend class="fs-Caption">排序條件</legend>
+                                    <div class="form-check form-check-inline py-2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1" checked />
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            難度
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline py-2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2" />
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            人氣
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline py-2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault3" />
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                            價格
+                                        </label>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="d-flex">
+                                        <div class="input-group">
+                                            <legend class="fs-Caption">工作室</legend>
+                                            <img src="../assets/images/icon/search.png" alt="search"
+                                                class="input-group-text border-primary-black rounded-start-1 rounded-end-0" />
+                                            <input type="text"
+                                                class="form-control border-primary-black rounded-start-0 rounded-end-1"
+                                                placeholder="搜尋工作室名稱" aria-label="search" />
+                                            <button type="submit"
+                                                class="btn btn-secondary-60 link-white px-11 py-2 ms-3 rounded-1">
+                                                搜尋
+                                            </button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <div class="p-lg-3 px-3 pb-8">
+                                <div class="scrollbar">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr class="border-0">
+                                                <th scope="col" class="text-primary-30 ps-0 py-3 pe-lg-6 pe-3 fw-bold">
+                                                    圖片
+                                                </th>
+                                                <th scope="col" class="text-primary-30 ps-0 py-3 pe-2 fw-bold">
+                                                    名稱
+                                                </th>
+                                                <th scope="col"
+                                                    class="text-primary-30 ps-0 py-3 pe-2 fw-bold d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    工作室
+                                                </th>
+                                                <th scope="col"
+                                                    class="text-primary-30 ps-0 py-3 pe-2 fw-bold d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    遊玩人數
+                                                </th>
+                                                <th scope="col" class="text-primary-30 ps-0 py-3 pe-2 fw-bold">
+                                                    評價
+                                                </th>
+                                                <th scope="col" class="text-primary-30 ps-0 py-3 pe-lg-5 pe-2 fw-bold">
+                                                    價格
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)"
+                                                            srcset="../assets/images/muhammad-haikal-list.png" />
+                                                        <img src="../assets/images/muhammad-haikal-list-sm.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    X伯爵的委託
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    神不在場
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1358
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">400/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)"
+                                                            srcset="../assets/images/julia-kadel-list.png" />
+                                                        <img src="../assets/images/julia-kadel-list-sm.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    等一個人．盜墓
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    許多門
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1301
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/half-star.png" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">400/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)"
+                                                            srcset="../assets/images/kostiantyn-li-list.png" />
+                                                        <img src="../assets/images/kostiantyn-li-list-sm.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    花月宴
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    神不在場
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1269
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/half-star.png" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">450/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)" srcset="
                                 ../assets/images/alexandru-zdrobau-list.png
-                              "
-                            />
-                            <img
-                              src="../assets/images/alexandru-zdrobau-list-sm.png"
-                              alt=""
-                              class="w-100 rounded-2"
-                            />
-                          </picture>
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          美人秘湯
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          LoGin
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          1200
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/half-star.png"
-                            alt="star"
-                          />
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 align-middle">450/人</td>
-                      </tr>
-                      <tr
-                        class="border-nature-90 py-lg-3"
-                        onclick="window.location='./game_content.html'"
-                      >
-                        <td
-                          class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle"
-                        >
-                          <picture>
-                            <source
-                              media="(min-width: 992px)"
-                              srcset="
+                              " />
+                                                        <img src="../assets/images/alexandru-zdrobau-list-sm.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    美人秘湯
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    LoGin
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1200
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/half-star.png" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">450/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)" srcset="
                                 ../assets/images/muhammad-haikal-sjukri-list.png
-                              "
-                            />
-                            <img
-                              src="../assets/images/muhammad-haikal-sjukri-list-sm.png"
-                              alt=""
-                              class="w-100 rounded-2"
-                            />
-                          </picture>
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          逃兵
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          玩笑實驗室
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          1186
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/half-star.png"
-                            alt="star"
-                          />
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 align-middle">500/人</td>
-                      </tr>
-                      <tr
-                        class="border-nature-90 py-lg-3"
-                        onclick="window.location='./game_content.html'"
-                      >
-                        <td
-                          class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle"
-                        >
-                          <picture>
-                            <source
-                              media="(min-width: 992px)"
-                              srcset="../assets/images/roonz-nl-list.png"
-                            />
-                            <img
-                              src="../assets/images/roonz-nl-list-sm.png"
-                              alt=""
-                              class="w-100 rounded-2"
-                            />
-                          </picture>
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          鬱金香
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          快樂工作室
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          1097
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/half-star.png"
-                            alt="star"
-                          />
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 align-middle">500/人</td>
-                      </tr>
-                      <tr
-                        class="border-nature-90 py-lg-3"
-                        onclick="window.location='./game_content.html'"
-                      >
-                        <td
-                          class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle"
-                        >
-                          <picture>
-                            <source
-                              media="(min-width: 992px)"
-                              srcset="../assets/images/harry-quan-list.png"
-                            />
-                            <img
-                              src="../assets/images/harry-quan-list-sm.png"
-                              alt=""
-                              class="w-100 rounded-2"
-                            />
-                          </picture>
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          獨眼傑克
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          任意門
-                        </td>
-                        <td
-                          class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell"
-                        >
-                          968
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/star.png"
-                            alt="star"
-                          />
-                          <img
-                            src="../assets/images/icon/half-star.png"
-                            alt="star"
-                          />
-                        </td>
-                        <td class="ps-0 py-lg-3 py-2 align-middle">500/人</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <picture>
-          <source
-            media="(min-width: 992px)"
-            srcset="../assets/images/illustration/AD.svg"
-          />
-          <img
-            src="../assets/images/illustration/Frame-427318970.svg"
-            alt="AD"
-            class="w-100"
-          />
-        </picture>
-      </section>
-
-      <section class="bg-nature-30 position-relative">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-9">
-              <div
-                class="row flex-lg-row flex-column justify-content-lg-between justify-content-center align-items-center my-lg-12 mt-15 mb-20"
-              >
-                <div class="col position-relative mb-12">
-                  <div class="grab d-none d-lg-block">
-                    <h3 class="text-nature-95 fw-bold">點擊右側的「揪團去」</h3>
-                    <h3 class="text-nature-95 fw-bold position-relative z-2">
-                      一起找人解謎吧！
-                    </h3>
-                    <div class="position-absolute bottom-0 z-1">
-                      <img
-                        src="../assets/images/illustration/Rectangle-15.svg"
-                        alt=""
-                      />
+                              " />
+                                                        <img src="../assets/images/muhammad-haikal-sjukri-list-sm.png"
+                                                            alt="" class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    逃兵
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    玩笑實驗室
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1186
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/half-star.png" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">500/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)"
+                                                            srcset="../assets/images/roonz-nl-list.png" />
+                                                        <img src="../assets/images/roonz-nl-list-sm.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    鬱金香
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    快樂工作室
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1097
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/half-star.png" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">500/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)"
+                                                            srcset="../assets/images/harry-quan-list.png" />
+                                                        <img src="../assets/images/harry-quan-list-sm.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    獨眼傑克
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    任意門
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    968
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/star.png" alt="star" />
+                                                    <img src="../assets/images/icon/half-star.png" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">500/人</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="grab-sm text-center d-block d-lg-none">
-                    <h3 class="text-nature-95 fw-bold">點擊下側的「揪團去」</h3>
-                    <h3 class="text-nature-95 fw-bold position-relative z-2">
-                      一起找人解謎吧！
-                    </h3>
-                    <div
-                      class="position-absolute bottom-0 start-50 translate-middle-x z-1"
-                    >
-                      <img
-                        src="../assets/images/illustration/Rectangle-15-sm.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
                 </div>
-                <div class="col">
-                  <a href="#" class="d-flex justify-content-center">
-                    <picture>
-                      <source
-                        media="(min-width: 992px)"
-                        srcset="/assets/images/illustration/CTA-lg.png"
-                      />
-                      <img
-                        src="../assets/images/illustration/CTA.png"
-                        alt="CTA"
-                        class="w-100"
-                      />
-                    </picture>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="position-absolute top-0 end-0">
-          <img src="../assets/images/illustration/dotted-line.svg" alt="" />
-        </div>
-        <div class="position-absolute bottom-0 start-0 d-none d-lg-block">
-          <img src="../assets/images/illustration/dotted-line.svg" alt="" />
-        </div>
-      </section>
-    </main>
-    <%- include('./layout/footer'); -%>
+            </section>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+            <section>
+                <picture>
+                    <source media="(min-width: 992px)" srcset="../assets/images/illustration/AD.svg" />
+                    <img src="../assets/images/illustration/Frame-427318970.svg" alt="AD" class="w-100" />
+                </picture>
+            </section>
+
+            <section class="bg-nature-30 position-relative">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <div
+                                class="row flex-lg-row flex-column justify-content-lg-between justify-content-center align-items-center my-lg-12 mt-15 mb-20">
+                                <div class="col position-relative mb-12">
+                                    <div class="grab d-none d-lg-block">
+                                        <h3 class="text-nature-95 fw-bold">點擊右側的「揪團去」</h3>
+                                        <h3 class="text-nature-95 fw-bold position-relative z-2">
+                                            一起找人解謎吧！
+                                        </h3>
+                                        <div class="position-absolute bottom-0 z-1">
+                                            <img src="../assets/images/illustration/Rectangle-15.svg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="grab-sm text-center d-block d-lg-none">
+                                        <h3 class="text-nature-95 fw-bold">點擊下側的「揪團去」</h3>
+                                        <h3 class="text-nature-95 fw-bold position-relative z-2">
+                                            一起找人解謎吧！
+                                        </h3>
+                                        <div class="position-absolute bottom-0 start-50 translate-middle-x z-1">
+                                            <img src="../assets/images/illustration/Rectangle-15-sm.svg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="d-flex justify-content-center">
+                                        <picture>
+                                            <source media="(min-width: 992px)"
+                                                srcset="/assets/images/illustration/CTA-lg.png" />
+                                            <img src="../assets/images/illustration/CTA.png" alt="CTA" class="w-100" />
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="position-absolute top-0 end-0">
+                    <img src="../assets/images/illustration/dotted-line.svg" alt="" />
+                </div>
+                <div class="position-absolute bottom-0 start-0 d-none d-lg-block">
+                    <img src="../assets/images/illustration/dotted-line.svg" alt="" />
+                </div>
+            </section>
+        </main>
+        <%- include('./layout/footer'); -%>
+
+            <script type="module" src="../main.js"></script>
+</body>
+
 </html>
