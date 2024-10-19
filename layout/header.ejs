@@ -1,33 +1,187 @@
-<nav class="navbar navbar-expand-lg w-100 bg-primary-99 position-fixed top-0 start-0 d-lg-flex justify-content-between">
-    <div class="nav-box container d-lg-none d-flex flex-row justify-content-between align-items-center">
-        <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand m-0 d-inline" href="#">
-            <img src="../assets/images/logo/Logo-Type-sm.svg" alt="logo" class="" />
-        </a>
+<nav
+  class="navbar navbar-expand-lg w-100 bg-primary-99 position-fixed top-0 start-0 d-lg-flex justify-content-between"
+>
+  <div
+    class="nav-box container d-lg-none d-flex flex-row justify-content-between align-items-center"
+  >
+    <button
+      class="navbar-toggler border-0 p-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand m-0 d-inline" href="#">
+      <img src="../assets/images/logo/Logo-Type-sm.svg" alt="logo" class="" />
+    </a>
+  </div>
+  <div class="container-lg px-0 px-lg-3">
+    <div
+      class="collapse navbar-collapse d-lg-flex justify-content-between"
+      id="navbarSupportedContent"
+    >
+      <a class="m-0 d-none d-lg-inline" href="index.html">
+        <img src="/assets/images/logo/Logo-Type.svg" alt="logo-lg" />
+      </a>
+      <ul
+        class="navbar-nav text-center gap-lg-10 bg-primary-99 align-items-center"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold"
+            href="search.html"
+            >找遊戲</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold"
+            href="ranking-list.html"
+            >密室排行榜</a
+          >
+        </li>
+        <li class="auth-button">
+          <!-- Button trigger modal -->
+          <button
+            id="auth-btn"
+            type="button"
+            class="btn w-100 nav-link-bg px-0 py-4 fs-h6 fw-bold border-0"
+            data-bs-toggle="modal"
+            data-bs-target="#login-modal"
+          >
+            登入/註冊
+          </button>
+          <div id="user-icon" class="hidden">
+            <img
+              src="/assets/images/erik-lucatero.png"
+              alt="User Avatar"
+              class="avatar rounded-circle"
+            />
+          </div>
+        </li>
+      </ul>
     </div>
-    <div class="container-lg px-0 px-lg-3">
-        <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarSupportedContent">
-            <a class="m-0 d-none d-lg-inline" href="index.html">
-                <img src="/assets/images/logo/Logo-Type.svg" alt="logo-lg" />
-            </a>
-            <ul class="navbar-nav text-center gap-lg-10 bg-primary-99">
-                <li class="nav-item">
-                    <a class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold link-primary-black"
-                        href="search.html">找遊戲</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold link-primary-black"
-                        href="ranking-list.html">密室排行榜</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold link-primary-black"
-                        href="sign.html">登入/註冊</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+  </div>
 </nav>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="login-modal"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body container bg-primary-99 p-md-16 p-8 rounded-4">
+        <div
+          class="bg-white mb-8 rounded-3 border border-black d-flex justify-content-around position-relative"
+        >
+          <div class="tab-background"></div>
+          <button
+            id="login-tab"
+            class="tab active py-md-4 py-2 w-100 rounded-3 fs-md-h6 fs-Body-1"
+          >
+            登入
+          </button>
+          <button
+            id="signup-tab"
+            class="tab py-md-4 py-2 w-100 rounded-3 fs-md-h6 fs-Body-1"
+          >
+            註冊
+          </button>
+        </div>
+
+        <form id="login-form" class="d-flex flex-column">
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="email"
+            id="email"
+            placeholder="電子郵件"
+            required
+          />
+          <input
+            class="p-md-3 p-2 border border-black rounded-3"
+            type="password"
+            id="password"
+            placeholder="密碼"
+            required
+          />
+          <a href="#" class="forgot-password fs-Body-2 text-secondary-60 mt-2"
+            >忘記密碼？
+          </a>
+          <button
+            type="button"
+            id="login-btn"
+            class="submit-btn fs-md-h6 fs-Body-1 bg-primary-70 text-white p-md-4 p-2 border border-black rounded-3"
+          >
+            登入
+          </button>
+        </form>
+
+        <form id="signup-form" class="hidden d-flex flex-column">
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="email"
+            id="signup-email"
+            placeholder="電子郵件"
+            required
+          />
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="password"
+            id="signup-password"
+            placeholder="密碼"
+            required
+          />
+          <input
+            class="p-md-3 p-2 mb-8 border border-black rounded-3"
+            type="password"
+            id="signup-password-confirm"
+            placeholder="確認密碼"
+            required
+          />
+          <button
+            type="button"
+            id="signup-btn"
+            class="submit-btn fs-md-h6 fs-Body-1 bg-primary-70 text-white p-md-4 p-2 border border-black rounded-3"
+          >
+            註冊
+          </button>
+        </form>
+
+        <div id="signup-nav" class="mt-4 d-flex justify-content-center">
+          <p>還沒有帳號嗎？</p>
+          <a class="text-secondary-60" href="#" id="signup-link">立即註冊</a>
+        </div>
+
+        <div id="login-nav" class="hidden mt-4 d-flex justify-content-center">
+          <p>已經有帳號？</p>
+          <a class="text-secondary-60" href="#" id="login-link">立即登入</a>
+        </div>
+
+        <div
+          class="social-login mt-8 position-relative d-flex flex-column align-items-center"
+        >
+          <button class="social-btn google my-2 p-md-3 p-2">
+            <img
+              class="social-img"
+              src="/assets/images/icon/google.png"
+              alt="google"
+            />
+            利用 Google 登入
+          </button>
+          <button class="social-btn facebook my-2 p-md-3 p-2">
+            <img class="social-img" src="/assets/images/icon/fb.svg" alt="fb" />
+            利用 Facebook 登入
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
