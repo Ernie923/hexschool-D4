@@ -1,20 +1,16 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.min.js";
+import "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js";
 
-
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
 // import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-
+import "swiper/css";
+import "swiper/css/navigation";
 
 // 當漢堡選單下拉時背景顏色變為黑色半透明
 const navbarToggler = document.querySelector(".navbar-toggler");
 const mainElement = document.querySelector("main");
 
 // ==================== Navbar ====================
-
 
 // 當漢堡選單下拉時背景顏色變為黑色半透明
 document.querySelector(".navbar-toggler").addEventListener("click", () => {
@@ -69,38 +65,38 @@ document.getElementById("login-link").addEventListener("click", function (e) {
   loginTab.click();
 });
 
-let isLoggedIn = false;
+// let isLoggedIn = false;
 
-const authButton = document.getElementById("auth-btn");
-const loginButton = document.getElementById("login-btn");
-const signupButton = document.getElementById("signup-btn");
-const userIcon = document.getElementById("user-icon");
+// const authButton = document.getElementById("auth-btn");
+// const loginButton = document.getElementById("login-btn");
+// const signupButton = document.getElementById("signup-btn");
+// const userIcon = document.getElementById("user-icon");
 
-// 檢查登入狀態並切換顯示
-function checkLoginStatus() {
-  if (isLoggedIn) {
-    loginButton.classList.add("hidden");
-    signupButton.classList.add("hidden");
-    userIcon.classList.remove("hidden");
-    authButton.classList.add("hidden");
-  } else {
-    loginButton.classList.remove("hidden");
-    signupButton.classList.remove("hidden");
-    userIcon.classList.add("hidden");
-    authButton.classList.remove("hidden");
-  }
-}
+// // 檢查登入狀態並切換顯示
+// function checkLoginStatus() {
+//   if (isLoggedIn) {
+//     loginButton.classList.add("hidden");
+//     signupButton.classList.add("hidden");
+//     userIcon.classList.remove("hidden");
+//     authButton.classList.add("hidden");
+//   } else {
+//     loginButton.classList.remove("hidden");
+//     signupButton.classList.remove("hidden");
+//     userIcon.classList.add("hidden");
+//     authButton.classList.remove("hidden");
+//   }
+// }
 
-loginButton.addEventListener("click", function () {
-  var loginModal = new bootstrap.Modal(document.getElementById("login-modal"));
-  if (loginModal) {
-    loginModal.hide();
-  }
-  isLoggedIn = true;
-  checkLoginStatus();
-});
+// loginButton.addEventListener("click", function () {
+//   var loginModal = new bootstrap.Modal(document.getElementById("login-modal"));
+//   if (loginModal) {
+//     loginModal.hide();
+//   }
+//   isLoggedIn = true;
+//   checkLoginStatus();
+// });
 
-checkLoginStatus();
+// checkLoginStatus();
 
 //限制checkbox選取數量的上限
 $(document).ready(function () {
@@ -114,8 +110,7 @@ $(document).ready(function () {
   });
 });
 
-const swiper = new Swiper('.swiper', {
-    // configure Swiper to use modules
-    modules: [Navigation, Pagination],
-    
-});
+// const swiper = new Swiper(".swiper", {
+//   // configure Swiper to use modules
+//   modules: [Navigation, Pagination],
+// });
