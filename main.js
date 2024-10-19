@@ -89,39 +89,6 @@ loginButton.addEventListener("click", function () {
 
 checkLoginStatus();
 
-let isLoggedIn = false;
-
-const authButton = document.getElementById("auth-btn");
-const loginButton = document.getElementById("login-btn");
-const signupButton = document.getElementById("signup-btn");
-const userIcon = document.getElementById("user-icon");
-
-// 檢查登入狀態並切換顯示
-function checkLoginStatus() {
-  if (isLoggedIn) {
-    loginButton.classList.add("hidden");
-    signupButton.classList.add("hidden");
-    userIcon.classList.remove("hidden");
-    authButton.classList.add("hidden");
-  } else {
-    loginButton.classList.remove("hidden");
-    signupButton.classList.remove("hidden");
-    userIcon.classList.add("hidden");
-    authButton.classList.remove("hidden");
-  }
-}
-
-loginButton.addEventListener("click", function () {
-  var loginModal = new bootstrap.Modal(document.getElementById("login-modal"));
-  if (loginModal) {
-    loginModal.hide();
-  }
-  isLoggedIn = true;
-  checkLoginStatus();
-});
-
-checkLoginStatus();
-
 //限制checkbox選取數量的上限
 $(document).ready(function () {
   $("#input_3_2 input[type=checkbox]").click(function () {
