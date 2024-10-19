@@ -20,314 +20,465 @@
                     <img src="../assets/images/illustration/Banner-2.svg" alt="banner" class="w-100" />
                 </picture>
             </div>
-            <div class="my-10">
+            <div class="my-md-10 my-sm-0">
                 <div class="container-lg">
-                    <div class="row d-flex flex-column flex-md-row">
-                        <div class="col-md-3 p-4">
-                            <form action="">
-                                <p class="h5 pb-3  fw-bold">
-                                    遊戲名稱
-                                </p>
-                                <div class="search-all-group mb-6">
-                                    <label for="" class="pb-1">搜尋</label>
-                                    <div class=" input-group search-group border  rounded-1  border-primary-black">
-                                        <input type="text" class="form-control border-0 search-input"
-                                            placeholder="搜尋關鍵字" aria-label="Search">
-                                        <span class="input-group-text search-input border-0">
-                                            <i class="bi bi-search"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <p class="h5 pb-4  fw-bold">
-                                    遊戲地區
-                                </p>
-                                <div class="row m-0 mb-6">
-                                    <div class="col-md-6 mx-0 p-0 w-auto">
-                                        <div class="form-check mb-4 me-6">
-                                            <input class="form-check-input" type="checkbox" value="" id="taipei">
-                                            <label class="form-check-label" for="taipei">
-                                                台北市
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                基隆市
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="hsinchu">
-                                            <label class="form-check-label" for="hsinchu">
-                                                新竹市
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="changhua">
-                                            <label class="form-check-label" for="changhua">
-                                                彰化縣
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="chiayi">
-                                            <label class="form-check-label" for="chiayi">
-                                                嘉義市
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="kaohsiung">
-                                            <label class="form-check-label" for="kaohsiung">
-                                                高雄市
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="yilan">
-                                            <label class="form-check-label" for="yilan">
-                                                宜蘭縣
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="taidong">
-                                            <label class="form-check-label" for="taidong">
-                                                台東縣
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 m-0 p-0">
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="newtaipei">
-                                            <label class="form-check-label" for="newtaipei">
-                                                新北市
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="taoyuan">
-                                            <label class="form-check-label" for="taoyuan">
-                                                桃園市
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="taichung">
-                                            <label class="form-check-label" for="taichung">
-                                                台中市
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="nantou">
-                                            <label class="form-check-label" for="nantou">
-                                                南投縣
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="tainan">
-                                            <label class="form-check-label" for="tainan">
-                                                台南市
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="pingtung">
-                                            <label class="form-check-label" for="pingtung">
-                                                屏東縣
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="hualien">
-                                            <label class="form-check-label" for="hualien">
-                                                花蓮縣
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="jinmen">
-                                            <label class="form-check-label" for="jinmen">
-                                                澎湖金門馬祖
-                                            </label>
+                    <div class="row d-flex flex-column flex-md-row g-0">
+                        <!-- 表單部分 -->
+                        <div class="col-md-3 pe-lg-6 pe-md-3 ">
+                            <form action="" class="p-4 bg-white">
+                                <div class="search">
+                                    <p class="h5 pb-3  fw-bold">
+                                        遊戲名稱
+                                    </p>
+                                    <div class="search-all-group mb-6">
+                                        <label for="" class="pb-1">搜尋</label>
+                                        <div class=" input-group search-group border  rounded-1  border-primary-black">
+                                            <input type="text" class="form-control border-0 search-input"
+                                                placeholder="搜尋關鍵字" aria-label="Search">
+                                            <span class="input-group-text search-input border-0">
+                                                <i class="bi bi-search"></i>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
-                                <p class="h5 pb-4  fw-bold">
-                                    遊玩人數
-                                </p>
-                                <select class="form-select mb-6 border  rounded-1  border-primary-black"
-                                    aria-label="Default select example">
-                                    <option selected>請選擇遊玩人數</option>
-                                    <option value="1">1人</option>
-                                    <option value="2">2人</option>
-                                    <option value="3">3人</option>
-                                    <option value="4">4人</option>
-                                    <option value="5">5人</option>
-                                </select>
-                                <p class="h5 pb-4  fw-bold">
-                                    遊戲地區
-                                </p>
+                                <!-- 地區、人數 -->
+                                <div class="d-flex  w-100  ">
+                                    <div class="row w-100 row1 flex-md-column">
+                                        <div class="col-6 col-md-12 col1 ">
+                                            <div class="area ">
+                                                <p class="h5 pb-4  fw-bold">
+                                                    遊戲地區
+                                                </p>
+                                                <!-- 手機板下拉式選單 -->
+                                                <select
+                                                    class="form-select d-md-none mb-md-6 mb-3 border  rounded-1  border-primary-black"
+                                                    aria-label="Default select example">
+                                                    <option selected>請選擇遊玩地區</option>
+                                                    <option value="taipei">台北市</option>
+                                                    <option value="keelung">基隆市</option>
+                                                    <option value="hsinchu">新竹市</option>
+                                                    <option value="changhua">彰化縣</option>
+                                                    <option value="chiayi">嘉義市</option>
+                                                    <option value="kaohsiung">高雄市</option>
+                                                    <option value="yilan">宜蘭縣</option>
+                                                    <option value="taidong">台東縣</option>
+                                                    <option value="newtaipei">新北市</option>
+                                                    <option value="taoyuan">桃園市</option>
+                                                    <option value="taichung">台中市</option>
+                                                    <option value="nantou">南投縣</option>
+                                                    <option value="tainan">台南市</option>
+                                                    <option value="pingtung">屏東縣</option>
+                                                    <option value="hualien">花蓮縣</option>
+                                                    <option value="PenghuKinmenMatsu">澎湖金門馬祖</option>
+                                                </select>
+                                                <!-- 電腦版checkbox -->
+                                                <div class="row m-0 mb-6 d-none d-md-flex">
+                                                    <div class="col-md-6 mx-0 p-0 w-auto">
+                                                        <div class="form-check mb-4 me-6">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="taipei" id="taipei">
+                                                            <label class="form-check-label text-nowrap" for="taipei">
+                                                                台北市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="keelung" id="keelung">
+                                                            <label class="form-check-label text-nowrap" for="keelung">
+                                                                基隆市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="hsinchu" id="hsinchu">
+                                                            <label class="form-check-label text-nowrap" for="hsinchu">
+                                                                新竹市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="changhua" id="changhua">
+                                                            <label class="form-check-label text-nowrap" for="changhua">
+                                                                彰化縣
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="chiayi">
+                                                            <label class="form-check-label text-nowrap" for="chiayi">
+                                                                嘉義市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="kaohsiung" id="kaohsiung">
+                                                            <label class="form-check-label text-nowrap" for="kaohsiung">
+                                                                高雄市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="yilan" id="yilan">
+                                                            <label class="form-check-label text-nowrap" for="yilan">
+                                                                宜蘭縣
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="taidong" id="taidong">
+                                                            <label class="form-check-label text-nowrap" for="taidong">
+                                                                台東縣
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 m-0 p-0">
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="newtaipei" id="newtaipei">
+                                                            <label class="form-check-label text-nowrap" for="newtaipei">
+                                                                新北市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="taoyuan" id="taoyuan">
+                                                            <label class="form-check-label text-nowrap" for="taoyuan">
+                                                                桃園市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="taichung" id="taichung">
+                                                            <label class="form-check-label text-nowrap" for="taichung">
+                                                                台中市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="nantou" id="nantou">
+                                                            <label class="form-check-label text-nowrap" for="nantou">
+                                                                南投縣
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="tainan" id="tainan">
+                                                            <label class="form-check-label text-nowrap" for="tainan">
+                                                                台南市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="pingtung" id="pingtung">
+                                                            <label class="form-check-label text-nowrap" for="pingtung">
+                                                                屏東縣
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="hualien" id="hualien">
+                                                            <label class="form-check-label text-nowrap" for="hualien">
+                                                                花蓮縣
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="PenghuKinmenMatsu" id="PenghuKinmenMatsu">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="PenghuKinmenMatsu">
+                                                                澎湖金門馬祖
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-                                <div class="row m-0 mb-6">
-                                    <div class="col-md-6 mx-0 p-0 w-auto">
-                                        <div class="form-check mb-4 me-6">
-                                            <input class="form-check-input" type="checkbox" value="" id="taipei">
-                                            <label class="form-check-label" for="taipei">
-                                                新手入門
-                                            </label>
+                                            </div>
                                         </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                中度玩家
-                                            </label>
+                                        <div class="col-6 col-md-12 col1 ">
+                                            <div class="people">
+                                                <p class="h5 pb-4  fw-bold">
+                                                    遊玩人數
+                                                </p>
+                                                <select
+                                                    class="form-select mb-md-6 mb-3 border  rounded-1  border-primary-black"
+                                                    aria-label="Default select example">
+                                                    <option selected>請選擇遊玩人數</option>
+                                                    <option value="1">1人</option>
+                                                    <option value="2">2人</option>
+                                                    <option value="3">3人</option>
+                                                    <option value="4">4人</option>
+                                                    <option value="5">5人</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6 m-0 p-0">
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="newtaipei">
-                                            <label class="form-check-label" for="newtaipei">
-                                                重度解謎
-                                            </label>
-                                        </div>
-
                                     </div>
                                 </div>
+                                <!-- 難度、主題 -->
+                                <div class="d-flex  w-100  ">
+                                    <div class="row w-100 row1 flex-md-column">
+                                        <div class="col-6 col-md-12 col1 ">
+                                            <div class="difficulty">
+                                                <p class="h5 pb-4  fw-bold">
+                                                    難度
+                                                </p>
+                                                <!-- 手機板下拉式選單 -->
+                                                <select
+                                                    class="form-select d-md-none mb-md-6 mb-3 border  rounded-1  border-primary-black"
+                                                    aria-label="Default select example">
+                                                    <option selected>請選擇主題類別</option>
+                                                    <option value="Detectivereasoning">偵探推理</option>
+                                                    <option value="Theplotisgreat">劇情厲害</option>
+                                                    <option value="interactiveoperation">互動操作</option>
+                                                    <option value="Relaxedandhappy">輕鬆歡樂</option>
+                                                    <option value="Thrilling">緊張刺激</option>
+                                                    <option value="Specialgameplay">玩法特殊</option>
+                                                    <option value="Manyagencies">機關重重</option>
+                                                    <option value="Realisticscenes">場景逼真</option>
+                                                    <option value="puzzleLogic">謎題邏輯</option>
+                                                    <option value="horrorthriller">恐怖驚悚</option>
+                                                    <option value="Intrigue">勾心鬥角</option>
+                                                    <option value="Familytravel">親子同遊</option>
+                                                    <option value="rolePlay">角色扮演</option>
+                                                </select>
 
-                                <p class="h5 pb-4  fw-bold">
-                                    主題
-                                </p>
+                                                <!-- 電腦版核取方塊 -->
+                                                <div class="row m-0 mb-6 d-none d-md-flex">
+                                                    <div class="col-md-6 mx-0 p-0 w-auto">
+                                                        <div class="form-check mb-4 me-6">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="GettingStarted" id="GettingStarted">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="GettingStarted">
+                                                                新手入門
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Moderateplayer" id="Moderateplayer">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Moderateplayer">
+                                                                中度玩家
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 m-0 p-0">
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Heavypuzzle" id="Heavypuzzle">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Heavypuzzle">
+                                                                重度解謎
+                                                            </label>
+                                                        </div>
 
-                                <div class="row m-0 mb-6">
-                                    <div class="col-md-6 mx-0 p-0 w-auto">
-                                        <div class="form-check mb-4 me-6">
-                                            <input class="form-check-input" type="checkbox" value="" id="taipei">
-                                            <label class="form-check-label" for="taipei">
-                                                偵探推理
-                                            </label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                劇情厲害
-                                            </label>
+                                        <div class="col-6 col-md-12 col1 ">
+                                            <div class="topic">
+                                                <p class="h5 pb-4  fw-bold">
+                                                    主題
+                                                </p>
+                                                <!-- 手機板下拉式選單 -->
+                                                <select
+                                                    class="form-select mb-md-6 mb-3 border rounded-1 border-primary-black"
+                                                    aria-label="Select player type">
+                                                    <option selected>請選擇難度</option>
+                                                    <option value="GettingStarted">新手入門</option>
+                                                    <option value="Moderateplayer">中度玩家</option>
+                                                    <option value="Heavypuzzle">重度解謎</option>
+                                                </select>
+
+                                                <!-- 電腦版核取方塊 -->
+                                                <div class="row m-0 mb-6 d-none d-md-flex">
+                                                    <div class="col-md-6 mx-0 p-0 w-auto">
+                                                        <div class="form-check mb-4 me-6">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Detectivereasoning" id="Detectivereasoning">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Detectivereasoning">
+                                                                偵探推理
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Theplotisgreat" id="Theplotisgreat">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Theplotisgreat">
+                                                                劇情厲害
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="interactiveoperation" id="interactiveoperation">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="interactiveoperation">
+                                                                互動操作
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Relaxedandhappy" id="Relaxedandhappy">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Relaxedandhappy">
+                                                                輕鬆歡樂
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="keelung">
+                                                            <label class="form-check-label text-nowrap" for="keelung">
+                                                                緊張刺激
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Thrilling" id="Thrilling">
+                                                            <label class="form-check-label text-nowrap" for="Thrilling">
+                                                                團隊合作
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Specialgameplay" id="Specialgameplay">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Specialgameplay">
+                                                                玩法特殊
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 m-0 p-0">
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Manyagencies" id="Manyagencies">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Manyagencies">
+                                                                機關重重
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Realisticscenes" id="Realisticscenes">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Realisticscenes">
+                                                                場景逼真
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="puzzleLogic" id="puzzleLogic">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="puzzleLogic">
+                                                                謎題邏輯
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="horrorthriller" id="horrorthriller">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="horrorthriller">
+                                                                恐怖驚悚
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Intrigue" id="Intrigue">
+                                                            <label class="form-check-label text-nowrap" for="Intrigue">
+                                                                勾心鬥角
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Familytravel" id="Familytravel">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Familytravel">
+                                                                親子同遊
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="rolePlay" id="rolePlay">
+                                                            <label class="form-check-label text-nowrap" for="rolePlay">
+                                                                角色扮演
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                互動操作
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                輕鬆歡樂
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                緊張刺激
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                團隊合作
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                玩法特殊
-                                            </label>
-                                        </div>
+
                                     </div>
-                                    <div class="col-md-6 m-0 p-0">
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="newtaipei">
-                                            <label class="form-check-label" for="newtaipei">
-                                                機關重重
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                場品逼真
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                謎題邏輯
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                恐怖驚悚
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                勾心鬥角
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                親子同遊
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-4 ">
-                                            <input class="form-check-input" type="checkbox" value="" id="keelung">
-                                            <label class="form-check-label" for="keelung">
-                                                角色扮演
-                                            </label>
-                                        </div>
-                                    </div>
+
                                 </div>
+
                                 <div class="text-center mb-3">
                                     <button type="submit"
                                         class="btn btn-secondary-60 link-white rounded-2 w-100">搜尋</button>
                                 </div>
-                                <div class="text-center">
+                                <div class=" ">
                                     <button type="submit"
-                                        class="btn w-100 reset_button border-0 text-primary-black fw-bold">重置</button>
+                                        class="btn w-100 reset_button border-0 text-primary-black fw-bold text-sm-center text-end">重置</button>
                                 </div>
                             </form>
                         </div>
+                        <!-- 遊戲卡片 -->
                         <div class="col-md-9 p-0">
                             <div class="recommend">
-                                <h3 class="text-center mb-10">本月推薦</h3>
-                                <div class="row d-flex m-0">
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                <div class="title-container w-100  d-flex justify-content-center align-items-center">
+                                    <h3 class="text-center mb-12 recommendation-title fw-bold fs-sm-h3 fs-h6">
+                                        本月推薦</h3>
+                                </div>
+                                <div class="row m-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -337,52 +488,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -392,52 +557,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -447,52 +626,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -502,52 +695,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -557,52 +764,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -612,52 +833,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -667,52 +902,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -722,57 +971,76 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
+
+
                                 </div>
                             </div>
                             <div class="recently mt-5 mt-md-10 ">
-                                <h3 class="text-center mb-10">近期新作</h3>
-                                <div class="row d-flex">
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                <div class="title-container w-100  d-flex justify-content-center align-items-center">
+                                    <h3 class="text-center mb-12 recommendation-title fw-bold fs-sm-h3 fs-h6">
+                                        近期新作</h3>
+                                </div>
+                                <div class="row m-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -782,52 +1050,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -837,52 +1119,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -892,52 +1188,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -947,52 +1257,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -1002,52 +1326,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -1057,52 +1395,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -1112,52 +1464,66 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 ps-2 p-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
                                         <a href="game_content.html">
-                                            <div class="card p-3 rounded-6  mb-6">
-                                                <div class="row g-0 align-items-start">
-                                                    <!-- 手機板圖片在左邊 -->
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
                                                     <div class="col-auto">
-                                                        <picture>
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 超大螢幕 (1200px 以上) -->
+                                                            <!-- <source media="(min-width: 992px)"
+                                                                srcset="../assets/images/julia-kadel.png"> -->
+
+                                                            <!-- 大螢幕 (992px 以上) -->
+                                                            <source media="(min-width: 768px)"
+                                                                srcset="../assets/images/julia-kadel.png">
+
+                                                            <!-- 中螢幕 (768px 以上) -->
                                                             <source media="(min-width: 576px)"
-                                                                srcset="../assets/images/julia-kadel.png" />
+                                                                srcset="../assets/images/julia-kadel-sm.png">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
                                                             <img src="../assets/images/julia-kadel-list-sm.png" alt=""
-                                                                class="card-img-top pb-3 w-100" />
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-sm-0" />
                                                         </picture>
                                                     </div>
                                                     <!-- 手機板文字內容在右邊 -->
-                                                    <div class="col">
+                                                    <div class="col ms-3 ms-sm-0">
                                                         <div class="card-body p-0">
-                                                            <h6 class="card-title  text-primary-black fw-bold">等一個人・盜墓
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
                                                             </h6>
-                                                            <p class="card-text text-nature-40 pb-3 fw-bold fs-Body-2">
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
                                                                 新北市
                                                             </p>
-                                                            <div class="d-flex align-items-center">
+                                                            <p class="d-flex align-items-center mb-2">
                                                                 <span class="rating dotted pe-3 fs-Body-2">
                                                                     <img src="../assets/images/icon/star.png" alt="star"
                                                                         class="pe-1">4.9
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">1,264 人評論</span>
-                                                            </div>
-                                                            <p class="mt-2 mb-3">
-                                                                <span class="dotted pe-3 fs-Body-2">
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
                                                                     <img src="../assets/images/icon/person.png"
                                                                         alt="star" class="pe-1 fs-Body-2">
                                                                     2-8人
                                                                 </span>
-                                                                <span class="ms-2 fs-Body-2">
+                                                                <span class="ps-md-2  fs-Body-2">
                                                                     <img src="../assets/images/icon/price.png"
                                                                         alt="star" class="pe-1">
                                                                     每人600元起
@@ -1167,17 +1533,19 @@
                                                     </div>
                                                 </div>
                                                 <!-- 手機版標籤在底部 -->
-                                                <div class="tags  mt-2 d-flex flex-wrap">
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">中度玩家</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 mb-2 me-2 text-nowrap">場景逼真</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
                                                     <span
-                                                        class=" bg-nature-95 px-2 py-1 rounded-4 me-2 text-nowrap">機關重重</span>
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
+
+
                                 </div>
                             </div>
                         </div>
