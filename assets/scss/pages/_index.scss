@@ -19,6 +19,11 @@
   .row{
       top: -462px;
   }
+  @media(max-width:991px){
+    .row{
+      top: 0;
+    }
+  }
 }
 
 .index-banner-2{
@@ -27,6 +32,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 850px;
+  @media (max-width:991px){
+    height: 887px;
+  }
 }
 
 .index-content-1{
