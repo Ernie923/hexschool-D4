@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>找密室</title>
+  <script type="module" crossorigin src="/hexschool-D4/assets/main-1d611916.js"></script>
+  <link rel="stylesheet" href="/hexschool-D4/assets/main-6519c4d9.css">
+</head>
+
+<body>
+    <nav
+  class="navbar navbar-expand-lg w-100 bg-primary-99 position-fixed top-0 start-0 d-lg-flex justify-content-between"
+>
+  <div
+    class="nav-box container d-lg-none d-flex flex-row justify-content-between align-items-center"
+  >
+    <button
+      class="navbar-toggler border-0 p-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand m-0 d-inline" href="#">
+      <img src="/hexschool-D4/assets/Logo-Type-sm-63bac178.svg" alt="logo" class="" />
+    </a>
+  </div>
+  <div class="container-lg px-0 px-lg-3">
+    <div
+      class="collapse navbar-collapse d-lg-flex justify-content-between"
+      id="navbarSupportedContent"
+    >
+      <a class="m-0 d-none d-lg-inline" href="index.html">
+        <img src="/hexschool-D4/assets/Logo-Type-eb30690f.svg" alt="logo-lg" />
+      </a>
+      <ul
+        class="navbar-nav text-center gap-lg-10 bg-primary-99 align-items-center"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold"
+            href="search.html"
+            >找遊戲</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold"
+            href="ranking-list.html"
+            >密室排行榜</a
+          >
+        </li>
+        <li class="auth-button">
+          <!-- Button trigger modal -->
+          <button
+            id="auth-btn"
+            type="button"
+            class="btn w-100 nav-link-bg px-0 py-4 fs-h6 fw-bold border-0"
+            data-bs-toggle="modal"
+            data-bs-target="#login-modal"
+          >
+            登入/註冊
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="login-modal"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body container bg-primary-99 p-md-16 p-8 rounded-4">
+        <div
+          class="bg-white mb-8 rounded-3 border border-black d-flex justify-content-around position-relative"
+        >
+          <div class="tab-background"></div>
+          <button
+            id="login-tab"
+            class="tab active py-md-4 py-2 w-100 rounded-3 fs-md-h6 fs-Body-1"
+          >
+            登入
+          </button>
+          <button
+            id="signup-tab"
+            class="tab py-md-4 py-2 w-100 rounded-3 fs-md-h6 fs-Body-1"
+          >
+            註冊
+          </button>
+        </div>
+
+        <form id="login-form" class="d-flex flex-column">
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="email"
+            id="email"
+            placeholder="電子郵件"
+            required
+          />
+          <input
+            class="p-md-3 p-2 border border-black rounded-3"
+            type="password"
+            id="password"
+            placeholder="密碼"
+            required
+          />
+          <a href="#" class="forgot-password fs-Body-2 text-secondary-60 mt-2"
+            >忘記密碼？
+          </a>
+          <button
+            type="button"
+            id="login-btn"
+            class="submit-btn fs-md-h6 fs-Body-1 bg-primary-70 text-white p-md-4 p-2 border border-black rounded-3"
+          >
+            登入
+          </button>
+        </form>
+
+        <form id="signup-form" class="hidden d-flex flex-column">
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="email"
+            id="signup-email"
+            placeholder="電子郵件"
+            required
+          />
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="password"
+            id="signup-password"
+            placeholder="密碼"
+            required
+          />
+          <input
+            class="p-md-3 p-2 mb-8 border border-black rounded-3"
+            type="password"
+            id="signup-password-confirm"
+            placeholder="確認密碼"
+            required
+          />
+          <button
+            type="button"
+            id="signup-btn"
+            class="submit-btn fs-md-h6 fs-Body-1 bg-primary-70 text-white p-md-4 p-2 border border-black rounded-3"
+          >
+            註冊
+          </button>
+        </form>
+
+        <div id="signup-nav" class="mt-4 d-flex justify-content-center">
+          <p>還沒有帳號嗎？</p>
+          <a class="text-secondary-60" href="#" id="signup-link">立即註冊</a>
+        </div>
+
+        <div id="login-nav" class="hidden mt-4 d-flex justify-content-center">
+          <p>已經有帳號？</p>
+          <a class="text-secondary-60" href="#" id="login-link">立即登入</a>
+        </div>
+
+        <div
+          class="social-login mt-8 position-relative d-flex flex-column align-items-center"
+        >
+          <button class="social-btn google my-2 p-md-3 p-2">
+            <img
+              class="social-img"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAg8SURBVHgB3Vp/TFXXHf9+z73vFw/hiagIdFBxnbUrwYLUTq1Uq1s6NZNMrF11M5o26ZZl3a9o0ujb3B/bmqyLSZO5pLOB2m7aWacYXScCTmWdYOvKaNUgQinIT3n4gMt7955vv5diIxXeuxdBiJ/k5t177vecez7nfM/3+z3f8wDuESCMET7Ny04UKGZKoAwSNAcIU7n56fwqZuBDSCH+6QGCRhDQIHW4AiAbU1u1BqypCcEdYtREiOteWzI/EZxqukHwTQJahghzBeAMfqdYaKKXW7nIHfhQSnnUSdqp6WU1LTjQtH3YJmISqF+Zma7orvXc21WE8CgXq3Dn6AQpjxEqf6G+por7Khr77FS2TKQ0L0+dA93poIitgmAL60oijAtI8mAdQwP+mJy36iT6/dJKLUtEOp/MjtcI1xPgNn68H+4ONJ7+NxD03ySffL8BoqhcVCLX87J8vYrjZb7dyJcL7j7eVwzalFRWWR1JKCKRxuW5DyDQOyz0II2hhbMNouuK6pyb9O7Z1pFExEgvWlbkLGISpXw7byJJIEE7G8GnI5EYkBuusHV57hId4G02qTNgAsGdu8pXwaySc+csyA5Fw7LsDCHEv3kkZsGoQRIB29ncNPGsdhOPCCK6+GsJvGS/wgLuaC2YJACVp5JP/OcjsIAh9v/aykyvoSv7WCdtk2B/EmKz/B4bz2L27uWGkxqo3+jzOGV4ptNBbZ5eEeqMdUkyfE505BhkrGET/i2umfDlttixVocN4wdppecskbiNiC7d2zmUyAV70FiRS8hQd/WT+0J6aWk/j/5IpjLIVwdftUS0v3X5otk6hLfy8L/AZXF8ES/a9/oFPpN+4nwd2MAXqlW3YkGWS8Jp7oHXamWehWqehd81dcmDOVVVvTAKkN8vrp0qzjEQX+HOtADKn6ScqGqw2cznRGgPONqrM14LfTy1ACRa8hVM+IIU+tb73j1fFWEGLKM1b15sGDzulLKqdhgFBoj0HoPHgNSS0CVft1ae4jW6Hd4BTR25UqWhqhtS/1lRO9ogb6yB7ClUTVPe5PBjnVmgd7iD2qnk3nBdfALI4YJBbAWHfDzleOVFmEQQ/RpksJlcfLNAnabFxq6u88Usb+gUseHgl+R11uHnJhsJE4LD5ly2+UlDSlVyujI7Er35taT4+k2PelN9/n5Jjz0KkxCCndVqGM7DIwh1Rt+UKc9e9DozO9pYspl0ueeJsjIdJiFUZpATabWi2/B6V3zidj7YeTxU/FAl2ITfT6JcBOZLMJwwTtBdslrl2CEuqt1BUpypwfPxh8/cAJs4Ak3ueBmzWwHxDRgnKL3iRcEkPFaEJVEVTFrINDOMjz7lCAFURDNMWmCSSSR6xoPohlTQVjLg7gJjBdwD4JjPYxIxokoiTjFCFAOTF5pJJHqWjyBOBZkEkxVEPSYRzYIou0fMgUkKRNHBQSGxb8CEiJIEslaPy163P8l5oMBentYZ4HxbPFzi2ylgC8TWFDPAWhbzisohyoccsKeNJBEGDO7r+1rgUF9abifGZAHU/Bds4OwfUrWcXzX90KN5beXEnC65gLXgIA9iRCK8F5K8tb6sskc8wiH8t2GYeKtLum7s6M4JXtCnJZOZTzeMbdl7nltf9fyfw2ARg5uu3sHLMpbuuP6QQtF3q5JkCxO+KtAty3karw15CRg+3Z/UtKVrqfxAT5xFg5ss7tRS8rSthnFGnr81VhW4wZo01pD01QvXZfOcQpTcLA6SeuOV4MNt/uCC6W3SEz+0DiQwmZcfKVrH5x/jl7RDUF/gDFK2JVnEf5XuhIDA53kZELzKver+XzihZWtXHv5Duz85RMIx/EdwNoJRlPvG2kwYByzzB8z90XaIkAW9Bd0UDh8y1XdA2OMJVxdpDxz4Zfdj8U2GNzZabf7QQglid07h2q+P1cyY4f6TOwMLubV3+NFnqRJRManB+s/7NIisveuyVEWe4RLrHpygjlOK2zr1jsNXN5dZ8UfDgg1IzJRPf7tWCPw1P862WE2iUBaX7IirMB+GjOaCwvxdvD95CWyB+tgsHddV3BVWxP9rCg5Y9jPpe/PcCY6ZWULKX7i6Vi50BVb5wHBbG0ikAyd3JhR88Xjru8zCjV4n9poL/1GwDyaEp/k88IhDhE5pQUezLtXekBEcMNWaHitS5gYdeofHKwlTBMLjPAhrWU3NzKa5lSAllNrlbt2IIpQRjxFUlgeusV/tW3z2peT6YYmYyNmXPxsMNFXsTmIr9qPQBAY18ZINEO9z+deDpo8HTOFodQaOuJiVoLv9mR5nYAmfCIvbZYg1AOW2Un/i7luLh2WdW/TdJWz++FgBJupYgdSe+a2els1TkWKGbPw4u/9qM0z9aY0fQ0PLR0DW6/mLVAX2s0gyTBBQ93V7Wr4fVrWHpw0WvS7B92KZH7tuk43U0CNFa+YIchxiJZg3ng4wMoTu6F7U4e549m9eOW17sR+HDXWidi5r73d8DkX5PavaJkCciMPQAK+Ln1VuOvhaJKGo3vODzYe6RKL75wLFj/jxLicg6IzU5dM0r74wmqQtdckuyp/Fqckfs1ffggISx0vd2Mhc5p8/geIsrNrwVoe5wqPVsf8XDiKc/9e1ac6wKGBCBeyYzJjLAXcOjfdGFezd35Zxjv1Va96ydU4y+j/VMKGvHnvKObXFk4kKruRQ5QlubC6vpeRIZyu3IMTjfIUH4hIJLJGaLPe6Qw2nv3fUtEi2z1zGTDWy39yQqJKeZkgjhTVuDjecwq3P4M1NzOCX+rm8h++aWT0/MVRRi6FwvduQrWe2HLadir1n8RkWNy5ZmhmWsgAAAABJRU5ErkJggg=="
+              alt="google"
+            />
+            利用 Google 登入
+          </button>
+          <button class="social-btn facebook my-2 p-md-3 p-2">
+            <img class="social-img" src="/hexschool-D4/assets/fb-f3c54cd1.svg" alt="fb" />
+            利用 Facebook 登入
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <main>
+            <div class="banner">
+                <div class="banner-title d-none">
+                    <h1 class="">密室排行榜</h1>
+                </div>
+                <picture>
+                    <source media="(min-width: 992px)" srcset="/hexschool-D4/assets/Banner-11e059ca.png " />
+                    <img src="/hexschool-D4/assets/Banner-2-d16208b0.svg" alt="banner" class="w-100" />
+                </picture>
+            </div>
+            <div class="my-md-10 my-sm-0">
+                <div class="container-lg">
+                    <div class="row d-flex flex-column flex-md-row g-0">
+                        <!-- 表單部分 -->
+                        <div class="col-md-3 pe-lg-6 pe-md-3 ">
+                            <form action="" class="p-4 bg-white">
+                                <div class="search">
+                                    <p class="h5 pb-3  fw-bold">
+                                        遊戲名稱
+                                    </p>
+                                    <div class="search-all-group mb-6">
+                                        <label for="" class="pb-1">搜尋</label>
+                                        <div class=" input-group search-group border  rounded-1  border-primary-black">
+                                            <input type="text" class="form-control border-0 search-input"
+                                                placeholder="搜尋關鍵字" aria-label="Search">
+                                            <span class="input-group-text search-input border-0">
+                                                <a href=""><i class="bi bi-search"></i></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 地區、人數 -->
+                                <div class="d-flex  w-100  ">
+                                    <div class="row w-100 row1 flex-md-column">
+                                        <div class="col-6 col-md-12 col1 ">
+                                            <div class="area ">
+                                                <p class="h5 pb-4  fw-bold">
+                                                    遊戲地區
+                                                </p>
+                                                <!-- 手機板下拉式選單 -->
+                                                <select
+                                                    class="form-select d-md-none mb-md-6 mb-3 border  rounded-1  border-primary-black"
+                                                    aria-label="Default select example">
+                                                    <option selected>請選擇遊玩地區</option>
+                                                    <option value="taipei">台北市</option>
+                                                    <option value="keelung">基隆市</option>
+                                                    <option value="hsinchu">新竹市</option>
+                                                    <option value="changhua">彰化縣</option>
+                                                    <option value="chiayi">嘉義市</option>
+                                                    <option value="kaohsiung">高雄市</option>
+                                                    <option value="yilan">宜蘭縣</option>
+                                                    <option value="taidong">台東縣</option>
+                                                    <option value="newtaipei">新北市</option>
+                                                    <option value="taoyuan">桃園市</option>
+                                                    <option value="taichung">台中市</option>
+                                                    <option value="nantou">南投縣</option>
+                                                    <option value="tainan">台南市</option>
+                                                    <option value="pingtung">屏東縣</option>
+                                                    <option value="hualien">花蓮縣</option>
+                                                    <option value="PenghuKinmenMatsu">澎湖金門馬祖</option>
+                                                </select>
+                                                <!-- 電腦版checkbox -->
+                                                <div class="row m-0 mb-6 d-none d-md-flex">
+                                                    <div class="col-md-6 mx-0 p-0 w-auto">
+                                                        <div class="form-check mb-4 me-6">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="taipei" id="taipei">
+                                                            <label class="form-check-label text-nowrap" for="taipei">
+                                                                台北市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="keelung" id="keelung">
+                                                            <label class="form-check-label text-nowrap" for="keelung">
+                                                                基隆市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="hsinchu" id="hsinchu">
+                                                            <label class="form-check-label text-nowrap" for="hsinchu">
+                                                                新竹市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="changhua" id="changhua">
+                                                            <label class="form-check-label text-nowrap" for="changhua">
+                                                                彰化縣
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="chiayi">
+                                                            <label class="form-check-label text-nowrap" for="chiayi">
+                                                                嘉義市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="kaohsiung" id="kaohsiung">
+                                                            <label class="form-check-label text-nowrap" for="kaohsiung">
+                                                                高雄市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="yilan" id="yilan">
+                                                            <label class="form-check-label text-nowrap" for="yilan">
+                                                                宜蘭縣
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="taidong" id="taidong">
+                                                            <label class="form-check-label text-nowrap" for="taidong">
+                                                                台東縣
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 m-0 p-0">
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="newtaipei" id="newtaipei">
+                                                            <label class="form-check-label text-nowrap" for="newtaipei">
+                                                                新北市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="taoyuan" id="taoyuan">
+                                                            <label class="form-check-label text-nowrap" for="taoyuan">
+                                                                桃園市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="taichung" id="taichung">
+                                                            <label class="form-check-label text-nowrap" for="taichung">
+                                                                台中市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="nantou" id="nantou">
+                                                            <label class="form-check-label text-nowrap" for="nantou">
+                                                                南投縣
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="tainan" id="tainan">
+                                                            <label class="form-check-label text-nowrap" for="tainan">
+                                                                台南市
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="pingtung" id="pingtung">
+                                                            <label class="form-check-label text-nowrap" for="pingtung">
+                                                                屏東縣
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="hualien" id="hualien">
+                                                            <label class="form-check-label text-nowrap" for="hualien">
+                                                                花蓮縣
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="PenghuKinmenMatsu" id="PenghuKinmenMatsu">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="PenghuKinmenMatsu">
+                                                                澎湖金門馬祖
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-12 col1 ">
+                                            <div class="people">
+                                                <p class="h5 pb-4  fw-bold">
+                                                    遊玩人數
+                                                </p>
+                                                <select
+                                                    class="form-select mb-md-6 mb-3 border  rounded-1  border-primary-black"
+                                                    aria-label="Default select example">
+                                                    <option selected>請選擇遊玩人數</option>
+                                                    <option value="1">1人</option>
+                                                    <option value="2">2人</option>
+                                                    <option value="3">3人</option>
+                                                    <option value="4">4人</option>
+                                                    <option value="5">5人</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 難度、主題 -->
+                                <div class="d-flex  w-100  ">
+                                    <div class="row w-100 row1 flex-md-column">
+                                        <div class="col-6 col-md-12 col1 ">
+                                            <div class="difficulty">
+                                                <p class="h5 pb-4  fw-bold">
+                                                    難度
+                                                </p>
+                                                <!-- 手機板下拉式選單 -->
+
+                                                <select
+                                                    class="form-select d-md-none mb-md-6 mb-3 border  rounded-1  border-primary-black"
+                                                    aria-label="Default select example">
+                                                    <option selected>請選擇難度</option>
+                                                    <option value="GettingStarted">新手入門</option>
+                                                    <option value="Moderateplayer">中度玩家</option>
+                                                    <option value="Heavypuzzle">重度解謎</option>
+                                                </select>
+
+
+                                                <!-- 電腦版核取方塊 -->
+                                                <div class="row m-0 mb-6 d-none d-md-flex">
+                                                    <div class="col-md-6 mx-0 p-0 w-auto">
+                                                        <div class="form-check mb-4 me-6">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="GettingStarted" id="GettingStarted">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="GettingStarted">
+                                                                新手入門
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Moderateplayer" id="Moderateplayer">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Moderateplayer">
+                                                                中度玩家
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 m-0 p-0">
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Heavypuzzle" id="Heavypuzzle">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Heavypuzzle">
+                                                                重度解謎
+                                                            </label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-12 col1 ">
+                                            <div class="topic">
+                                                <p class="h5 pb-4  fw-bold">
+                                                    主題
+                                                </p>
+                                                <!-- 手機板下拉式選單 -->
+                                                <select
+                                                    class="form-select d-md-none mb-md-6 mb-3 border  rounded-1  border-primary-black"
+                                                    aria-label="Default select example">
+                                                    <option selected>請選擇主題類別</option>
+                                                    <option value="Detectivereasoning">偵探推理</option>
+                                                    <option value="Theplotisgreat">劇情厲害</option>
+                                                    <option value="interactiveoperation">互動操作</option>
+                                                    <option value="Relaxedandhappy">輕鬆歡樂</option>
+                                                    <option value="Thrilling">緊張刺激</option>
+                                                    <option value="teamWork">團隊合作</option>
+                                                    <option value="Specialgameplay">玩法特殊</option>
+                                                    <option value="Manyagencies">機關重重</option>
+                                                    <option value="Realisticscenes">場景逼真</option>
+                                                    <option value="puzzleLogic">謎題邏輯</option>
+                                                    <option value="horrorthriller">恐怖驚悚</option>
+                                                    <option value="Intrigue">勾心鬥角</option>
+                                                    <option value="Familytravel">親子同遊</option>
+                                                    <option value="rolePlay">角色扮演</option>
+                                                </select>
+
+                                                <!-- 電腦版核取方塊 -->
+                                                <div class="row m-0 mb-6 d-none d-md-flex">
+                                                    <div class="col-md-6 mx-0 p-0 w-auto">
+                                                        <div class="form-check mb-4 me-6">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Detectivereasoning" id="Detectivereasoning">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Detectivereasoning">
+                                                                偵探推理
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Theplotisgreat" id="Theplotisgreat">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Theplotisgreat">
+                                                                劇情厲害
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="interactiveoperation" id="interactiveoperation">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="interactiveoperation">
+                                                                互動操作
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Relaxedandhappy" id="Relaxedandhappy">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Relaxedandhappy">
+                                                                輕鬆歡樂
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Thrilling" id="Thrilling">
+                                                            <label class="form-check-label text-nowrap" for="Thrilling">
+                                                                緊張刺激
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="teamWork" id="teamWork">
+                                                            <label class="form-check-label text-nowrap" for="teamWork">
+                                                                團隊合作
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Specialgameplay" id="Specialgameplay">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Specialgameplay">
+                                                                玩法特殊
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 m-0 p-0">
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Manyagencies" id="Manyagencies">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Manyagencies">
+                                                                機關重重
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Realisticscenes" id="Realisticscenes">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Realisticscenes">
+                                                                場景逼真
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="puzzleLogic" id="puzzleLogic">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="puzzleLogic">
+                                                                謎題邏輯
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="horrorthriller" id="horrorthriller">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="horrorthriller">
+                                                                恐怖驚悚
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Intrigue" id="Intrigue">
+                                                            <label class="form-check-label text-nowrap" for="Intrigue">
+                                                                勾心鬥角
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="Familytravel" id="Familytravel">
+                                                            <label class="form-check-label text-nowrap"
+                                                                for="Familytravel">
+                                                                親子同遊
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-4 ">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                value="rolePlay" id="rolePlay">
+                                                            <label class="form-check-label text-nowrap" for="rolePlay">
+                                                                角色扮演
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="text-center mb-3">
+                                    <button type="submit"
+                                        class="btn btn-secondary-60 link-white rounded-2 w-100">搜尋</button>
+                                </div>
+                                <div class=" ">
+                                    <button type="reset"
+                                        class="btn w-100 reset_button border-0 text-primary-black fw-bold text-sm-center text-end">重置</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- 遊戲卡片 -->
+                        <div class="col-md-9 p-0">
+                            <div class="recommend">
+                                <div class="title-container w-100  d-flex justify-content-center align-items-center">
+                                    <h3 class="text-center mb-12 recommendation-title fw-bold fs-sm-h3 fs-h6">
+                                        本月推薦</h3>
+                                </div>
+                                <div class="row m-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/julia-kadel-304f1515.svg ">
+
+                                                            <img src="/hexschool-D4/assets/julia-kadel-sm-b68e5a23.svg" alt="等一個人・盜墓"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0 img-fluid" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                等一個人・盜墓
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                新北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">4,055 人評論</span>
+                                                            </p>
+                                                            <p=
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    2-8 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 600元起
+                                                                </span>
+                                                                </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/kostiantyn-49715a97.svg ">
+
+                                                            <img src="/hexschool-D4/assets/kostiantyn-sm-f9e20040.svg" alt="花月宴"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                花月宴
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                新北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating do tted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">1,264 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    4-8 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 800元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/sergio-alves-4ed9ce5a.svg ">
+
+                                                            <img src="/hexschool-D4/assets/sergio-alves-sm-af556e09.svg" alt="利維得酒吧"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                利維得酒吧
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                新北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">1,245 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    4-8 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 1,280 元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">劇情厲害</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/joanna-kosinska-1091cf3a.svg ">
+
+                                                            <img src="/hexschool-D4/assets/joanna-kosinska-sm-a358f994.svg" alt="秦閣"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                秦閣
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                新北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.8
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">1,233 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    6-8 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 650元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/adrien-olichon-eye-fbf8711a.svg ">
+
+                                                            <img src="/hexschool-D4/assets/adrien-olichon-eye-sm-a71eb5a7.svg"
+                                                                alt="獨眼傑克"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                獨眼傑克
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                台北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.7
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">1,049 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    2-8 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 600元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">新手入門</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">互動操作</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/jerome-b94c01c8.svg ">
+
+                                                            <img src="/hexschool-D4/assets/jerome-sm-0254ac18.svg" alt="SHINOBI 忍"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                SHINOBI 忍
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                台北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.6
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">680 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    4-10 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 550元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/adrien-olichon-knight-0449ad60.svg ">
+
+                                                            <img src="/hexschool-D4/assets/adrien-olichon-knight-sm-e7ad5818.svg"
+                                                                alt="騎士軌途"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                騎士軌途
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                太北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">642 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    6-10 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 650元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">謎題邏輯</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/Comment3-eb119785.svg ">
+
+                                                            <img src="/hexschool-D4/assets/Comment3-sm-784b6d67.svg" alt="美人秘湯"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                美人秘湯
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                台北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">622 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    6-8 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 750元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">新手入門</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">輕鬆歡樂</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="recently my-5 my-md-10  ">
+                                <div class="title-container w-100  d-flex justify-content-center align-items-center">
+                                    <h3 class="text-center mb-12 recommendation-title fw-bold fs-sm-h3 fs-h6">
+                                        近期新作</h3>
+                                </div>
+                                <div class="row m-0">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/sergei-0364181b.svg ">
+
+                                                            <img src="/hexschool-D4/assets/sergei-sm-8fac33b1.svg" alt="逃兵"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                逃兵
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                桃園市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">219 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    2-4 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 700元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">恐怖驚悚</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <!-- 中螢幕 (768px 以上) -->
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/ante-samarzija-fbcd19c3.svg ">
+
+                                                            <!-- 最小螢幕，當視窗寬度小於 576px 時使用 -->
+                                                            <img src="/hexschool-D4/assets/ante-samarzija-sm-1f469ba2.svg"
+                                                                alt="玄武石醫院"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                玄武石醫院
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                高雄市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">183 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    2-5人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人550元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">劇情厲害</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/adrien-olichon-9686514f.svg ">
+
+                                                            <img src="/hexschool-D4/assets/adrien-olichon-sm-28c2f03e.svg"
+                                                                alt="庫克王國2-復仇的餓火"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                庫克王國2-復仇的餓火
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                高雄市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">160 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    2-6 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 750元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">新手入門</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">機關重重</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/egor-freethinkel-050f2578.svg ">
+
+                                                            <img src="/hexschool-D4/assets/egor-freethinkel-sm-f1f85cfd.svg"
+                                                                alt="MY後台苦路"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                MY後台苦路
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                台中市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.4
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">70 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    8-12 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 900元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">團隊合作</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">玩法特殊</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/omer-haktan-9a3dd17d.svg ">
+
+                                                            <img src="/hexschool-D4/assets/omer-haktan-sm-2fc1d754.svg"
+                                                                alt="康斯特學員：惡獸起源"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                康斯特學員：惡獸起源
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                台北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.7
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">36 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    1-4 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 200元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">新手入門</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">角色扮演</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">輕鬆歡樂</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/roonz-28b6bb03.svg ">
+
+                                                            <img src="/hexschool-D4/assets/roonz-sm-a8878d11.svg" alt="鬱金香"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                鬱金香
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                桃園市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">5.0
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">1 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    2-6 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 850元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">新手入門</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">劇情厲害
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/erik-muller-e8da5a7b.svg ">
+
+                                                            <img src="/hexschool-D4/assets/erik-muller-sm-12a5dc0e.svg" alt="諜影：重慶迷霧"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                諜影：重慶迷霧
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                台北市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.8
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">253 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    8-8 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 1,350元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">場景逼真</span>
+                                                    <span class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">勾心鬥角
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col2 ">
+                                        <a href="game_content.html">
+                                            <div class="card p-3 rounded-6 ">
+                                                <div class="row g-0 align-items-start h-100">
+                                                    <div class="col-auto col-sm-12 ">
+                                                        <!-- 手機板圖片在左邊 -->
+                                                        <picture class="">
+
+                                                            <source media="(min-width: 576px)"
+                                                                srcset="/hexschool-D4/assets/lan-gao-b1f83c49.svg ">
+
+                                                            <img src="/hexschool-D4/assets/lan-gao-sm-8997eaf7.svg" alt="驅魔"
+                                                                class="card-photo rounded-3 w-100 mb-3 me-3 me-md-0" />
+                                                        </picture>
+                                                    </div>
+                                                    <!-- 手機板文字內容在右邊 -->
+                                                    <div class="col ms-3 ms-md-0">
+                                                        <div class="card-body p-0">
+                                                            <h6
+                                                                class="card-title mb-1 mb-md-2 text-primary-black fw-bold lh-base">
+                                                                驅魔
+                                                            </h6>
+                                                            <p class="card-text text-nature-40 mb-3 fw-bold fs-Body-2">
+                                                                台中市
+                                                            </p>
+                                                            <p class="d-flex align-items-center mb-2">
+                                                                <span class="rating dotted pe-3 fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star"
+                                                                        class="pe-1">4.9
+                                                                </span>
+                                                                <span class="ps-2 fs-Body-2">4,055 人評論</span>
+                                                            </p>
+                                                            <p
+                                                                class="d-flex align-items-start flex-md-row flex-column ">
+                                                                <span class="dotted pe-md-3 fs-Body-2 pb-2 pb-md-0">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgBpVExDoJAEJw9GgtNUBvsrlBjSWnpU/AFYkdnbWV8gfgEf8A3DIV0amFyhYUV5xJET0wkhEnubie3s5ndJZQwls4K0H4WE0R4TM5L898yyUgONgQEnNrKD6Z9u003dY+KHGEKCKmHH9DCZAI1URLQtpygke5N/tVD5rVnd7oEPWH64ALrOLkGaAIqgqF0ZgKaGySXqXwZUnxFGnSIk0v4FvDsd/x4/yprIGTR3MoXBR/VVtxsJ8SC08dCpUzV3INWT1gyMAij+FumAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1 fs-Body-2">
+                                                                    4-10 人
+                                                                </span>
+                                                                <span class="ps-md-2  fs-Body-2">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBdVGxTsMwED07BXWIwSkghc2VQDC2W5koG2NXNv6gHbtRvoCZifAJbGy0E4zMhMEbQQLkShlQhXI8p60UUXGWrfP53bt3Z6KK7Zv4HPuG/pjwhzFar1O9zyR6glgT8TP8u9RmiX8PDk1sJNUe8dDF3fo8LIfs4bZW00+XPwWRViMEOzOidkA0BbAOhrOGVhH8vtK1azmnL6y1ma3qSO3bYEbcttY5uSjROjC7A0m8WQUuEwPUHM+p+QLgU2jRWzqMlA7BkbsS5I8vl9/v6PCWiTy4hVAnIDEEmEAyCZbUH8hq6BD6xHdq3488u+9wI1KJ3DNx12AMtGI/SVmKuVmD2Ks1zAX3kypEkjxmD4V+4ZnQ4sOiS0yajCh97iF2+WKzkXy12RigJgITzAuAwjCxK8DsASsq/vvgXyKYdgxdskeGAAAAAElFTkSuQmCC"
+                                                                        alt="star" class="pe-1">
+                                                                    每人 600元起
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 手機版標籤在底部 -->
+                                                <div class="tags   d-flex flex-wrap fs-Body-2 gap-2 mt-3 ">
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">中度玩家</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3 text-nowrap">恐怖驚悚</span>
+                                                    <span
+                                                        class=" bg-nature-95 px-2 py-1 rounded-3  text-nowrap">場景逼真</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </main>
+
+
+
+
+        <footer class="footer bg-nature-20">
+    <div class="container">
+        <div class="d-flex flex-lg-row flex-column-reverse justify-content-between py-8">
+            <div class="d-flex flex-column align-items-center align-items-lg-start px-0">
+                <a href="index.html">
+                    <img src="/hexschool-D4/assets/Logo-Type-eb30690f.svg" alt="logo" class="mb-10 mb-lg-3" />
+                </a>
+                <p class="text-white fs-Caption m-0">
+                    Cpyright@ 2024 密室搜搜 -All Right Reserved
+                </p>
+            </div>
+            <ul class="d-flex flex-lg-row flex-column justify-content-lg-end gap-6 p-0 mb-10 mb-lg-0">
+                <li class="text-center px-lg-10 px-xl-15">
+                    <h6 class="text-white fs-h6 mb-6">主要功能</h6>
+                    <div class="fw-bold">
+                        <a href="search.html" class="mb-3 link-white fs-Body-2">找遊戲</a>
+                        <a href="ranking-list.html" class="link-white fs-Body-2">密室排行榜</a>
+                    </div>
+                </li>
+                <li class="text-center px-lg-10 px-xl-15">
+                    <h6 class="text-white fs-h6 mb-6">關於密室搜搜</h6>
+                    <div class="fw-bold">
+                        <a href="about.html#about-us" class="mb-3 link-white fs-Body-2">關於密室搜搜</a>
+                        <a href="about.html#terms-of-service" class="mb-3 link-white fs-Body-2">服務條款</a>
+                        <a href="about.html#privacy-policy" class="link-white fs-Body-2">隱私權政策</a>
+                    </div>
+                </li>
+                <li class="text-center px-lg-10 px-xl-15">
+                    <h6 class="text-white fs-h6 mb-6">追蹤我們</h6>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="https://www.facebook.com/">
+                            <img class="social_icon" src="/hexschool-D4/assets/fb-f3c54cd1.svg" alt="fb" />
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img class="social_icon" src="/hexschool-D4/assets/ig-d66703be.png" alt="ig" />
+                        </a>
+                        <a href="https://workspace.google.com/intl/zh-TW/products/gmail/">
+                            <img class="social_icon" src="/hexschool-D4/assets/email-ce0b55e7.png" alt="mail" />
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+            
+</body>
+
+</html>

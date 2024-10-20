@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>密室排行榜</title>
+  <script type="module" crossorigin src="/hexschool-D4/assets/main-1d611916.js"></script>
+  <link rel="stylesheet" href="/hexschool-D4/assets/main-6519c4d9.css">
+</head>
+
+<body>
+    <nav
+  class="navbar navbar-expand-lg w-100 bg-primary-99 position-fixed top-0 start-0 d-lg-flex justify-content-between"
+>
+  <div
+    class="nav-box container d-lg-none d-flex flex-row justify-content-between align-items-center"
+  >
+    <button
+      class="navbar-toggler border-0 p-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand m-0 d-inline" href="#">
+      <img src="/hexschool-D4/assets/Logo-Type-sm-63bac178.svg" alt="logo" class="" />
+    </a>
+  </div>
+  <div class="container-lg px-0 px-lg-3">
+    <div
+      class="collapse navbar-collapse d-lg-flex justify-content-between"
+      id="navbarSupportedContent"
+    >
+      <a class="m-0 d-none d-lg-inline" href="index.html">
+        <img src="/hexschool-D4/assets/Logo-Type-eb30690f.svg" alt="logo-lg" />
+      </a>
+      <ul
+        class="navbar-nav text-center gap-lg-10 bg-primary-99 align-items-center"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold"
+            href="search.html"
+            >找遊戲</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold"
+            href="ranking-list.html"
+            >密室排行榜</a
+          >
+        </li>
+        <li class="auth-button">
+          <!-- Button trigger modal -->
+          <button
+            id="auth-btn"
+            type="button"
+            class="btn w-100 nav-link-bg px-0 py-4 fs-h6 fw-bold border-0"
+            data-bs-toggle="modal"
+            data-bs-target="#login-modal"
+          >
+            登入/註冊
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="login-modal"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body container bg-primary-99 p-md-16 p-8 rounded-4">
+        <div
+          class="bg-white mb-8 rounded-3 border border-black d-flex justify-content-around position-relative"
+        >
+          <div class="tab-background"></div>
+          <button
+            id="login-tab"
+            class="tab active py-md-4 py-2 w-100 rounded-3 fs-md-h6 fs-Body-1"
+          >
+            登入
+          </button>
+          <button
+            id="signup-tab"
+            class="tab py-md-4 py-2 w-100 rounded-3 fs-md-h6 fs-Body-1"
+          >
+            註冊
+          </button>
+        </div>
+
+        <form id="login-form" class="d-flex flex-column">
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="email"
+            id="email"
+            placeholder="電子郵件"
+            required
+          />
+          <input
+            class="p-md-3 p-2 border border-black rounded-3"
+            type="password"
+            id="password"
+            placeholder="密碼"
+            required
+          />
+          <a href="#" class="forgot-password fs-Body-2 text-secondary-60 mt-2"
+            >忘記密碼？
+          </a>
+          <button
+            type="button"
+            id="login-btn"
+            class="submit-btn fs-md-h6 fs-Body-1 bg-primary-70 text-white p-md-4 p-2 border border-black rounded-3"
+          >
+            登入
+          </button>
+        </form>
+
+        <form id="signup-form" class="hidden d-flex flex-column">
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="email"
+            id="signup-email"
+            placeholder="電子郵件"
+            required
+          />
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="password"
+            id="signup-password"
+            placeholder="密碼"
+            required
+          />
+          <input
+            class="p-md-3 p-2 mb-8 border border-black rounded-3"
+            type="password"
+            id="signup-password-confirm"
+            placeholder="確認密碼"
+            required
+          />
+          <button
+            type="button"
+            id="signup-btn"
+            class="submit-btn fs-md-h6 fs-Body-1 bg-primary-70 text-white p-md-4 p-2 border border-black rounded-3"
+          >
+            註冊
+          </button>
+        </form>
+
+        <div id="signup-nav" class="mt-4 d-flex justify-content-center">
+          <p>還沒有帳號嗎？</p>
+          <a class="text-secondary-60" href="#" id="signup-link">立即註冊</a>
+        </div>
+
+        <div id="login-nav" class="hidden mt-4 d-flex justify-content-center">
+          <p>已經有帳號？</p>
+          <a class="text-secondary-60" href="#" id="login-link">立即登入</a>
+        </div>
+
+        <div
+          class="social-login mt-8 position-relative d-flex flex-column align-items-center"
+        >
+          <button class="social-btn google my-2 p-md-3 p-2">
+            <img
+              class="social-img"
+              src="data:image/png;base64,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"
+              alt="google"
+            />
+            利用 Google 登入
+          </button>
+          <button class="social-btn facebook my-2 p-md-3 p-2">
+            <img class="social-img" src="/hexschool-D4/assets/fb-f3c54cd1.svg" alt="fb" />
+            利用 Facebook 登入
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <main>
+            <div class="banner position-relative">
+                <div class="banner-title position-absolute top-30 start-10 pb-3 d-none d-lg-block">
+                    <h1 class="fs-Display2 fw-bold text-primary-10">密室排行榜</h1>
+                </div>
+                <picture>
+                    <source media="(min-width: 992px)" srcset="/hexschool-D4/assets/Banner-list-c2e21910.png " />
+                    <img src="/hexschool-D4/assets/Banner-3-8c755651.svg" alt="banner" class="w-100" />
+                </picture>
+            </div>
+
+            <section class="my-lg-10">
+                <div class="container-fluid container-lg">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10 bg-white rounded-3">
+                            <form class="p-3 pb-6">
+                                <fieldset class="mb-3">
+                                    <legend class="fs-Caption">排序條件</legend>
+                                    <div class="form-check form-check-inline py-2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1" checked />
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            難度
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline py-2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2" />
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            人氣
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline py-2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault3" />
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                            價格
+                                        </label>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="d-flex">
+                                        <div class="input-group">
+                                            <legend class="fs-Caption">工作室</legend>
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFfSURBVHgB7VTLTcNAFJy1IAk3cwu3ReJ3pQKcCmghHSRUgKjAcQXQAhXgdAEIib3hGz5iA17mYRAI/FuIBIfMyfIbzezbffOAJf4aqqm4pYeBBzvhZ0CqD9iU33EBFd2YJEYHeHWFbb0RsnjKE8xzZJvXJlEe1L6FOpf/u6zjpx2IuIJdz/EwNSZNv9a19v0eBjMFdX9l7o7gArmWHT28FZEmntSFJ/wmnvf9h51Y4KTq5J8hdXYZkT91MiCCRz4kOiBDdkaJA7iAbdtF8is6sGnb/b9jTw815yR1NEDcx9oYHfD8mo9iDhcDCZHlQ3eZIs74MfkzJwNJqIRpFYOwzuQtB6Gk+4kDhQbUrgqGjUGyhzKyMlXGJEaE++iPeQCuD+uX6wMmB0ZSdzIQlLtIxIrgYxd53EU2WqFwAVxIQ00mjQZtkClqM/HwC1xSjAIjlO+ge6UZFmZQYbLEP8QL86qGnm21xGgAAAAASUVORK5CYII=" alt="search"
+                                                class="input-group-text border-primary-black rounded-start-1 rounded-end-0" />
+                                            <input type="text"
+                                                class="form-control border-primary-black rounded-start-0 rounded-end-1"
+                                                placeholder="搜尋工作室名稱" aria-label="search" />
+                                            <button type="submit"
+                                                class="btn btn-secondary-60 link-white px-11 py-2 ms-3 rounded-1">
+                                                搜尋
+                                            </button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <div class="p-lg-3 px-3 pb-8">
+                                <div class="scrollbar">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr class="border-0">
+                                                <th scope="col" class="text-primary-30 ps-0 py-3 pe-lg-6 pe-3 fw-bold">
+                                                    圖片
+                                                </th>
+                                                <th scope="col" class="text-primary-30 ps-0 py-3 pe-2 fw-bold">
+                                                    名稱
+                                                </th>
+                                                <th scope="col"
+                                                    class="text-primary-30 ps-0 py-3 pe-2 fw-bold d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    工作室
+                                                </th>
+                                                <th scope="col"
+                                                    class="text-primary-30 ps-0 py-3 pe-2 fw-bold d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    遊玩人數
+                                                </th>
+                                                <th scope="col" class="text-primary-30 ps-0 py-3 pe-2 fw-bold">
+                                                    評價
+                                                </th>
+                                                <th scope="col" class="text-primary-30 ps-0 py-3 pe-lg-5 pe-2 fw-bold">
+                                                    價格
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)"
+                                                            srcset="/hexschool-D4/assets/muhammad-haikal-list-528d448b.png " />
+                                                        <img src="/hexschool-D4/assets/muhammad-haikal-list-sm-d1fb08b7.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    X伯爵的委託
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    神不在場
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1358
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">400/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)"
+                                                            srcset="/hexschool-D4/assets/julia-kadel-list-b5a234b7.png " />
+                                                        <img src="/hexschool-D4/assets/julia-kadel-list-sm-c3ec7500.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    等一個人．盜墓
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    許多門
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1301
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBlVNBTsNADLS3FedwQ0qQfKCFW/qE5iWUH/CDwg/gBcAL+gS+kCOCA64EUm/kwKkiWey0Gy0rskpHstZa2zPW2gsQQUqTmVosZxwLGsCVBcviFv05/eoLC0AWkDI6mx9MIOrLnWdvofMHEjh19T/57THWxXj/SGImMdDkjfgoBX4SQnMl8VVGkxIBWAjXNdSlAcOY0vQd92r/4YNfUU/tAMEmFkYqmIvNpcsKT+iCRtA895E4Ah8ZTZdSvKhhW5gNv3ANppALhgHwizfM3D7iUJKwWO+6KSjJbmRRzDTHFf8hUGCbEINdhznhHuRhyalMye2AtF+KDPnx4C+gz16J3TftXzAPsgMyf3jCQKQbERElP3D05Qq/YXtXMVcuLg94IwSXOm6JHfuxjiCl8+tETuiB7oyuuX/3C37ZfKhQUnrYAAAAAElFTkSuQmCC" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">400/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)"
+                                                            srcset="/hexschool-D4/assets/kostiantyn-li-list-211f1768.png " />
+                                                        <img src="/hexschool-D4/assets/kostiantyn-li-list-sm-19f0f166.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    花月宴
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    神不在場
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1269
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBlVNBTsNADLS3FedwQ0qQfKCFW/qE5iWUH/CDwg/gBcAL+gS+kCOCA64EUm/kwKkiWey0Gy0rskpHstZa2zPW2gsQQUqTmVosZxwLGsCVBcviFv05/eoLC0AWkDI6mx9MIOrLnWdvofMHEjh19T/57THWxXj/SGImMdDkjfgoBX4SQnMl8VVGkxIBWAjXNdSlAcOY0vQd92r/4YNfUU/tAMEmFkYqmIvNpcsKT+iCRtA895E4Ah8ZTZdSvKhhW5gNv3ANppALhgHwizfM3D7iUJKwWO+6KSjJbmRRzDTHFf8hUGCbEINdhznhHuRhyalMye2AtF+KDPnx4C+gz16J3TftXzAPsgMyf3jCQKQbERElP3D05Qq/YXtXMVcuLg94IwSXOm6JHfuxjiCl8+tETuiB7oyuuX/3C37ZfKhQUnrYAAAAAElFTkSuQmCC" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">450/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)" srcset="/hexschool-D4/assets/alexandru-zdrobau-list-cc0cb404.png " />
+                                                        <img src="/hexschool-D4/assets/alexandru-zdrobau-list-sm-b3ad35b5.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    美人秘湯
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    LoGin
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1200
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBlVNBTsNADLS3FedwQ0qQfKCFW/qE5iWUH/CDwg/gBcAL+gS+kCOCA64EUm/kwKkiWey0Gy0rskpHstZa2zPW2gsQQUqTmVosZxwLGsCVBcviFv05/eoLC0AWkDI6mx9MIOrLnWdvofMHEjh19T/57THWxXj/SGImMdDkjfgoBX4SQnMl8VVGkxIBWAjXNdSlAcOY0vQd92r/4YNfUU/tAMEmFkYqmIvNpcsKT+iCRtA895E4Ah8ZTZdSvKhhW5gNv3ANppALhgHwizfM3D7iUJKwWO+6KSjJbmRRzDTHFf8hUGCbEINdhznhHuRhyalMye2AtF+KDPnx4C+gz16J3TftXzAPsgMyf3jCQKQbERElP3D05Qq/YXtXMVcuLg94IwSXOm6JHfuxjiCl8+tETuiB7oyuuX/3C37ZfKhQUnrYAAAAAElFTkSuQmCC" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">450/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)" srcset="/hexschool-D4/assets/muhammad-haikal-sjukri-list-4f0e6774.png " />
+                                                        <img src="/hexschool-D4/assets/muhammad-haikal-sjukri-list-sm-d9dfa3f1.png"
+                                                            alt="" class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    逃兵
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    玩笑實驗室
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1186
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBlVNBTsNADLS3FedwQ0qQfKCFW/qE5iWUH/CDwg/gBcAL+gS+kCOCA64EUm/kwKkiWey0Gy0rskpHstZa2zPW2gsQQUqTmVosZxwLGsCVBcviFv05/eoLC0AWkDI6mx9MIOrLnWdvofMHEjh19T/57THWxXj/SGImMdDkjfgoBX4SQnMl8VVGkxIBWAjXNdSlAcOY0vQd92r/4YNfUU/tAMEmFkYqmIvNpcsKT+iCRtA895E4Ah8ZTZdSvKhhW5gNv3ANppALhgHwizfM3D7iUJKwWO+6KSjJbmRRzDTHFf8hUGCbEINdhznhHuRhyalMye2AtF+KDPnx4C+gz16J3TftXzAPsgMyf3jCQKQbERElP3D05Qq/YXtXMVcuLg94IwSXOm6JHfuxjiCl8+tETuiB7oyuuX/3C37ZfKhQUnrYAAAAAElFTkSuQmCC" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">500/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)"
+                                                            srcset="/hexschool-D4/assets/roonz-nl-list-408dadf7.png " />
+                                                        <img src="/hexschool-D4/assets/roonz-nl-list-sm-e25c8465.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    鬱金香
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    快樂工作室
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    1097
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBlVNBTsNADLS3FedwQ0qQfKCFW/qE5iWUH/CDwg/gBcAL+gS+kCOCA64EUm/kwKkiWey0Gy0rskpHstZa2zPW2gsQQUqTmVosZxwLGsCVBcviFv05/eoLC0AWkDI6mx9MIOrLnWdvofMHEjh19T/57THWxXj/SGImMdDkjfgoBX4SQnMl8VVGkxIBWAjXNdSlAcOY0vQd92r/4YNfUU/tAMEmFkYqmIvNpcsKT+iCRtA895E4Ah8ZTZdSvKhhW5gNv3ANppALhgHwizfM3D7iUJKwWO+6KSjJbmRRzDTHFf8hUGCbEINdhznhHuRhyalMye2AtF+KDPnx4C+gz16J3TftXzAPsgMyf3jCQKQbERElP3D05Qq/YXtXMVcuLg94IwSXOm6JHfuxjiCl8+tETuiB7oyuuX/3C37ZfKhQUnrYAAAAAElFTkSuQmCC" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">500/人</td>
+                                            </tr>
+                                            <tr class="border-nature-90 py-lg-3"
+                                                onclick="window.location='./game_content.html'">
+                                                <td class="col-lg-2 ps-0 py-lg-3 py-2 pe-lg-6 pe-2 align-middle">
+                                                    <picture>
+                                                        <source media="(min-width: 992px)"
+                                                            srcset="/hexschool-D4/assets/harry-quan-list-31db8f80.png " />
+                                                        <img src="/hexschool-D4/assets/harry-quan-list-sm-87cb0ff5.png" alt=""
+                                                            class="w-100 rounded-2" />
+                                                    </picture>
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    獨眼傑克
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    任意門
+                                                </td>
+                                                <td
+                                                    class="ps-0 py-lg-3 py-2 pe-2 align-middle d-none d-sm-none d-md-table-cell d-lg-table-cell">
+                                                    968
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 pe-2 align-middle">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVHgBlVLBTcRADBxvEOLBIwidFMTHDw74XUo4OqADoAOoAOgAKqEEKOEqAPPLA8EiIXQ6KVkcQkKyuuRu5xF7156xs3aEAYx5P92Nt5J3+5315WwMCRDyB4dI1D3pyzHorZ6cq2ECpgecTIMFlHi9zF9LoK7eEujtgsY8SoEoNaC4gJsALiUYJbvYS7UObqaOqOBrjmJm4IQOOXlpVwuEGFO9sCAcslAuld4xJ1wAjwGd/JJFMqH6JkCkIZeHqL59s192FG9/OuB0iK3xq2fJnupzZ4w5KMVKuE6OtwflGIdB3i+abrDdAVn93GrLF+hMiSaeYAVmjjcx/6iI7n6B+Z2ItXVc9+VGzVmZqrGddqwROOK9SzXeBv6jnNTfmjf4ATp5WZoaQTkeAAAAAElFTkSuQmCC" alt="star" />
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE/SURBVHgBlVNBTsNADLS3FedwQ0qQfKCFW/qE5iWUH/CDwg/gBcAL+gS+kCOCA64EUm/kwKkiWey0Gy0rskpHstZa2zPW2gsQQUqTmVosZxwLGsCVBcviFv05/eoLC0AWkDI6mx9MIOrLnWdvofMHEjh19T/57THWxXj/SGImMdDkjfgoBX4SQnMl8VVGkxIBWAjXNdSlAcOY0vQd92r/4YNfUU/tAMEmFkYqmIvNpcsKT+iCRtA895E4Ah8ZTZdSvKhhW5gNv3ANppALhgHwizfM3D7iUJKwWO+6KSjJbmRRzDTHFf8hUGCbEINdhznhHuRhyalMye2AtF+KDPnx4C+gz16J3TftXzAPsgMyf3jCQKQbERElP3D05Qq/YXtXMVcuLg94IwSXOm6JHfuxjiCl8+tETuiB7oyuuX/3C37ZfKhQUnrYAAAAAElFTkSuQmCC" alt="star" />
+                                                </td>
+                                                <td class="ps-0 py-lg-3 py-2 align-middle">500/人</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <picture>
+                    <source media="(min-width: 992px)" srcset="/hexschool-D4/assets/AD-d26cf84f.svg " />
+                    <img src="/hexschool-D4/assets/Frame-427318970-b0ae91e6.svg" alt="AD" class="w-100" />
+                </picture>
+            </section>
+
+            <section class="bg-nature-30 position-relative">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <div
+                                class="row flex-lg-row flex-column justify-content-lg-between justify-content-center align-items-center my-lg-12 mt-15 mb-20">
+                                <div class="col position-relative mb-12">
+                                    <div class="grab d-none d-lg-block">
+                                        <h3 class="text-nature-95 fw-bold">點擊右側的「揪團去」</h3>
+                                        <h3 class="text-nature-95 fw-bold position-relative z-2">
+                                            一起找人解謎吧！
+                                        </h3>
+                                        <div class="position-absolute bottom-0 z-1">
+                                            <img src="/hexschool-D4/assets/Rectangle-15-d2caba63.svg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="grab-sm text-center d-block d-lg-none">
+                                        <h3 class="text-nature-95 fw-bold">點擊下側的「揪團去」</h3>
+                                        <h3 class="text-nature-95 fw-bold position-relative z-2">
+                                            一起找人解謎吧！
+                                        </h3>
+                                        <div class="position-absolute bottom-0 start-50 translate-middle-x z-1">
+                                            <img src="/hexschool-D4/assets/Rectangle-15-sm-acf11d51.svg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="d-flex justify-content-center">
+                                        <picture>
+                                            <source media="(min-width: 992px)"
+                                                srcset="/hexschool-D4/assets/CTA-lg-37c07600.png " />
+                                            <img src="/hexschool-D4/assets/CTA-0d147b79.png" alt="CTA" class="w-100" />
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="position-absolute top-0 end-0">
+                    <img src="/hexschool-D4/assets/dotted-line-4116fe6d.svg" alt="" />
+                </div>
+                <div class="position-absolute bottom-0 start-0 d-none d-lg-block">
+                    <img src="/hexschool-D4/assets/dotted-line-4116fe6d.svg" alt="" />
+                </div>
+            </section>
+        </main>
+        <footer class="footer bg-nature-20">
+    <div class="container">
+        <div class="d-flex flex-lg-row flex-column-reverse justify-content-between py-8">
+            <div class="d-flex flex-column align-items-center align-items-lg-start px-0">
+                <a href="index.html">
+                    <img src="/hexschool-D4/assets/Logo-Type-eb30690f.svg" alt="logo" class="mb-10 mb-lg-3" />
+                </a>
+                <p class="text-white fs-Caption m-0">
+                    Cpyright@ 2024 密室搜搜 -All Right Reserved
+                </p>
+            </div>
+            <ul class="d-flex flex-lg-row flex-column justify-content-lg-end gap-6 p-0 mb-10 mb-lg-0">
+                <li class="text-center px-lg-10 px-xl-15">
+                    <h6 class="text-white fs-h6 mb-6">主要功能</h6>
+                    <div class="fw-bold">
+                        <a href="search.html" class="mb-3 link-white fs-Body-2">找遊戲</a>
+                        <a href="ranking-list.html" class="link-white fs-Body-2">密室排行榜</a>
+                    </div>
+                </li>
+                <li class="text-center px-lg-10 px-xl-15">
+                    <h6 class="text-white fs-h6 mb-6">關於密室搜搜</h6>
+                    <div class="fw-bold">
+                        <a href="about.html#about-us" class="mb-3 link-white fs-Body-2">關於密室搜搜</a>
+                        <a href="about.html#terms-of-service" class="mb-3 link-white fs-Body-2">服務條款</a>
+                        <a href="about.html#privacy-policy" class="link-white fs-Body-2">隱私權政策</a>
+                    </div>
+                </li>
+                <li class="text-center px-lg-10 px-xl-15">
+                    <h6 class="text-white fs-h6 mb-6">追蹤我們</h6>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="https://www.facebook.com/">
+                            <img class="social_icon" src="/hexschool-D4/assets/fb-f3c54cd1.svg" alt="fb" />
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img class="social_icon" src="/hexschool-D4/assets/ig-d66703be.png" alt="ig" />
+                        </a>
+                        <a href="https://workspace.google.com/intl/zh-TW/products/gmail/">
+                            <img class="social_icon" src="/hexschool-D4/assets/email-ce0b55e7.png" alt="mail" />
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+            
+</body>
+
+</html>

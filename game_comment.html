@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>遊戲評論</title>
+		<script type="module" crossorigin src="/hexschool-D4/assets/main-1d611916.js"></script>
+		<link rel="stylesheet" href="/hexschool-D4/assets/main-6519c4d9.css">
+	</head>
+	<body>
+		<nav
+  class="navbar navbar-expand-lg w-100 bg-primary-99 position-fixed top-0 start-0 d-lg-flex justify-content-between"
+>
+  <div
+    class="nav-box container d-lg-none d-flex flex-row justify-content-between align-items-center"
+  >
+    <button
+      class="navbar-toggler border-0 p-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand m-0 d-inline" href="#">
+      <img src="/hexschool-D4/assets/Logo-Type-sm-63bac178.svg" alt="logo" class="" />
+    </a>
+  </div>
+  <div class="container-lg px-0 px-lg-3">
+    <div
+      class="collapse navbar-collapse d-lg-flex justify-content-between"
+      id="navbarSupportedContent"
+    >
+      <a class="m-0 d-none d-lg-inline" href="index.html">
+        <img src="/hexschool-D4/assets/Logo-Type-eb30690f.svg" alt="logo-lg" />
+      </a>
+      <ul
+        class="navbar-nav text-center gap-lg-10 bg-primary-99 align-items-center"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold"
+            href="search.html"
+            >找遊戲</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-bg px-0 py-4 fs-h6 fw-bold"
+            href="ranking-list.html"
+            >密室排行榜</a
+          >
+        </li>
+        <li class="auth-button">
+          <!-- Button trigger modal -->
+          <button
+            id="auth-btn"
+            type="button"
+            class="btn w-100 nav-link-bg px-0 py-4 fs-h6 fw-bold border-0"
+            data-bs-toggle="modal"
+            data-bs-target="#login-modal"
+          >
+            登入/註冊
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="login-modal"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body container bg-primary-99 p-md-16 p-8 rounded-4">
+        <div
+          class="bg-white mb-8 rounded-3 border border-black d-flex justify-content-around position-relative"
+        >
+          <div class="tab-background"></div>
+          <button
+            id="login-tab"
+            class="tab active py-md-4 py-2 w-100 rounded-3 fs-md-h6 fs-Body-1"
+          >
+            登入
+          </button>
+          <button
+            id="signup-tab"
+            class="tab py-md-4 py-2 w-100 rounded-3 fs-md-h6 fs-Body-1"
+          >
+            註冊
+          </button>
+        </div>
+
+        <form id="login-form" class="d-flex flex-column">
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="email"
+            id="email"
+            placeholder="電子郵件"
+            required
+          />
+          <input
+            class="p-md-3 p-2 border border-black rounded-3"
+            type="password"
+            id="password"
+            placeholder="密碼"
+            required
+          />
+          <a href="#" class="forgot-password fs-Body-2 text-secondary-60 mt-2"
+            >忘記密碼？
+          </a>
+          <button
+            type="button"
+            id="login-btn"
+            class="submit-btn fs-md-h6 fs-Body-1 bg-primary-70 text-white p-md-4 p-2 border border-black rounded-3"
+          >
+            登入
+          </button>
+        </form>
+
+        <form id="signup-form" class="hidden d-flex flex-column">
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="email"
+            id="signup-email"
+            placeholder="電子郵件"
+            required
+          />
+          <input
+            class="p-md-3 p-2 mb-4 border border-black rounded-3"
+            type="password"
+            id="signup-password"
+            placeholder="密碼"
+            required
+          />
+          <input
+            class="p-md-3 p-2 mb-8 border border-black rounded-3"
+            type="password"
+            id="signup-password-confirm"
+            placeholder="確認密碼"
+            required
+          />
+          <button
+            type="button"
+            id="signup-btn"
+            class="submit-btn fs-md-h6 fs-Body-1 bg-primary-70 text-white p-md-4 p-2 border border-black rounded-3"
+          >
+            註冊
+          </button>
+        </form>
+
+        <div id="signup-nav" class="mt-4 d-flex justify-content-center">
+          <p>還沒有帳號嗎？</p>
+          <a class="text-secondary-60" href="#" id="signup-link">立即註冊</a>
+        </div>
+
+        <div id="login-nav" class="hidden mt-4 d-flex justify-content-center">
+          <p>已經有帳號？</p>
+          <a class="text-secondary-60" href="#" id="login-link">立即登入</a>
+        </div>
+
+        <div
+          class="social-login mt-8 position-relative d-flex flex-column align-items-center"
+        >
+          <button class="social-btn google my-2 p-md-3 p-2">
+            <img
+              class="social-img"
+              src="data:image/png;base64,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"
+              alt="google"
+            />
+            利用 Google 登入
+          </button>
+          <button class="social-btn facebook my-2 p-md-3 p-2">
+            <img class="social-img" src="/hexschool-D4/assets/fb-f3c54cd1.svg" alt="fb" />
+            利用 Facebook 登入
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<main>
+			<div class="container-fluid container-lg">
+				<div class="rol d-flex justify-content-center">
+					<div class="col-xl-10">
+						<div class="pb-10">
+							<picture>
+								<source
+									media="(min-width: 992px)"
+									srcset="/hexschool-D4/assets/julia-kadel-7ca938d3.png " />
+								<img
+									src="/hexschool-D4/assets/julia-kadel-sm-712f5b00.png"
+									alt="banner"
+									class="w-100" />
+							</picture>
+							<div>
+								<div class="py-10">
+									<h1 class="fs-lg-Display2 fs-h5 fw-bold">
+										遊戲名稱：等一個人・盜墓
+									</h1>
+								</div>
+								<div class="mb-6">
+									<h2 class="fs-lg-h2 fs-h6 fw-bold">
+										整體評價
+									</h2>
+									<p class="py-3">
+										依據您遊玩的經驗，整體而言您會給這個遊戲幾分?
+									</p>
+									<div class="box">
+										<input
+											type="radio"
+											name="star"
+											id="score5"
+											value="5" />
+										<label
+											class="star"
+											for="score5"></label>
+										<input
+											type="radio"
+											name="star"
+											id="score4"
+											value="4" />
+										<label
+											class="star"
+											for="score4"></label>
+										<input
+											type="radio"
+											name="star"
+											id="score3"
+											value="3" />
+										<label
+											class="star"
+											for="score3"></label>
+										<input
+											type="radio"
+											name="star"
+											id="score2"
+											value="2" />
+										<label
+											class="star"
+											for="score2"></label>
+										<input
+											type="radio"
+											name="star"
+											id="score1"
+											value="1" />
+										<label
+											class="star"
+											for="score1"></label>
+									</div>
+								</div>
+								<div>
+									<form>
+										<div class="row mb-6">
+											<h2 class="fs-lg-h2 fs-h6 fw-bold">
+												難度與特色
+											</h2>
+											<div class="row py-3">
+												<h3
+													class="fs-lg-h3 fs-h6 fw-bold pb-2">
+													難度
+												</h3>
+												<div class="col-auto">
+													<input
+														class="form-check-input"
+														type="radio"
+														name="inlineRadioOptions"
+														id="inlineRadio1"
+														value="option1" />
+													<label
+														class="form-check-label"
+														for="inlineRadio1"
+														>新手入門</label
+													>
+												</div>
+												<div class="col-auto">
+													<input
+														class="form-check-input"
+														type="radio"
+														name="inlineRadioOptions"
+														id="inlineRadio2"
+														value="option2" />
+													<label
+														class="form-check-label"
+														for="inlineRadio2"
+														>中度玩家</label
+													>
+												</div>
+												<div class="col-auto">
+													<input
+														class="form-check-input"
+														type="radio"
+														name="inlineRadioOptions"
+														id="inlineRadio3"
+														value="option3" />
+													<label
+														class="form-check-label"
+														for="inlineRadio3"
+														>重度解謎</label
+													>
+												</div>
+											</div>
+											<div
+												class="row py-3"
+												id="input_3_2">
+												<h3
+													class="fs-lg-h3 fs-h6 fw-bold pb-2">
+													主題特色(最多選3項)
+												</h3>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck1" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck1">
+															偵探推理
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck2" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck2">
+															機關重重
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck3" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck3">
+															劇情厲害
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck4" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck4">
+															場景逼真
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck5" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck5">
+															互動操作
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck6" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck6">
+															謎題邏輯
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck7" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck7">
+															輕鬆歡樂
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck8" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck8">
+															恐怖驚悚
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck9" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck9">
+															緊張刺激
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck10" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck10">
+															勾心鬥角
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck11" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck11">
+															團隊合作
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck12" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck12">
+															親子同遊
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck13" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck13">
+															玩法特殊
+														</label>
+													</div>
+												</div>
+												<div
+													class="col-lg-3 col-md-4 col-sm-6 col-12">
+													<div class="form-check">
+														<input
+															class="form-check-input"
+															type="checkbox"
+															id="autoSizingCheck14" />
+														<label
+															class="form-check-label"
+															for="autoSizingCheck14">
+															角色扮演
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row mb-6">
+											<h3
+												class="fs-lg-h3 fs-h6 fw-bold pb-2">
+												遊玩日期
+											</h3>
+											<div class="col-12">
+												<input
+													type="date"
+													class="form-control" />
+											</div>
+										</div>
+										<div class="row mb-6">
+											<h3
+												class="fs-lg-h3 fs-h6 fw-bold pb-2">
+												遊戲完成度
+											</h3>
+											<div class="col-auto">
+												<input
+													class="form-check-input"
+													type="radio"
+													name="inlineRadioOptions"
+													id="inlineRadioSuccess"
+													value="option1" />
+												<label
+													class="form-check-label"
+													for="inlineRadioSuccess"
+													>過關</label
+												>
+											</div>
+											<div class="col-auto">
+												<input
+													class="form-check-input"
+													type="radio"
+													name="inlineRadioOptions"
+													id="inlineRadioFail"
+													value="option2" />
+												<label
+													class="form-check-label"
+													for="inlineRadioFail"
+													>未通關</label
+												>
+											</div>
+										</div>
+										<div class="row">
+											<h3
+												class="fs-lg-h3 fs-h6 fw-bold pb-2">
+												體驗心得
+											</h3>
+											<div class="col-12">
+												<textarea
+													class="form-control"
+													id="experience"
+													rows="5"></textarea>
+												<label
+													for="experience"
+													class="form-label"></label>
+											</div>
+										</div>
+										<div class="col-12 d-grid gap-2">
+											<button
+												type="submit"
+												class="btn btn-secondary-60 link-white rounded-1">
+												送出
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer bg-nature-20">
+    <div class="container">
+        <div class="d-flex flex-lg-row flex-column-reverse justify-content-between py-8">
+            <div class="d-flex flex-column align-items-center align-items-lg-start px-0">
+                <a href="index.html">
+                    <img src="/hexschool-D4/assets/Logo-Type-eb30690f.svg" alt="logo" class="mb-10 mb-lg-3" />
+                </a>
+                <p class="text-white fs-Caption m-0">
+                    Cpyright@ 2024 密室搜搜 -All Right Reserved
+                </p>
+            </div>
+            <ul class="d-flex flex-lg-row flex-column justify-content-lg-end gap-6 p-0 mb-10 mb-lg-0">
+                <li class="text-center px-lg-10 px-xl-15">
+                    <h6 class="text-white fs-h6 mb-6">主要功能</h6>
+                    <div class="fw-bold">
+                        <a href="search.html" class="mb-3 link-white fs-Body-2">找遊戲</a>
+                        <a href="ranking-list.html" class="link-white fs-Body-2">密室排行榜</a>
+                    </div>
+                </li>
+                <li class="text-center px-lg-10 px-xl-15">
+                    <h6 class="text-white fs-h6 mb-6">關於密室搜搜</h6>
+                    <div class="fw-bold">
+                        <a href="about.html#about-us" class="mb-3 link-white fs-Body-2">關於密室搜搜</a>
+                        <a href="about.html#terms-of-service" class="mb-3 link-white fs-Body-2">服務條款</a>
+                        <a href="about.html#privacy-policy" class="link-white fs-Body-2">隱私權政策</a>
+                    </div>
+                </li>
+                <li class="text-center px-lg-10 px-xl-15">
+                    <h6 class="text-white fs-h6 mb-6">追蹤我們</h6>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="https://www.facebook.com/">
+                            <img class="social_icon" src="/hexschool-D4/assets/fb-f3c54cd1.svg" alt="fb" />
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img class="social_icon" src="/hexschool-D4/assets/ig-d66703be.png" alt="ig" />
+                        </a>
+                        <a href="https://workspace.google.com/intl/zh-TW/products/gmail/">
+                            <img class="social_icon" src="/hexschool-D4/assets/email-ce0b55e7.png" alt="mail" />
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+		
+	</body>
+</html>
